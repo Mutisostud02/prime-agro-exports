@@ -2,18 +2,26 @@ import React from "react";
 
 export default function ConservationPage() {
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Ecological Preservation</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Conservation & Biodiversity</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">WETLAND RESTORATION, REWILDING CORRIDORS & SOLAR POWER ENERGY ARRAYS</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Ecological Preservation
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Conservation & Biodiversity
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            WETLAND RESTORATION, REWILDING CORRIDORS & SOLAR POWER ENERGY ARRAYS
+          </p>
         </div>
 
-        {/* Content Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="space-y-4 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">Protecting Kenya’s Flora & Fauna</h2>
+        {/* Content Section Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem", alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>Protecting Kenya’s Flora & Fauna</h2>
             <p>
               Agriculture does not exist in isolation. At Prime Agro Exports, we deliberately allocate up to 15% of our private estate acreage as non-productive rewilding zones, wetlands, and buffer areas.
             </p>
@@ -28,29 +36,33 @@ export default function ConservationPage() {
             <img 
               src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
               alt="Conservation and wetlands" 
-              className="w-full h-80 object-cover rounded shadow-md border border-[#241F18]/10"
+              style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />
           </div>
         </div>
 
-        {/* Action List */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-6">Our Conservation Metrics</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">☀️</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-1">1.2 MW Solar Power</h3>
-            <p className="text-[#241F18]/80 leading-relaxed mt-1">Four proprietary packhouses are partially powered by clean, off-grid rooftop solar panels.</p>
+        {/* Action List Grid */}
+        <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A", marginBottom: "1.5rem" }}>Our Conservation Metrics</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>
+          
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>☀️</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>1.2 MW Solar Power</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", marginTop: "0.25rem" }}>Four proprietary packhouses are partially powered by clean, off-grid rooftop solar panels.</p>
           </div>
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">🦆</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-1">Wetlands Reserve</h3>
-            <p className="text-[#241F18]/80 leading-relaxed mt-1">Subsidized reed lagoons filter farm runoff, hosting over 50 native bird species.</p>
+
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>🦆</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Wetlands Reserve</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", marginTop: "0.25rem" }}>Subsidized reed lagoons filter farm runoff, hosting over 50 native bird species.</p>
           </div>
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">💧</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-1">Drip Micro-Irrigation</h3>
-            <p className="text-[#241F18]/80 leading-relaxed mt-1">Computerized water delivery reduces water usage by 40% compared to traditional sprayers.</p>
+
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>💧</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Drip Micro-Irrigation</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", marginTop: "0.25rem" }}>Computerized water delivery reduces water usage by 40% compared to traditional sprayers.</p>
           </div>
+
         </div>
       </div>
     </div>

@@ -2,18 +2,27 @@ import React from "react";
 
 export default function FarmingPracticePage() {
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Integrated Agriculture</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Farming Practice</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">SEED TO SPOON TRACEABILITY & INTEGRATED PEST MANAGEMENT</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Integrated Agriculture
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.25rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Farming Practice
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            SEED TO SPOON TRACEABILITY & INTEGRATED PEST MANAGEMENT
+          </p>
         </div>
 
-        {/* Content Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="md:col-span-2 space-y-6 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">IPM & Natural Soil Solutions</h2>
+        {/* Content Section Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
+          
+          <div style={{ gridColumn: "span 2", display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>IPM & Natural Soil Solutions</h2>
             <p>
               At Prime Agro Exports, we practice <strong>Integrated Farming</strong>. We believe that sustained high-quality yields are only possible when we nurture the physical and biological integrity of the soil and ecosystem.
             </p>
@@ -25,30 +34,31 @@ export default function FarmingPracticePage() {
             </p>
           </div>
 
-          <div className="bg-[#EAE2CE] p-6 rounded border border-[#241F18]/10 h-fit space-y-4 font-mono text-xs">
-            <h3 className="font-serif font-bold text-sm text-[#16302A]">Agricultural Audits</h3>
-            <div className="border-b border-[#241F18]/10 pb-2">
-              <span className="text-[#E1672B] block">FERTILIZATION:</span>
+          <div style={{ backgroundColor: "#EAE2CE", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", height: "fit-content", display: "flex", flexDirection: "column", gap: "1rem", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A" }}>Agricultural Audits</h3>
+            <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.1)", paddingBottom: "0.5rem" }}>
+              <span style={{ color: "#E1672B", display: "block" }}>FERTILIZATION:</span>
               Drip-irrigation vermiculture & organic plant-extract sprays.
             </div>
-            <div className="border-b border-[#241F18]/10 pb-2">
-              <span className="text-[#E1672B] block">PEST CONTROLS:</span>
+            <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.1)", paddingBottom: "0.5rem" }}>
+              <span style={{ color: "#E1672B", display: "block" }}>PEST CONTROLS:</span>
               Predatory biological beneficial insect release (IPM focus).
             </div>
             <div>
-              <span className="text-[#E1672B] block">TRACE STATUS:</span>
+              <span style={{ color: "#E1672B", display: "block" }}>TRACE STATUS:</span>
               100% individual crop carton barcoding (Seed to Flight).
             </div>
           </div>
         </div>
 
-        {/* Traceability Info banner */}
-        <div className="bg-[#16302A] text-[#F3EEE1] p-8 rounded shadow-md font-mono text-xs">
-          <h3 className="font-serif font-bold text-lg text-[#C99A3D] mb-3">Complete Transparency Barcoding</h3>
-          <p className="leading-relaxed text-[#F3EEE1]/80 max-w-xl">
+        {/* Traceability Info Banner */}
+        <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "2rem", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+          <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.125rem", color: "#C99A3D", marginBottom: "0.75rem" }}>Complete Transparency Barcoding</h3>
+          <p style={{ lineHeight: "1.625", color: "rgba(243, 238, 225, 0.8)", maxWidth: "36rem" }}>
             Traceability is the cornerstone of modern horticulture. Every box of fine beans, cut roses, or frozen diced avocados that leaves our packing facility is barcoded with a secure batch code. Buyers can immediately inspect the sowing date, proprietary estate block or contract outgrower code, cooling timestamp, and airport cargo village dispatch manifest.
           </p>
         </div>
+
       </div>
     </div>
   );
