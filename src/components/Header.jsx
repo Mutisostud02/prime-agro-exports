@@ -74,8 +74,8 @@ export default function Header() {
     src="/dist/assets/logo.jpeg" // Put your source here later
     alt="Prime Agro Exports Logo"
     style={{ 
-      width: "2rem", 
-      height: "2rem", 
+      width: "3rem", 
+      height: "3rem", 
       borderRadius: "0.25rem", 
       objectFit: "contain",
       display: "block"
