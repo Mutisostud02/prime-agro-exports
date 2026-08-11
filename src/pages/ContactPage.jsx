@@ -11,61 +11,72 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Secure Global Comms Portal</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Contact Us</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">DIRECT CHANNELS TO OUR NAIROBI EXPORT DESK & REGIONAL FARMS</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Secure Global Comms Portal
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Contact Us
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            DIRECT CHANNELS TO OUR NAIROBI EXPORT DESK & REGIONAL FARMS
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mb-12">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", alignItems: "start", marginBottom: "3rem" }}>
+          
           {/* Form Panel */}
-          <div className="bg-white p-6 rounded border border-[#241F18]/10 shadow-sm font-mono text-xs">
-            <h2 className="font-serif text-xl font-bold text-[#16302A] mb-4">Submit securing wholesale inquiry</h2>
+          <div style={{ backgroundColor: "white", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.25rem", fontWeight: "bold", color: "#16302A", marginBottom: "1rem" }}>
+              Submit securing wholesale inquiry
+            </h2>
             
             {submitted ? (
-              <div className="text-center py-12 space-y-4">
-                <span className="text-4xl block">📬</span>
-                <h3 className="font-serif font-bold text-base text-[#16302A]">Inquiry Transmitted</h3>
-                <p className="text-[#241F18]/80 leading-relaxed">
+              <div style={{ textAlign: "center", padding: "3rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
+                <span style={{ fontSize: "2.25rem", display: "block" }}>📬</span>
+                <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Inquiry Transmitted</h3>
+                <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
                   Thank you! Your cold-chain procurement request has been safely logged in our central database. Our Nairobi export desk agent will follow up via email within 12 hours.
                 </p>
                 <button 
                   onClick={() => { setSubmitted(false); setFormData({ name: "", email: "", category: "Export Wholesale Quote", message: "" }); }}
-                  className="bg-[#16302A] text-white px-4 py-2 rounded font-bold hover:bg-[#E1672B] transition-colors"
+                  style={{ backgroundColor: "#16302A", color: "white", padding: "0.5rem 1rem", borderRadius: "0.25rem", fontWeight: "bold", border: "none", cursor: "pointer" }}
                 >
                   New Message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Company / Buyer Name</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
                   <input 
                     required 
                     type="text" 
                     value={formData.name} 
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
-                    className="w-full bg-[#EAE2CE]/40 border border-[#241F18]/15 p-2.5 rounded text-xs focus:outline-none focus:border-[#E1672B]" 
+                    style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} 
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Business Email</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Business Email</label>
                   <input 
                     required 
                     type="email" 
                     value={formData.email} 
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
-                    className="w-full bg-[#EAE2CE]/40 border border-[#241F18]/15 p-2.5 rounded text-xs focus:outline-none focus:border-[#E1672B]" 
+                    style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} 
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Inquiry Category</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
                   <select 
                     value={formData.category} 
                     onChange={(e) => setFormData({...formData, category: e.target.value})}
-                    className="w-full bg-[#EAE2CE]/40 border border-[#241F18]/15 p-2.5 rounded text-xs focus:outline-none"
+                    style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }}
                   >
                     <option>Export Wholesale Quote</option>
                     <option>Out-Grower Partnership Inquiry</option>
@@ -74,16 +85,16 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Message Detail</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
                   <textarea 
                     required 
                     placeholder="Specify stem counts, varieties, required shipment arrival airports, or seasonal volume expectations..."
                     value={formData.message} 
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
-                    className="w-full bg-[#EAE2CE]/40 border border-[#241F18]/15 p-2.5 rounded text-xs h-28 focus:outline-none focus:border-[#E1672B]" 
+                    style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", height: "7rem", outline: "none", resize: "vertical" }} 
                   />
                 </div>
-                <button type="submit" className="w-full bg-[#E1672B] hover:bg-[#C4551F] text-white py-3 rounded font-bold uppercase tracking-wider text-xs transition-colors">
+                <button type="submit" style={{ width: "100%", backgroundColor: "#E1672B", color: "white", padding: "0.75rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: "pointer" }}>
                   Submit Direct Inquiry
                 </button>
               </form>
@@ -91,28 +102,29 @@ export default function ContactPage() {
           </div>
 
           {/* Location Panel */}
-          <div className="space-y-6 text-sm">
-            <div className="bg-[#EAE2CE]/60 p-6 rounded border border-[#241F18]/15 font-mono text-xs space-y-3">
-              <h3 className="font-serif font-bold text-base text-[#16302A]">Headquarters Office</h3>
-              <p className="text-[#241F18]/80 leading-relaxed">
+          <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "0.875rem" }}>
+            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Headquarters Office</h3>
+              <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
                 📍 {COMPANY.address.full}
               </p>
-              <div className="text-[10px] text-[#E1672B] font-bold space-y-1">
+              <div style={{ fontSize: "10px", color: "#E1672B", fontWeight: "bold", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 <div>📞 {COMPANY.phoneDisplay}</div>
                 <div>✉️ Email: {COMPANY.email}</div>
               </div>
             </div>
 
-            <div className="bg-[#EAE2CE]/60 p-6 rounded border border-[#241F18]/15 font-mono text-xs space-y-3">
-              <h3 className="font-serif font-bold text-base text-[#16302A]">Regional Operations Centers</h3>
-              <div className="space-y-2 text-[11px] text-[#241F18]/80">
-                <div>🌳 <strong className="text-[#16302A]">Naivasha Farm Office:</strong> Lake Naivasha Highland Depot (140 km from Nairobi)</div>
-                <div>🏭 <strong className="text-[#16302A]">Thika Processing Plant:</strong> Thika Industrial Highway Complex</div>
-                <div>✈️ <strong className="text-[#16302A]">{COMPANY.logisticsDivision}:</strong> JKIA Cargo Build-up Hub, Warehouse 3</div>
+            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Regional Operations Centers</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "11px", color: "rgba(36, 31, 24, 0.8)" }}>
+                <div>🌳 <strong style={{ color: "#16302A" }}>Naivasha Farm Office:</strong> Lake Naivasha Highland Depot (140 km from Nairobi)</div>
+                <div>🏭 <strong style={{ color: "#16302A" }}>Thika Processing Plant:</strong> Thika Industrial Highway Complex</div>
+                <div>✈️ <strong style={{ color: "#16302A" }}>{COMPANY.logisticsDivision}:</strong> JKIA Cargo Build-up Hub, Warehouse 3</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
