@@ -332,7 +332,7 @@ export default function PrimeAgroExports() {
           <div className="wrap about-grid">
             <div className="about-copy reveal">
               <div className="eyebrow">WHO WE ARE</div>
-              <h2>
+              <h2 style={{color:"black"}}>
                 A grower first,
                 <br />
                 an exporter by trade.
@@ -380,7 +380,7 @@ export default function PrimeAgroExports() {
             <div className="products-head reveal">
               <div>
                 <div className="eyebrow">THE CONSIGNMENT</div>
-                <h2>
+                <h2 style={{color:"black"}}>
                   What we grow,
                   <br />
                   pack and ship.
@@ -515,7 +515,7 @@ export default function PrimeAgroExports() {
           <div className="wrap">
             <div className="reveal" style={{ maxWidth: "56ch" }}>
               <div className="eyebrow">GROWN RESPONSIBLY</div>
-              <h2>
+              <h2 style={{color:"black"}}>
                 Good soil, fair farms,
                 <br />
                 careful water.
