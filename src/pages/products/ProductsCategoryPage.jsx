@@ -14,7 +14,6 @@ export default function ProductsCategoryPage() {
     { id: "frozen-iqf", label: "Frozen – IQF", icon: "❄️", banner: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?fm=jpg&q=80&w=1200&auto=format&fit=crop" }
   ];
 
-  // Sync state with product query parameter (from live header search clicks!)
   useEffect(() => {
     const prodId = searchParams.get("product");
     if (prodId) {
@@ -35,30 +34,30 @@ export default function ProductsCategoryPage() {
     setSearchParams({});
   };
 
-  // If no categoryId is specified, render the general Products Landing Hub!
+  // --- LANDING HUB (No category selected) ---
   if (!categoryId) {
     return (
-      <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="border-b border-[#241F18]/15 pb-8 mb-12 text-center md:text-left">
-            <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Consignments & Portfolios</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2">Our Products</h1>
-            <p className="text-[#241F18]/70 text-sm font-mono mt-4">FOUR CERTIFIED EXPORT PRODUCT LINES GRADED TO CONSERVED COLD-CHAIN STANDARD</p>
+      <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+        <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
+          <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+            <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>Consignments & Portfolios</span>
+            <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem" }}>Our Products</h1>
+            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>FOUR CERTIFIED EXPORT PRODUCT LINES GRADED TO CONSERVED COLD-CHAIN STANDARD</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
             {categories.map((cat) => (
               <Link 
                 key={cat.id} 
                 to={`/our-products/${cat.id}`}
-                className="group relative h-64 rounded overflow-hidden shadow-md border border-[#241F18]/15 hover:border-[#E1672B] transition-all"
+                style={{ position: "relative", height: "16rem", borderRadius: "0.25rem", overflow: "hidden", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.15)", display: "block", textDecoration: "none" }}
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#16302A]/95 via-[#16302A]/60 to-transparent z-10" />
-                <img src={cat.banner} alt={cat.label} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                <div className="absolute bottom-6 left-6 right-6 z-20 text-white font-mono">
-                  <div className="text-3xl mb-1">{cat.icon}</div>
-                  <h3 className="font-serif font-bold text-xl text-[#F3EEE1]">{cat.label}</h3>
-                  <p className="text-[10px] text-[#C99A3D] uppercase tracking-wider font-bold mt-1">Explore Full Catalog & Specs →</p>
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(22, 48, 42, 0.95), rgba(22, 48, 42, 0.6), transparent)", zIndex: 10 }} />
+                <img src={cat.banner} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem", zIndex: 20, color: "white", fontFamily: "monospace" }}>
+                  <div style={{ fontSize: "1.875rem", marginBottom: "0.25rem" }}>{cat.icon}</div>
+                  <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.25rem", color: "#F3EEE1", margin: 0 }}>{cat.label}</h3>
+                  <p style={{ fontSize: "10px", color: "#C99A3D", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", marginTop: "0.25rem" }}>Explore Full Catalog & Specs →</p>
                 </div>
               </Link>
             ))}
@@ -68,110 +67,106 @@ export default function ProductsCategoryPage() {
     );
   }
 
-  // Filter products by active category
   const activeCategory = categories.find((c) => c.id === categoryId);
   const products = PRODUCTS_DATA.filter((p) => p.category === categoryId);
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto">
-        {/* Back Link */}
-        <Link to="/our-products" className="font-mono text-xs font-bold text-[#E1672B] hover:text-[#16302A] mb-6 inline-block">
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        <Link to="/our-products" style={{ fontFamily: "monospace", fontSize: "0.75rem", fontWeight: "bold", color: "#E1672B", textDecoration: "none", marginBottom: "1.5rem", display: "inline-block" }}>
           ← Back to All Product Portfolios
         </Link>
 
         {activeCategory ? (
-          <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-            <span className="font-mono text-3xl mb-2 block">{activeCategory.icon}</span>
-            <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] leading-none">{activeCategory.label} Portfolio</h1>
-            <p className="text-[#241F18]/70 text-sm font-mono mt-4">PRIME EXPORT GRADE 1 SPECS · BRCGS CERTIFIED</p>
+          <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+            <span style={{ fontFamily: "monospace", fontSize: "1.875rem", marginBottom: "0.5rem", display: "block" }}>{activeCategory.icon}</span>
+            <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", lineHeight: "1" }}>{activeCategory.label} Portfolio</h1>
+            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>PRIME EXPORT GRADE 1 SPECS · BRCGS CERTIFIED</p>
           </div>
         ) : (
-          <div className="text-center py-12">Category not found.</div>
+          <div style={{ textAlign: "center", padding: "3rem 0" }}>Category not found.</div>
         )}
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
           {products.map((prod) => (
             <div 
               key={prod.id} 
               onClick={() => handleOpenProduct(prod)}
-              className="bg-white rounded border border-[#241F18]/10 overflow-hidden shadow-sm hover:shadow-md cursor-pointer group hover:border-[#E1672B] transition-all flex flex-col h-full"
+              style={{ backgroundColor: "white", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", overflow: "hidden", boxShadow: "0 1px 3px rgba(0,0,0,0.1)", cursor: "pointer", display: "flex", flexDirection: "column", height: "100%" }}
             >
-              <div className="h-48 overflow-hidden relative">
-                <img src={prod.image} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+              <div style={{ height: "12rem", overflow: "hidden", position: "relative" }}>
+                <img src={prod.image} alt={prod.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 {prod.isPopular && (
-                  <span className="absolute top-3 left-3 bg-[#E1672B] text-white font-mono text-[9px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">
+                  <span style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: "#E1672B", color: "white", fontFamily: "monospace", fontSize: "9px", fontWeight: "bold", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     High Volume Demand
                   </span>
                 )}
               </div>
-              <div className="p-4 flex-1 flex flex-col justify-between font-mono">
+              <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", fontFamily: "monospace" }}>
                 <div>
-                  <span className="text-[10px] text-[#C99A3D] font-bold block mb-1 uppercase">{prod.subcategory}</span>
-                  <h3 className="font-serif font-bold text-sm text-[#16302A] leading-tight group-hover:text-[#E1672B] transition-colors">{prod.name}</h3>
-                  <p className="text-[11px] text-[#241F18]/80 mt-2 leading-relaxed h-12 overflow-hidden text-ellipsis line-clamp-3">{prod.shortDesc}</p>
+                  <span style={{ fontSize: "10px", color: "#C99A3D", fontWeight: "bold", display: "block", marginBottom: "0.25rem", textTransform: "uppercase" }}>{prod.subcategory}</span>
+                  <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", lineHeight: "1.2" }}>{prod.name}</h3>
+                  <p style={{ fontSize: "11px", color: "rgba(36, 31, 24, 0.8)", marginTop: "0.5rem", lineHeight: "1.625", height: "3rem", overflow: "hidden" }}>{prod.shortDesc}</p>
                 </div>
-                <div className="text-[10px] font-bold text-[#16302A] border-t border-[#241F18]/10 pt-3 mt-4 flex justify-between items-center">
+                <div style={{ fontSize: "10px", fontWeight: "bold", color: "#16302A", borderTop: "1px solid rgba(36, 31, 24, 0.1)", paddingTop: "0.75rem", marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <span>SPECIFICATION SHEETS</span>
-                  <span className="text-[#E1672B] group-hover:translate-x-1 transition-transform">Inspect →</span>
+                  <span style={{ color: "#E1672B" }}>Inspect →</span>
                 </div>
               </div>
             </div>
           ))}
         </div>
 
-        {/* SECURE TECHNICAL SPECS DIALOG / MODAL (The Thorough Product Details!) */}
+        {/* --- PRODUCT DETAIL MODAL --- */}
         {selectedProduct && (
-          <div className="fixed inset-0 bg-black/75 backdrop-blur-sm flex items-center justify-center p-4 z-50 overflow-y-auto">
-            <div className="bg-[#F3EEE1] border border-[#241F18]/25 rounded max-w-2xl w-full p-6 relative font-mono text-xs max-h-[90vh] overflow-y-auto">
-              {/* Close Button */}
+          <div style={{ position: "fixed", inset: 0, backgroundColor: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem", zIndex: 50 }}>
+            <div style={{ backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.25)", borderRadius: "0.25rem", maxWidth: "42rem", width: "100%", padding: "1.5rem", position: "relative", fontFamily: "monospace", fontSize: "0.75rem", maxHeight: "90vh", overflowY: "auto" }}>
               <button 
                 onClick={handleCloseProduct}
-                className="absolute right-4 top-4 text-base text-[#241F18]/60 hover:text-[#E1672B]"
+                style={{ position: "absolute", right: "1rem", top: "1rem", fontSize: "1rem", color: "rgba(36, 31, 24, 0.6)", border: "none", background: "none", cursor: "pointer" }}
               >
                 ✕
               </button>
 
-              <span className="text-[10px] text-[#E1672B] uppercase tracking-wider font-bold block mb-1">
+              <span style={{ fontSize: "10px", color: "#E1672B", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", display: "block", marginBottom: "0.25rem" }}>
                 Prime Export Technical Specification Sheet
               </span>
-              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#16302A] mb-3 leading-tight border-b border-[#241F18]/15 pb-2">
+              <h2 style={{ fontFamily: "serif", fontSize: "1.75rem", fontWeight: "bold", color: "#16302A", marginBottom: "0.75rem", lineHeight: "1.2", borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "0.5rem" }}>
                 {selectedProduct.name}
               </h2>
 
-              {/* Grid with Image & Technical Specs */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem", marginBottom: "1.5rem" }}>
                 <div>
-                  <img src={selectedProduct.image} alt={selectedProduct.name} className="w-full h-44 object-cover rounded border border-[#241F18]/10" />
-                  <div className="bg-[#16302A] text-[#F3EEE1] text-center text-[9px] font-bold py-1.5 mt-2 rounded uppercase tracking-wider">
+                  <img src={selectedProduct.image} alt={selectedProduct.name} style={{ width: "100%", height: "11rem", objectFit: "cover", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)" }} />
+                  <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", textAlign: "center", fontSize: "9px", fontWeight: "bold", padding: "0.375rem 0", marginTop: "0.5rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     Cold Chain Sealed: {selectedProduct.freightType}
                   </div>
                 </div>
 
-                <div className="space-y-1.5 bg-[#EAE2CE]/60 p-3 rounded border border-[#241F18]/10 text-[10.5px]">
-                  <div>📊 <strong className="text-[#16302A]">Subcategory:</strong> {selectedProduct.subcategory}</div>
-                  <div>📐 <strong className="text-[#16302A]">Export Calibration:</strong> {selectedProduct.headSize}</div>
-                  <div>🌿 <strong className="text-[#16302A]">Stem/Cut Target:</strong> {selectedProduct.stemLength}</div>
-                  <div>⏳ <strong className="text-[#16302A]">Cold Chain Shelf Life:</strong> {selectedProduct.vaseLife}</div>
-                  <div>🏔️ <strong className="text-[#16302A]">Growing Altitude:</strong> {selectedProduct.growingAlt}</div>
-                  <div>📅 <strong className="text-[#16302A]">Peak Season:</strong> {selectedProduct.harvestSeason}</div>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.375rem", backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "0.75rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", fontSize: "10.5px" }}>
+                  <div>📊 <strong style={{ color: "#16302A" }}>Subcategory:</strong> {selectedProduct.subcategory}</div>
+                  <div>📐 <strong style={{ color: "#16302A" }}>Export Calibration:</strong> {selectedProduct.headSize}</div>
+                  <div>🌿 <strong style={{ color: "#16302A" }}>Stem/Cut Target:</strong> {selectedProduct.stemLength}</div>
+                  <div>⏳ <strong style={{ color: "#16302A" }}>Cold Chain Shelf Life:</strong> {selectedProduct.vaseLife}</div>
+                  <div>🏔️ <strong style={{ color: "#16302A" }}>Growing Altitude:</strong> {selectedProduct.growingAlt}</div>
+                  <div>📅 <strong style={{ color: "#16302A" }}>Peak Season:</strong> {selectedProduct.harvestSeason}</div>
                 </div>
               </div>
 
-              {/* Detailed Description */}
-              <div className="space-y-4 text-xs leading-relaxed border-t border-[#241F18]/10 pt-4">
+              <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.75rem", lineHeight: "1.625", borderTop: "1px solid rgba(36, 31, 24, 0.1)", paddingTop: "1rem" }}>
                 <div>
-                  <h4 className="font-serif font-bold text-sm text-[#16302A] mb-1">Botanical / Crop Summary:</h4>
-                  <p className="text-[#241F18]/85">{selectedProduct.description}</p>
+                  <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Botanical / Crop Summary:</h4>
+                  <p style={{ color: "rgba(36, 31, 24, 0.85)", margin: 0 }}>{selectedProduct.description}</p>
                 </div>
 
                 {selectedProduct.varieties && selectedProduct.varieties.length > 0 && (
                   <div>
-                    <h4 className="font-serif font-bold text-sm text-[#16302A] mb-1">Certified Cultivars / Export Varieties:</h4>
-                    <div className="flex flex-wrap gap-1.5 mt-1">
+                    <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Certified Cultivars / Export Varieties:</h4>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: "0.375rem", marginTop: "0.25rem" }}>
                       {selectedProduct.varieties.map((v, i) => (
-                        <span key={i} className="bg-[#1F3D33]/10 text-[#16302A] text-[9.5px] px-2 py-0.5 rounded border border-[#16302A]/10">
+                        <span key={i} style={{ backgroundColor: "rgba(31, 61, 51, 0.1)", color: "#16302A", fontSize: "9.5px", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", border: "1px solid rgba(22, 48, 42, 0.1)" }}>
                           {v}
                         </span>
                       ))}
@@ -179,24 +174,23 @@ export default function ProductsCategoryPage() {
                   </div>
                 )}
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="bg-white p-3 rounded border border-[#241F18]/10">
-                    <h5 className="font-serif font-bold text-[#16302A] mb-1">📦 Carton Packaging specs:</h5>
-                    <p className="text-[10px] text-[#241F18]/80 leading-snug">{selectedProduct.packaging}</p>
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+                  <div style={{ backgroundColor: "white", padding: "0.75rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)" }}>
+                    <h5 style={{ fontFamily: "serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>📦 Carton Packaging specs:</h5>
+                    <p style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.4", margin: 0 }}>{selectedProduct.packaging}</p>
                   </div>
-                  <div className="bg-white p-3 rounded border border-[#241F18]/10">
-                    <h5 className="font-serif font-bold text-[#16302A] mb-1">🛡️ Compliance Credentials:</h5>
-                    <p className="text-[10px] text-[#E1672B] font-bold leading-snug">{selectedProduct.certifications ? selectedProduct.certifications.join(" • ") : "GLOBALG.A.P"}</p>
+                  <div style={{ backgroundColor: "white", padding: "0.75rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)" }}>
+                    <h5 style={{ fontFamily: "serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>🛡️ Compliance Credentials:</h5>
+                    <p style={{ fontSize: "10px", color: "#E1672B", fontWeight: "bold", lineHeight: "1.4", margin: 0 }}>{selectedProduct.certifications ? selectedProduct.certifications.join(" • ") : "GLOBALG.A.P"}</p>
                   </div>
                 </div>
               </div>
 
-              {/* Inquiry CTA */}
-              <div className="mt-6 border-t border-[#241F18]/15 pt-4 flex flex-col md:flex-row justify-between items-center gap-4">
-                <span className="text-[10px] text-[#241F18]/60">Document ID: Sec-PAE-{selectedProduct.id}-2026</span>
+              <div style={{ marginTop: "1.5rem", borderTop: "1px solid rgba(36, 31, 24, 0.15)", paddingTop: "1rem", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1rem" }}>
+                <span style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.6)" }}>Document ID: Sec-PAE-{selectedProduct.id}-2026</span>
                 <Link 
                   to="/contact-us"
-                  className="bg-[#E1672B] text-white hover:bg-[#C4551F] font-bold text-[10px] px-4 py-2 rounded uppercase tracking-wider"
+                  style={{ backgroundColor: "#E1672B", color: "white", fontWeight: "bold", fontSize: "10px", padding: "0.5rem 1rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: "none" }}
                 >
                   Request Secure Contract Quote for {selectedProduct.name}
                 </Link>
