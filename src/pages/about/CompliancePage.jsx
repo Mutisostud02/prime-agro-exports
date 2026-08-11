@@ -16,7 +16,7 @@ export default function CompliancePage() {
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
           <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Traceability & Social Standards</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Compliance & Accreditation</h1>
+<h1 className="font-serif text-4xl sm:text-5xl font-bold mt-2 leading-none" style={{ color: 'black' }}>Compliance & Accreditation</h1>
           <p className="text-[#241F18]/70 text-sm font-mono mt-4">UNCOMPROMISING QUALITY BENCHMARKS ACROSS GLOBAL FOOD CHAINS</p>
         </div>
 
@@ -31,19 +31,14 @@ export default function CompliancePage() {
         </div>
 
         {/* Downloadable Corporate Policies */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-6">Corporate Governance & Ethics Policies</h2>
+<h2 className="font-serif text-2xl font-bold mb-6" style={{ color: 'black' }}>Corporate Governance & Ethics Policies</h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           {policies.map((policy) => (
             <div key={policy.code} className="bg-[#EAE2CE]/60 border border-[#241F18]/15 p-5 rounded hover:border-[#E1672B] transition-colors">
               <span className="font-mono text-[10px] text-[#E1672B] font-bold block">{policy.code}</span>
-              <h3 className="font-serif font-bold text-[#16302A] text-base mt-1">{policy.title}</h3>
+              <h3 className="font-serif font-bold text-base mt-1" style={{ color: 'black' }}>{policy.title}</h3>
               <p className="text-xs text-[#241F18]/80 font-mono mt-2 leading-relaxed">{policy.desc}</p>
-              <button 
-                onClick={() => alert(`Initiating mock secure download for corporate doc: ${policy.title}`)}
-                className="mt-4 text-[10px] font-mono font-bold text-[#16302A] hover:text-[#E1672B] flex items-center gap-1"
-              >
-                📥 View / Download PDF Document
-              </button>
             </div>
           ))}
         </div>

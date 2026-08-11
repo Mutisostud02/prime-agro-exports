@@ -6,7 +6,7 @@ export default function WhoWeArePage() {
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
           <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">About Us</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Who We Are</h1>
+          <h1 className="font-serif text-4xl sm:text-5xl font-bold mt-2 leading-none" style={{ color: 'black' }}>Who We Are</h1>
           <p className="text-[#241F18]/70 text-sm font-mono mt-4">PRIME AGRO EXPORTS LIMITED · NAIROBI, KENYA</p>
         </div>
 
@@ -20,7 +20,7 @@ export default function WhoWeArePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="md:col-span-2 space-y-6 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">Kenya&apos;s Horticultural Experts</h2>
+<h2 className="font-serif text-2xl font-bold" style={{ color: 'black' }}>Kenya&apos;s Horticultural Experts</h2>
             <p>
               Welcome to <strong>Prime Agro Exports Limited</strong>. We grow, sort, pack, and export Kenya&apos;s finest flowers, vegetables, and fresh fruits — from our own farms and a trusted out-grower network across the Rift Valley, Central Kenya, and the Coast.
             </p>
@@ -39,14 +39,16 @@ export default function WhoWeArePage() {
 
           <div className="bg-[#EAE2CE] p-6 rounded border border-[#241F18]/10 h-fit space-y-6">
             <div>
-              <h3 className="font-serif font-bold text-lg text-[#16302A] mb-2">Our Mission</h3>
+<h3 className="font-serif font-bold text-lg mb-2" style={{ color: 'black' }}>Our Mission</h3>
+
               <p className="text-xs text-[#241F18]/80 leading-relaxed font-mono">
                 To consistently deliver the freshest, highest-quality Kenyan produce — adapting to modern technology while staying ethical and sustainable.
               </p>
             </div>
             <hr className="border-[#241F18]/10" />
             <div>
-              <h3 className="font-serif font-bold text-lg text-[#16302A] mb-2">Core Values</h3>
+<h3 className="font-serif font-bold text-lg mb-2" style={{ color: 'black' }}>Core Values</h3>
+
               <ul className="text-xs font-mono space-y-3">
                 <li><strong className="text-[#E1672B]">TRANSPARENCY:</strong> Farm-to-flight traceability on every carton.</li>
                 <li><strong className="text-[#E1672B]">INTEGRITY:</strong> Fair trade, social welfare, and environmental stewardship.</li>

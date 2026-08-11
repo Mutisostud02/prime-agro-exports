@@ -124,30 +124,51 @@ export default function HomePage() {
       {/* Popular/Featured Products Slider */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-wider font-bold">Consignment Focus</span>
-          <h2 className="font-serif text-3xl font-bold text-[#16302A] mt-2">Featured Products</h2>
+          <span className="font-mono text-xs uppercase tracking-wider font-bold" style={{ color: '#E1672B' }}>Consignment Focus</span>
+          <h2 className="font-serif text-3xl font-bold mt-2" style={{ color: 'black' }}>Featured Products</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          {popularProducts.slice(0, 4).map((prod) => (
-            <Link 
-              key={prod.id} 
-              to={`/our-products/${prod.category}?product=${prod.id}`}
-              className="bg-white rounded border border-[#241F18]/10 overflow-hidden shadow-sm hover:border-[#E1672B] transition-colors flex flex-col h-full group"
-            >
-              <div className="h-44 overflow-hidden">
-                <img src={prod.image} alt={prod.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
-              </div>
-              <div className="p-4 flex-1 flex flex-col justify-between font-mono">
-                <div>
-                  <span className="text-[9px] text-[#C99A3D] font-bold block uppercase mb-1">{prod.categoryLabel}</span>
-                  <h3 className="font-serif font-bold text-xs text-[#16302A] leading-tight group-hover:text-[#E1672B] transition-colors">{prod.name}</h3>
-                </div>
-                <span className="text-[#E1672B] text-[10px] font-bold mt-4 block">See Specifications →</span>
-              </div>
-            </Link>
-          ))}
+ <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+  {popularProducts.slice(0, 4).map((prod) => (
+    <Link 
+      key={prod.id} 
+      to={`/our-products/${prod.category}?product=${prod.id}`}
+      className="bg-white rounded border overflow-hidden shadow-sm transition-colors flex flex-col h-full group"
+      style={{ borderColor: 'rgba(0, 0, 0, 0.1)' }}
+    >
+      <div className="h-44 overflow-hidden">
+        <img 
+          src={prod.image} 
+          alt={prod.name} 
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+        />
+      </div>
+      <div className="p-4 flex-1 flex flex-col justify-between font-mono">
+        <div>
+          <span 
+            className="text-[9px] font-bold block uppercase mb-1" 
+            style={{ color: '#E1672B' }}
+          >
+            {prod.categoryLabel}
+          </span>
+          <h3 
+            className="font-serif font-bold text-xs leading-tight transition-colors" 
+            style={{ color: 'grey' }}
+          >
+            {prod.name}
+          </h3>
         </div>
+        <span 
+          className="text-[10px] font-bold mt-4 block" 
+          style={{ color: 'black' }}
+        >
+          See Specifications →
+        </span>
+      </div>
+    </Link>
+  ))}
+</div>
+
       </section>
 
       {/* Certifications strip */}
