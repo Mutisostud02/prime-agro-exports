@@ -9,18 +9,26 @@ export default function OutGrowerPage() {
   };
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Smallholder Collaboration</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Out-Grower Farming</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">8,000+ CONTRACTED SMALLHOLDERS SUPPORTING REGIONAL SUSTAINABILITY</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Smallholder Collaboration
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Out-Grower Farming
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            8,000+ CONTRACTED SMALLHOLDERS SUPPORTING REGIONAL SUSTAINABILITY
+          </p>
         </div>
 
-        {/* Introduction */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="space-y-4 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">Nurturing Local Communities</h2>
+        {/* Introduction Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem", alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>Nurturing Local Communities</h2>
             <p>
               We owe our incredible success to our locally contracted smallholder farmers. To augment our own estate production, Prime Agro Exports operates a highly structured out-grower contract farming program.
             </p>
@@ -35,62 +43,64 @@ export default function OutGrowerPage() {
             <img 
               src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19655?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
               alt="Outgrower picking fine beans" 
-              className="w-full h-80 object-cover rounded shadow-md border border-[#241F18]/10"
+              style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />
           </div>
         </div>
 
-        {/* Partnership Benefits */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-6">Our Support Protocol</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">🌱</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-2">High Quality Inputs</h3>
-            <p className="text-[#241F18]/80 leading-relaxed">Subsidized distribution of certified seeds, natural bio-beneficials for pest controls, and organic fertilizers.</p>
+        {/* Partnership Benefits Grid */}
+        <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A", marginBottom: "1.5rem" }}>
+          Our Support Protocol
+        </h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem", marginBottom: "3rem" }}>
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>🌱</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.5rem" }}>High Quality Inputs</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>Subsidized distribution of certified seeds, natural bio-beneficials for pest controls, and organic fertilizers.</p>
           </div>
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">📊</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-2">Technical Guidance</h3>
-            <p className="text-[#241F18]/80 leading-relaxed">Weekly soil pH audits, rain calendar scheduling, and GlobalG.A.P criteria audits by certified field managers.</p>
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>📊</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.5rem" }}>Technical Guidance</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>Weekly soil pH audits, rain calendar scheduling, and GlobalG.A.P criteria audits by certified field managers.</p>
           </div>
-          <div className="bg-[#EAE2CE]/60 p-5 rounded border border-[#241F18]/15 font-mono text-xs">
-            <span className="text-xl block mb-2">❄️</span>
-            <h3 className="font-serif font-bold text-sm text-[#16302A] mb-2">Solar Cooling Storage</h3>
-            <p className="text-[#241F18]/80 leading-relaxed">Decentralized, off-grid solar-powered cold boxes to secure crop dormancy within 30 minutes of farm harvest.</p>
+          <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+            <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>❄️</span>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.5rem" }}>Solar Cooling Storage</h3>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>Decentralized, off-grid solar-powered cold boxes to secure crop dormancy within 30 minutes of farm harvest.</p>
           </div>
         </div>
 
-        {/* Interactive Application Form */}
-        <div className="bg-[#16302A] text-[#F3EEE1] p-8 rounded shadow-lg font-mono text-xs">
-          <h2 className="font-serif text-2xl font-bold text-[#C99A3D] mb-2">Apply for Out-Grower Contract</h2>
-          <p className="text-xs text-[#F3EEE1]/70 mb-6 leading-relaxed">Are you a Kenyan landholder seeking stable, Fairtrade-aligned international export contracts? Submit your details to request an inspection.</p>
+        {/* Form Container */}
+        <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "2rem", borderRadius: "0.5rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", fontFamily: "monospace", fontSize: "0.75rem" }}>
+          <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#C99A3D", marginBottom: "0.5rem" }}>Apply for Out-Grower Contract</h2>
+          <p style={{ fontSize: "0.75rem", color: "rgba(243, 238, 225, 0.7)", marginBottom: "1.5rem", lineHeight: "1.625" }}>Are you a Kenyan landholder seeking stable, Fairtrade-aligned international export contracts? Submit your details to request an inspection.</p>
 
           {inquired ? (
-            <div className="text-center py-6 space-y-3">
-              <span className="text-3xl block">🌽</span>
-              <h3 className="font-serif font-bold text-base text-[#C99A3D]">Inspection Request Safely Queued</h3>
-              <p className="text-[#F3EEE1]/80 max-w-md mx-auto">Thank you for your trust. Our Rift Valley or Mt. Kenya field agronomist office will coordinate a direct soil-grade inspection call within 5-7 business days.</p>
+            <div style={{ textAlign: "center", padding: "1.5rem 0", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <span style={{ fontSize: "1.875rem", display: "block" }}>🌽</span>
+              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#C99A3D" }}>Inspection Request Safely Queued</h3>
+              <p style={{ color: "rgba(243, 238, 225, 0.8)", maxWidth: "28rem", marginLeft: "auto", marginRight: "auto" }}>Thank you for your trust. Our Rift Valley or Mt. Kenya field agronomist office will coordinate a direct soil-grade inspection call within 5-7 business days.</p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-4 max-w-xl">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: "36rem" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Land Owner Name</label>
-                  <input required type="text" className="w-full bg-[#1F3D33] text-[#F3EEE1] border border-[#F3EEE1]/10 p-2.5 rounded text-xs focus:outline-none" />
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Land Owner Name</label>
+                  <input required type="text" style={{ width: "100%", backgroundColor: "#1F3D33", color: "#F3EEE1", border: "1px solid rgba(243, 238, 225, 0.1)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} />
                 </div>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Mobile (M-Pesa registered)</label>
-                  <input required type="text" className="w-full bg-[#1F3D33] text-[#F3EEE1] border border-[#F3EEE1]/10 p-2.5 rounded text-xs focus:outline-none" />
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Mobile (M-Pesa registered)</label>
+                  <input required type="text" style={{ width: "100%", backgroundColor: "#1F3D33", color: "#F3EEE1", border: "1px solid rgba(243, 238, 225, 0.1)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} />
                 </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Acreage & Region</label>
-                  <input required placeholder="e.g. 5 Acres, Meru/Nanyuki" type="text" className="w-full bg-[#1F3D33] text-[#F3EEE1] border border-[#F3EEE1]/10 p-2.5 rounded text-xs focus:outline-none" />
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Acreage & Region</label>
+                  <input required placeholder="e.g. 5 Acres, Meru/Nanyuki" type="text" style={{ width: "100%", backgroundColor: "#1F3D33", color: "#F3EEE1", border: "1px solid rgba(243, 238, 225, 0.1)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} />
                 </div>
                 <div>
-                  <label className="block text-[10px] text-[#E1672B] font-bold uppercase mb-1">Main Crop Target</label>
-                  <select className="w-full bg-[#1F3D33] text-[#F3EEE1] border border-[#F3EEE1]/10 p-2.5 rounded text-xs focus:outline-none">
+                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Main Crop Target</label>
+                  <select style={{ width: "100%", backgroundColor: "#1F3D33", color: "#F3EEE1", border: "1px solid rgba(243, 238, 225, 0.1)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }}>
                     <option>Hass Avocados</option>
                     <option>Fine Green Beans</option>
                     <option>Sugar Snaps / Snow Peas</option>
@@ -99,7 +109,7 @@ export default function OutGrowerPage() {
                   </select>
                 </div>
               </div>
-              <button type="submit" className="bg-[#E1672B] hover:bg-[#C4551F] text-white px-6 py-3 rounded font-bold uppercase tracking-wider text-xs transition-colors">
+              <button type="submit" style={{ alignSelf: "flex-start", backgroundColor: "#E1672B", color: "white", padding: "0.75rem 1.5rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: "pointer", marginTop: "0.5rem" }}>
                 Submit Agricultural Intake Form
               </button>
             </form>

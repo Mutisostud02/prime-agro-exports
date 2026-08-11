@@ -293,7 +293,7 @@ export const FARMS_LIST = [
     altitude: "1,500 Metres ASL",
     area: "155 Acres (40 acres undercover Roses/Chrysanthemums, 15 acres Summer Flowers, State-of-the-art Avocado & IQF Plant)",
     highlights: ["Powered by solar array and regional river water", "Houses automated avocado processing & IQF freezing unit", "Wetlands buffer zone and organic compost plant", "Employs ~500 staff (45% women)"],
-    image: "https://images.unsplash.com/photo-1592417817098-8f3d6eb19655?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1667137751727-55ed2c3eec0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGlnaGxhbmQlMjBmYXJtfGVufDB8fDB8fHww"
   },
   {
     id: "rumuruti",
@@ -302,7 +302,7 @@ export const FARMS_LIST = [
     altitude: "1,800 Metres ASL",
     area: "450 Acres (50 acres undercover Roses, 300 acres Hass Avocados)",
     highlights: ["Drip irrigation fed by Ngare Narok River & rainwater catchment dams", "Solar powered pumping station", "Employs ~550 staff (53% women)"],
-    image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFybXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     id: "ol-kalou",
@@ -311,6 +311,6 @@ export const FARMS_LIST = [
     altitude: "2,360 Metres ASL (Ultra-High Altitude)",
     area: "120 Acres (50 acres undercover T-Hybrid Roses & Gypsophila)",
     highlights: ["Cold mountain microclimate yields premium 6cm+ rose head sizes", "Rooftop solar generation & Malewa River water harvesting", "Employs ~400 staff (51.5% women)"],
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+    image: "https://images.unsplash.com/photo-1619282812296-95ddc25e8a70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlnaGxhbmQlMjBmYXJtfGVufDB8fDB8fHww"
   }
 ];

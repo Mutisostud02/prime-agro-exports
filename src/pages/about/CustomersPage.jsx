@@ -8,18 +8,26 @@ export default function CustomersPage() {
   ];
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Global Footprint & Standards</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Our Customers</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">TRUSTED COLD-CHAIN SUPPLIERS TO MORE THAN 40 COUNTRIES</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Global Footprint & Standards
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Our Customers
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            TRUSTED COLD-CHAIN SUPPLIERS TO MORE THAN 40 COUNTRIES
+          </p>
         </div>
 
-        {/* Footprint text */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="md:col-span-2 space-y-4 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">A Global Network Built on Traceability</h2>
+        {/* Footprint Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
+          <div style={{ gridColumn: "span 2", display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>A Global Network Built on Traceability</h2>
             <p>
               Prime Agro Exports has built a reputation as a supplier-of-choice for some of the world&apos;s most demanding buyers. We do not simply ship produce; we align our harvesting, packhouse, and logistics standards to match the specific, granular protocols of our destinations.
             </p>
@@ -27,42 +35,65 @@ export default function CustomersPage() {
               Whether it is the UK's high-street supermarkets requiring detailed ethical audits (SMETA) or global baby food processors demanding pesticide-free IQF dicing, we adapt to deliver complete compliance.
             </p>
           </div>
-          <div className="bg-[#EAE2CE] p-6 rounded border border-[#241F18]/10 h-fit text-center font-mono">
-            <div className="text-[#E1672B] text-4xl font-bold">40+</div>
-            <div className="text-xs uppercase tracking-wider font-bold text-[#16302A] mt-2">Export Destinations</div>
-            <p className="text-[10px] text-[#241F18]/70 mt-2">Connecting Nairobi Cargo direct with Europe, Middle East, UK, and East Asia.</p>
+          
+          <div style={{ backgroundColor: "#EAE2CE", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", height: "fit-content", textAlign: "center", fontFamily: "monospace" }}>
+            <div style={{ color: "#E1672B", fontSize: "2.25rem", fontWeight: "bold" }}>40+</div>
+            <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem" }}>
+              Export Destinations
+            </div>
+            <p style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.7)", marginTop: "0.5rem" }}>
+              Connecting Nairobi Cargo direct with Europe, Middle East, UK, and East Asia.
+            </p>
           </div>
         </div>
 
         {/* Customer Segments Table */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-6">Markets We Serve & Specifications</h2>
-        <div className="space-y-4 mb-12">
+        <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A", marginBottom: "1.5rem" }}>
+          Markets We Serve & Specifications
+        </h2>
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "3rem" }}>
           {segments.map((seg) => (
-            <div key={seg.name} className="bg-white p-5 rounded border border-[#241F18]/10 font-mono text-xs shadow-sm">
-              <div className="flex justify-between items-center border-b border-[#241F18]/10 pb-2 mb-3">
-                <span className="font-serif font-bold text-sm text-[#16302A]">{seg.name}</span>
-                <span className="bg-[#16302A] text-[#F3EEE1] px-2 py-0.5 rounded text-[10px]">Volume: {seg.marketShare}</span>
+            <div key={seg.name} style={{ backgroundColor: "white", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", fontFamily: "monospace", fontSize: "0.75rem", boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid rgba(36, 31, 24, 0.1)", paddingBottom: "0.5rem", marginBottom: "0.75rem" }}>
+                <span style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A" }}>{seg.name}</span>
+                <span style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", fontSize: "10px" }}>
+                  Volume: {seg.marketShare}
+                </span>
               </div>
-              <p className="text-[#241F18]/80 leading-relaxed">
-                <span className="text-[#E1672B] font-bold">Strict Compliance Protocols:</span> {seg.requirements}
+              <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
+                <span style={{ color: "#E1672B", fontWeight: "bold" }}>Strict Compliance Protocols:</span> {seg.requirements}
               </p>
             </div>
           ))}
         </div>
 
-        {/* World Map Teaser */}
-        <div className="bg-[#16302A] text-[#F3EEE1] p-8 rounded text-center">
-          <h3 className="font-serif font-bold text-xl text-[#C99A3D] mb-2">Establish a Direct Import Contract</h3>
-          <p className="text-xs font-mono text-[#F3EEE1]/70 mb-4 max-w-xl mx-auto">
+        {/* Bottom CTA Section */}
+        <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "2rem", borderRadius: "0.25rem", textAlign: "center" }}>
+          <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.25rem", color: "#C99A3D", marginBottom: "0.5rem" }}>
+            Establish a Direct Import Contract
+          </h3>
+          <p style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "rgba(243, 238, 225, 0.7)", marginBottom: "1rem", maxWidth: "36rem", marginLeft: "auto", marginRight: "auto" }}>
             We establish custom farming schedules, proprietary carton branding, and secured cold hold allocations for long-term partners. Contact our international export desk for seasonal availability.
           </p>
           <button 
             onClick={() => window.location.href="/contact-us"}
-            className="bg-[#E1672B] text-white px-6 py-2.5 rounded font-mono text-xs font-bold hover:bg-[#C4551F] transition-colors"
+            style={{ 
+              backgroundColor: "#E1672B", 
+              color: "white", 
+              padding: "0.625rem 1.5rem", 
+              borderRadius: "0.25rem", 
+              fontFamily: "monospace", 
+              fontSize: "0.75rem", 
+              fontWeight: "bold", 
+              border: "none", 
+              cursor: "pointer",
+              transition: "background-color 0.2s" 
+            }}
           >
             Inquire For Secure Contract Allocation
           </button>
         </div>
+
       </div>
     </div>
   );

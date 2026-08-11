@@ -16,66 +16,74 @@ export default function FreightLogisticsPage() {
   };
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">{COMPANY.logisticsDivision}</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Freight & Logistics</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">NURTURED IN KENYA, COOLED IN NAIROBI, DELIVERED FRESH WORLDWIDE</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", trackingWidest: "0.1em", fontWeight: "bold" }}>
+            {COMPANY.logisticsDivision}
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Freight & Logistics
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            NURTURED IN KENYA, COOLED IN NAIROBI, DELIVERED FRESH WORLDWIDE
+          </p>
         </div>
 
         {/* Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="space-y-4 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">In-House Cold Chain Mastery</h2>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>In-House Cold Chain Mastery</h2>
             <p>
               Unlike many exporters who transfer sensitive produce to third-party handlers, Prime Agro Exports operates <strong>{COMPANY.logisticsDivision}</strong>, our fully integrated logistics division based inside JKIA Cargo Village, {COMPANY.address.line1}, Nairobi.
             </p>
             <p>
               Our flagship facility features a state-of-the-art 75-tonne capacity cold room with advanced vacuum and forced-air blast chillers. This allows us to drop harvest temperatures to optimal dormancy levels within hours, preserving peak texture and vase life before air palettes are built.
             </p>
-            <ul className="list-disc pl-5 font-mono text-xs text-[#241F18]/80 space-y-1.5">
+            <ul style={{ listStyleType: "disc", paddingLeft: "1.25rem", fontFamily: "monospace", fontSize: "0.75rem", color: "rgba(36, 31, 24, 0.8)", display: "flex", flexDirection: "column", gap: "0.375rem" }}>
               <li><strong>RA3 Certified Agent:</strong> Pre-cleared security status for direct flights into European Union airports.</li>
               <li><strong>IATA Accredited cargo division:</strong> Preferred booking rates with British Airways, Qatar Cargo, and Emirates SkyCargo.</li>
               <li><strong>Customs Clearing Agent:</strong> Direct electronic processing of KEPHIS phytosanitary certificates, eliminating airport tarmac delays.</li>
             </ul>
           </div>
 
-          <div className="bg-[#16302A] text-[#F3EEE1] p-6 rounded shadow-md">
-            <h3 className="font-serif font-bold text-lg text-[#C99A3D] mb-4">Logistics Credentials</h3>
-            <div className="font-mono text-xs space-y-3">
-              <div className="border-b border-[#F3EEE1]/10 pb-2">
-                <span className="text-[#E1672B] block">AIR FREIGHT BASE:</span>
+          <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "1.5rem", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)" }}>
+            <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.125rem", color: "#C99A3D", marginBottom: "1rem" }}>Logistics Credentials</h3>
+            <div style={{ fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <div style={{ borderBottom: "1px solid rgba(243, 238, 225, 0.1)", paddingBottom: "0.5rem" }}>
+                <span style={{ color: "#E1672B", display: "block" }}>AIR FREIGHT BASE:</span>
                 JKIA Cargo Village, {COMPANY.address.line1}, Nairobi
               </div>
-              <div className="border-b border-[#F3EEE1]/10 pb-2">
-                <span className="text-[#E1672B] block">SEA REEFER CORRIDOR:</span>
+              <div style={{ borderBottom: "1px solid rgba(243, 238, 225, 0.1)", paddingBottom: "0.5rem" }}>
+                <span style={{ color: "#E1672B", display: "block" }}>SEA REEFER CORRIDOR:</span>
                 Mombasa Port Cold-Storage Depot to CA Sea Containers
               </div>
-              <div className="border-b border-[#F3EEE1]/10 pb-2">
-                <span className="text-[#E1672B] block">CAPACITY LIMITS:</span>
+              <div style={{ borderBottom: "1px solid rgba(243, 238, 225, 0.1)", paddingBottom: "0.5rem" }}>
+                <span style={{ color: "#E1672B", display: "block" }}>CAPACITY LIMITS:</span>
                 75-tonne static cold-room hold & blast chilling array
               </div>
               <div>
-                <span className="text-[#E1672B] block">CERTIFICATIONS:</span>
+                <span style={{ color: "#E1672B", display: "block" }}>CERTIFICATIONS:</span>
                 RA3 (Regulated Agent EU Third Country), KRA Customs, KIFWA Member
               </div>
             </div>
           </div>
         </div>
 
-        {/* Cool interactive feature: Cargo cold hold / delivery duration calculator */}
-        <div className="bg-[#EAE2CE] p-8 rounded border border-[#241F18]/15">
-          <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-2">Simulate a Cold Chain Booking</h2>
-          <p className="text-xs font-mono text-[#241F18]/70 mb-6">Estimate shipping parameters and optimal cold room storage temperatures based on crop category.</p>
+        {/* Form Section */}
+        <div style={{ backgroundColor: "#EAE2CE", padding: "2rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)" }}>
+          <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A", marginBottom: "0.5rem" }}>Simulate a Cold Chain Booking</h2>
+          <p style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "rgba(36, 31, 24, 0.7)", marginBottom: "1.5rem" }}>Estimate shipping parameters and optimal cold room storage temperatures based on crop category.</p>
 
-          <form onSubmit={handleCalc} className="grid grid-cols-1 md:grid-cols-4 gap-4 items-end">
+          <form onSubmit={handleCalc} style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1rem", alignItems: "end" }}>
             <div>
-              <label className="block text-[10px] font-mono font-bold uppercase text-[#16302A] mb-1">Crop Type</label>
+              <label style={{ display: "block", fontSize: "10px", fontFamily: "monospace", fontWeight: "bold", textTransform: "uppercase", color: "#16302A", marginBottom: "0.25rem" }}>Crop Type</label>
               <select 
                 value={formData.cropType} 
                 onChange={(e) => setFormData({...formData, cropType: e.target.value})}
-                className="w-full bg-[#F3EEE1] border border-[#241F18]/20 p-2 rounded text-xs font-mono"
+                style={{ width: "100%", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem", fontFamily: "monospace" }}
               >
                 <option value="Flowers">🌹 Flowers / Roses</option>
                 <option value="Fruits">🥑 Avocados / Fruits</option>
@@ -84,50 +92,50 @@ export default function FreightLogisticsPage() {
               </select>
             </div>
             <div>
-              <label className="block text-[10px] font-mono font-bold uppercase text-[#16302A] mb-1">Destination</label>
+              <label style={{ display: "block", fontSize: "10px", fontFamily: "monospace", fontWeight: "bold", textTransform: "uppercase", color: "#16302A", marginBottom: "0.25rem" }}>Destination</label>
               <input 
                 type="text" 
                 required
                 placeholder="e.g. London Heathrow" 
                 value={formData.destination} 
                 onChange={(e) => setFormData({...formData, destination: e.target.value})}
-                className="w-full bg-[#F3EEE1] border border-[#241F18]/20 p-2 rounded text-xs font-mono"
+                style={{ width: "100%", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem", fontFamily: "monospace" }}
               />
             </div>
             <div>
-              <label className="block text-[10px] font-mono font-bold uppercase text-[#16302A] mb-1">Weight (KG)</label>
+              <label style={{ display: "block", fontSize: "10px", fontFamily: "monospace", fontWeight: "bold", textTransform: "uppercase", color: "#16302A", marginBottom: "0.25rem" }}>Weight (KG)</label>
               <input 
                 type="number" 
                 required
                 placeholder="e.g. 5000" 
                 value={formData.weight} 
                 onChange={(e) => setFormData({...formData, weight: e.target.value})}
-                className="w-full bg-[#F3EEE1] border border-[#241F18]/20 p-2 rounded text-xs font-mono"
+                style={{ width: "100%", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem", fontFamily: "monospace" }}
               />
             </div>
-            <button className="bg-[#E1672B] text-white p-2.5 rounded font-mono font-bold hover:bg-[#C4551F] text-xs uppercase tracking-wider">
+            <button style={{ backgroundColor: "#E1672B", color: "white", padding: "0.625rem", borderRadius: "0.25rem", fontFamily: "monospace", fontWeight: "bold", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", border: "none", cursor: "pointer" }}>
               Calculate Plan
             </button>
           </form>
 
           {estimate && (
-            <div className="mt-8 bg-[#F3EEE1] border-l-4 border-[#16302A] p-4 rounded-r font-mono text-xs text-[#241F18] space-y-2">
-              <h4 className="font-serif font-bold text-sm text-[#16302A]">Optimal Cargo Cooling Manifest</h4>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-2">
+            <div style={{ marginTop: "2rem", backgroundColor: "#F3EEE1", borderLeft: "4px solid #16302A", padding: "1rem", borderRadius: "0 0.25rem 0.25rem 0", fontFamily: "monospace", fontSize: "0.75rem", color: "#241F18", display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+              <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A" }}>Optimal Cargo Cooling Manifest</h4>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "1rem", marginTop: "0.5rem" }}>
                 <div>
-                  <span className="text-[#E1672B] text-[10px] font-bold block">COLD STORAGE PROFILE:</span>
-                  <span className="text-base font-bold">{estimate.tempHold}</span>
+                  <span style={{ color: "#E1672B", fontSize: "10px", fontWeight: "bold", display: "block" }}>COLD STORAGE PROFILE:</span>
+                  <span style={{ fontSize: "1rem", fontWeight: "bold" }}>{estimate.tempHold}</span>
                 </div>
                 <div>
-                  <span className="text-[#E1672B] text-[10px] font-bold block">ESTIMATED TRANSIT TIME:</span>
-                  <span className="text-base font-bold">{estimate.time}</span>
+                  <span style={{ color: "#E1672B", fontSize: "10px", fontWeight: "bold", display: "block" }}>ESTIMATED TRANSIT TIME:</span>
+                  <span style={{ fontSize: "1rem", fontWeight: "bold" }}>{estimate.time}</span>
                 </div>
                 <div>
-                  <span className="text-[#E1672B] text-[10px] font-bold block">ROUTING SYSTEM:</span>
+                  <span style={{ color: "#E1672B", fontSize: "10px", fontWeight: "bold", display: "block" }}>ROUTING SYSTEM:</span>
                   <span>{estimate.route}</span>
                 </div>
               </div>
-              <p className="text-[10px] text-[#241F18]/70 mt-2">
+              <p style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.7)", marginTop: "0.5rem" }}>
                 *Note: Manifest plans are synced with HCD and KEPHIS health certification databases. Cargo remains in airtight cool rooms until air pallet building inside our RA3 certified facility.
               </p>
             </div>

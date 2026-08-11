@@ -44,7 +44,7 @@ export default function CompliancePage() {
         </div>
 
         {/* Interactive Certifications Accordion */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-6">Global Certifications & Frameworks</h2>
+        <h2 className="font-serif text-2xl font-bold mb-6" style={{ color: 'black' }}>Global Certifications & Frameworks</h2>
         <p className="text-xs font-mono text-[#241F18]/70 mb-4">Click on any standard to explore its audit parameters, scope, and certifying organization.</p>
         
         <div className="space-y-3">
@@ -58,7 +58,7 @@ export default function CompliancePage() {
                 className="w-full flex justify-between items-center p-4 bg-[#EAE2CE]/40 hover:bg-[#EAE2CE] transition-colors text-left"
               >
                 <div>
-                  <h3 className="font-serif font-bold text-sm text-[#16302A]">{cert.name}</h3>
+                  <h3 className="font-serif font-bold text-sm" style={{ color: '#E1672B' }}>{cert.name}</h3>
                   <span className="text-[10px] font-mono text-[#241F18]/60 mt-0.5 block">{cert.short}</span>
                 </div>
                 <span className="text-[#E1672B] font-mono text-xs">{activeCert === cert.id ? "Close ▲" : "Inspect ▼"}</span>

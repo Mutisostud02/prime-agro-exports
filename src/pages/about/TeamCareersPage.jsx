@@ -16,18 +16,26 @@ export default function TeamCareersPage() {
   };
 
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Diversity & Social Responsibility</span>
-          <h1 className="font-serif text-4xl sm:text-5xl font-bold text-[#16302A] mt-2 leading-none">Our Team & Careers</h1>
-          <p className="text-[#241F18]/70 text-sm font-mono mt-4">2,500+ EMPLOYEES DRIVING AGRICULTURAL INNOVATION IN EAST AFRICA</p>
+    <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
+        
+        {/* Header Section */}
+        <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
+          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+            Diversity & Social Responsibility
+          </span>
+          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+            Our Team & Careers
+          </h1>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+            2,500+ EMPLOYEES DRIVING AGRICULTURAL INNOVATION IN EAST AFRICA
+          </p>
         </div>
 
-        {/* Team intro */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-center">
-          <div className="space-y-4 text-sm leading-relaxed">
-            <h2 className="font-serif text-2xl font-bold text-[#16302A]">Empowerment in the Field</h2>
+        {/* Team Intro Grid */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", marginBottom: "3rem", alignItems: "center" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
+            <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>Empowerment in the Field</h2>
             <p>
               Horticulture is a people-first business. From the careful hand-harvesting of snow peas to the precise grading of cut roses, the quality of our exports is defined by the skill, wellness, and dedication of our workforce.
             </p>
@@ -39,102 +47,105 @@ export default function TeamCareersPage() {
             <img 
               src="https://images.unsplash.com/photo-1540420773420-3366772f4999?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
               alt="Team at Naivasha Packhouse" 
-              className="w-full h-64 object-cover rounded shadow-md"
+              style={{ width: "100%", height: "16rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)" }}
             />
           </div>
         </div>
 
-        {/* Stats strip */}
-        <div className="bg-[#EAE2CE] grid grid-cols-2 md:grid-cols-4 gap-6 p-6 rounded border border-[#241F18]/10 text-center font-mono mb-12">
-          <div>
-            <div className="text-2xl font-bold text-[#16302A]">2,500+</div>
-            <div className="text-[9px] uppercase text-[#241F18]/60 mt-1">Direct Staff</div>
+        {/* Stats Strip */}
+        <div style={{ backgroundColor: "#EAE2CE", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.5rem", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", textAlign: "center", fontFamily: "monospace", marginBottom: "3rem" }}>
+          {/* Workaround for responsive: grid-cols-2 md:grid-cols-4 is handled by CSS, but inline we use repeat(auto-fit) or base value */}
+          <div style={{ minWidth: "120px" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>2,500+</div>
+            <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>Direct Staff</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold text-[#E1672B]">52%</div>
-            <div className="text-[9px] uppercase text-[#241F18]/60 mt-1">Female Workforce</div>
+          <div style={{ minWidth: "120px" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#E1672B" }}>52%</div>
+            <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>Female Workforce</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold text-[#16302A]">4</div>
-            <div className="text-[9px] uppercase text-[#241F18]/60 mt-1">On-Site Clinics</div>
+          <div style={{ minWidth: "120px" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>4</div>
+            <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>On-Site Clinics</div>
           </div>
-          <div>
-            <div className="text-2xl font-bold text-[#E1672B]">8,000+</div>
-            <div className="text-[9px] uppercase text-[#241F18]/60 mt-1">Contract Farmers</div>
+          <div style={{ minWidth: "120px" }}>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#E1672B" }}>8,000+</div>
+            <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>Contract Farmers</div>
           </div>
         </div>
 
-        {/* Careers Accordion */}
-        <h2 className="font-serif text-2xl font-bold text-[#16302A] mb-4">Join Our Growing Enterprise</h2>
-        <p className="text-xs font-mono text-[#241F18]/70 mb-6">Explore professional, technical, and logistical roles within our farms, packhouses, and head office.</p>
+        {/* Careers Section */}
+        <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A", marginBottom: "1rem" }}>Join Our Growing Enterprise</h2>
+        <p style={{ fontSize: "0.75rem", fontFamily: "monospace", color: "rgba(36, 31, 24, 0.7)", marginBottom: "1.5rem" }}>
+          Explore professional, technical, and logistical roles within our farms, packhouses, and head office.
+        </p>
 
-        <div className="space-y-4 mb-12">
+        <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "3rem" }}>
           {jobs.map((job) => (
-            <div key={job.id} className="bg-white rounded border border-[#241F18]/10 p-5 font-mono text-xs shadow-sm">
-              <div className="flex justify-between items-start gap-4">
+            <div key={job.id} style={{ backgroundColor: "white", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", padding: "1.25rem", fontFamily: "monospace", fontSize: "0.75rem", boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: "1rem" }}>
                 <div>
-                  <h3 className="font-serif font-bold text-sm text-[#16302A]">{job.title}</h3>
-                  <span className="text-[#E1672B] text-[10px] block mt-0.5">{job.location}</span>
+                  <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A" }}>{job.title}</h3>
+                  <span style={{ color: "#E1672B", fontSize: "10px", display: "block", marginTop: "0.125rem" }}>{job.location}</span>
                 </div>
                 <button 
                   onClick={() => { setActiveJob(job); setApplied(false); }}
-                  className="bg-[#16302A] text-[#F3EEE1] hover:bg-[#E1672B] px-3 py-1.5 rounded transition-colors text-[10px] uppercase font-bold"
+                  style={{ backgroundColor: "#16302A", color: "#F3EEE1", padding: "0.375rem 0.75rem", borderRadius: "0.25rem", fontSize: "10px", textTransform: "uppercase", fontWeight: "bold", border: "none", cursor: "pointer" }}
                 >
                   Apply Now
                 </button>
               </div>
-              <p className="text-[#241F18]/80 mt-3 leading-relaxed">{job.desc}</p>
+              <p style={{ color: "rgba(36, 31, 24, 0.8)", marginTop: "0.75rem", lineHeight: "1.625" }}>{job.desc}</p>
             </div>
           ))}
         </div>
 
-        {/* Application Modal simulated */}
+        {/* Application Modal */}
         {activeJob && (
-          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 z-50">
-            <div className="bg-[#F3EEE1] border border-[#241F18]/20 rounded max-w-md w-full p-6 relative font-mono text-xs">
+          <div style={{ position: "fixed", inset: 0, backgroundColor: "rgba(0, 0, 0, 0.6)", backdropFilter: "blur(4px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem", zIndex: 50 }}>
+            <div style={{ backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.2)", borderRadius: "0.25rem", maxWidth: "28rem", width: "100%", padding: "1.5rem", position: "relative", fontFamily: "monospace", fontSize: "0.75rem" }}>
               <button 
                 onClick={() => setActiveJob(null)} 
-                className="absolute right-4 top-4 text-base text-[#241F18]/60 hover:text-[#E1672B]"
+                style={{ position: "absolute", right: "1rem", top: "1rem", fontSize: "1rem", color: "rgba(36, 31, 24, 0.6)", border: "none", background: "none", cursor: "pointer" }}
               >
                 ✕
               </button>
               
-              <h3 className="font-serif font-bold text-lg text-[#16302A] mb-1">Export Career Portal</h3>
-              <p className="text-[10px] text-[#E1672B] uppercase mb-4">Applying for: {activeJob.title}</p>
+              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.125rem", color: "#16302A", marginBottom: "0.25rem" }}>Export Career Portal</h3>
+              <p style={{ fontSize: "10px", color: "#E1672B", textTransform: "uppercase", marginBottom: "1rem" }}>Applying for: {activeJob.title}</p>
               
               {applied ? (
-                <div className="text-center py-8 space-y-4">
-                  <div className="text-3xl">🌿</div>
-                  <h4 className="font-serif font-bold text-base text-[#16302A]">Application Securely Transmitted</h4>
-                  <p className="text-[#241F18]/70">
+                <div style={{ textAlign: "center", padding: "2rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
+                  <div style={{ fontSize: "1.875rem" }}>🌿</div>
+                  <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Application Securely Transmitted</h4>
+                  <p style={{ color: "rgba(36, 31, 24, 0.7)" }}>
                     Thank you! Your agronomy / logistical credentials have been safely queued for our Nairobi Human Resources desk.
                   </p>
                   <button 
                     onClick={() => setActiveJob(null)}
-                    className="bg-[#16302A] text-white px-4 py-2 rounded font-bold hover:bg-[#E1672B]"
+                    style={{ backgroundColor: "#16302A", color: "white", padding: "0.5rem 1rem", borderRadius: "0.25rem", fontWeight: "bold", border: "none", cursor: "pointer" }}
                   >
                     Back to Listings
                   </button>
                 </div>
               ) : (
-                <form onSubmit={handleApply} className="space-y-4">
+                <form onSubmit={handleApply} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-[#16302A] mb-1">Full Name</label>
-                    <input required type="text" className="w-full bg-white border border-[#241F18]/20 p-2 rounded text-xs" />
+                    <label style={{ display: "block", fontSize: "10px", textTransform: "uppercase", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem" }}>Full Name</label>
+                    <input required type="text" style={{ width: "100%", backgroundColor: "white", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem" }} />
                   </div>
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-[#16302A] mb-1">Email Address</label>
-                    <input required type="email" className="w-full bg-white border border-[#241F18]/20 p-2 rounded text-xs" />
+                    <label style={{ display: "block", fontSize: "10px", textTransform: "uppercase", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem" }}>Email Address</label>
+                    <input required type="email" style={{ width: "100%", backgroundColor: "white", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem" }} />
                   </div>
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-[#16302A] mb-1">Phone Number</label>
-                    <input required type="text" className="w-full bg-white border border-[#241F18]/20 p-2 rounded text-xs" />
+                    <label style={{ display: "block", fontSize: "10px", textTransform: "uppercase", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem" }}>Phone Number</label>
+                    <input required type="text" style={{ width: "100%", backgroundColor: "white", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem" }} />
                   </div>
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-[#16302A] mb-1">Resume / Cover Cover Letter Text</label>
-                    <textarea required placeholder="Paste qualifications here..." className="w-full bg-white border border-[#241F18]/20 p-2 rounded text-xs h-24" />
+                    <label style={{ display: "block", fontSize: "10px", textTransform: "uppercase", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem" }}>Resume / Cover Letter Text</label>
+                    <textarea required placeholder="Paste qualifications here..." style={{ width: "100%", backgroundColor: "white", border: "1px solid rgba(36, 31, 24, 0.2)", padding: "0.5rem", borderRadius: "0.25rem", fontSize: "0.75rem", height: "6rem", resize: "vertical" }} />
                   </div>
-                  <button type="submit" className="w-full bg-[#E1672B] hover:bg-[#C4551F] text-white py-2.5 rounded font-bold text-xs uppercase tracking-wider">
+                  <button type="submit" style={{ width: "100%", backgroundColor: "#E1672B", color: "white", padding: "0.625rem", borderRadius: "0.25rem", fontWeight: "bold", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", border: "none", cursor: "pointer" }}>
                     Submit Secure Application
                   </button>
                 </form>
