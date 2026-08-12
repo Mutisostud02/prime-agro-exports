@@ -5,7 +5,7 @@ export default function TeamCareersPage() {
   const [applied, setApplied] = useState(false);
 
   const jobs = [
-    { id: "agronomist", title: "Senior Agronomist (Avocado Orchards)", location: "Naivasha & Rumuruti Farm Base", desc: "Oversee tree pruning, soil micro-nutrition balance, drip irrigation fertigation charts, and global compliance checklists." },
+    { id: "agronomist", title: "Senior Agronomist (Avocado Orchards)", location: "Muranga Farm Base", desc: "Oversee tree pruning, soil micro-nutrition balance, drip irrigation fertigation charts, and global compliance checklists." },
     { id: "tech", title: "Cold Chain Logistics Technician", location: "JKIA Cargo Village Office, Nairobi", desc: "Manage vacuum pre-coolers, compile automatic temperature charts for airline handovers, and oversee RA3 security protocols." },
     { id: "export", title: "International Export Account Executive", location: "JKIA Headquarters, Nairobi", desc: "Negotiate wholesale contracts with EU supermarket chains, schedule CA sea reefer sea container lanes, and manage customs clearance." }
   ];
@@ -28,7 +28,7 @@ export default function TeamCareersPage() {
             Our Team & Careers
           </h1>
           <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
-            2,500+ EMPLOYEES DRIVING AGRICULTURAL INNOVATION IN EAST AFRICA
+            150+ EMPLOYEES DRIVING AGRICULTURAL INNOVATION IN EAST AFRICA
           </p>
         </div>
 
@@ -56,7 +56,7 @@ export default function TeamCareersPage() {
         <div style={{ backgroundColor: "#EAE2CE", display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "1.5rem", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", textAlign: "center", fontFamily: "monospace", marginBottom: "3rem" }}>
           {/* Workaround for responsive: grid-cols-2 md:grid-cols-4 is handled by CSS, but inline we use repeat(auto-fit) or base value */}
           <div style={{ minWidth: "120px" }}>
-            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>2,500+</div>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>150+</div>
             <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>Direct Staff</div>
           </div>
           <div style={{ minWidth: "120px" }}>
@@ -68,7 +68,7 @@ export default function TeamCareersPage() {
             <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>On-Site Clinics</div>
           </div>
           <div style={{ minWidth: "120px" }}>
-            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#E1672B" }}>8,000+</div>
+            <div style={{ fontSize: "1.5rem", fontWeight: "bold", color: "#E1672B" }}>2,000+</div>
             <div style={{ fontSize: "9px", textTransform: "uppercase", color: "rgba(36, 31, 24, 0.6)", marginTop: "0.25rem" }}>Contract Farmers</div>
           </div>
         </div>

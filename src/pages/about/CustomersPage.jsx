@@ -20,7 +20,7 @@ export default function CustomersPage() {
             Our Customers
           </h1>
           <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
-            TRUSTED COLD-CHAIN SUPPLIERS TO MORE THAN 40 COUNTRIES
+            TRUSTED COLD-CHAIN SUPPLIERS TO MORE THAN 15 COUNTRIES
           </p>
         </div>
 
@@ -32,17 +32,17 @@ export default function CustomersPage() {
               Prime Agro Exports has built a reputation as a supplier-of-choice for some of the world&apos;s most demanding buyers. We do not simply ship produce; we align our harvesting, packhouse, and logistics standards to match the specific, granular protocols of our destinations.
             </p>
             <p>
-              Whether it is the UK's high-street supermarkets requiring detailed ethical audits (SMETA) or global baby food processors demanding pesticide-free IQF dicing, we adapt to deliver complete compliance.
+              Whether it is Europe's high-street supermarkets requiring detailed ethical audits (SMETA) or global baby food processors demanding pesticide-free IQF dicing, we adapt to deliver complete compliance.
             </p>
           </div>
           
           <div style={{ backgroundColor: "#EAE2CE", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", height: "fit-content", textAlign: "center", fontFamily: "monospace" }}>
-            <div style={{ color: "#E1672B", fontSize: "2.25rem", fontWeight: "bold" }}>40+</div>
+            <div style={{ color: "#E1672B", fontSize: "2.25rem", fontWeight: "bold" }}>15+</div>
             <div style={{ fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem" }}>
               Export Destinations
             </div>
             <p style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.7)", marginTop: "0.5rem" }}>
-              Connecting Nairobi Cargo direct with Europe, Middle East, UK, and East Asia.
+              Connecting Nairobi Cargo direct with East Africa, East Asia, Middle East, and Europe.
             </p>
           </div>
         </div>

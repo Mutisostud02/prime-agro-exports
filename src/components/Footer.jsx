@@ -2,75 +2,265 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { COMPANY } from "../data/companyData";
 
+const COMPANY_LINKS = [
+  { label: "Who We Are", to: "/about-us/who-we-are" },
+  { label: "Compliance & Accreditation", to: "/about-us/compliance-accreditation" },
+  { label: "Freight & Logistics", to: "/about-us/freight-logistics" },
+  { label: "Customers", to: "/about-us/customers" },
+  { label: "Our Team & Careers", to: "/about-us/our-team-careers" },
+  { label: "CSI / CSR", to: "/sustainability/corporate-social-initiative-responsibilities" },
+  { label: "Contact Us", to: "/contact-us" },
+];
+
+const PRODUCTS_LINKS = [
+  { label: "Our Farms & Packhouses", to: "/growing-base/our-farms-packhouses" },
+  { label: "Out Grower Farming", to: "/growing-base/out-grower-farming" },
+  { label: "Farming Practice", to: "/sustainability/farming-practice" },
+  { label: "Flowers", to: "/our-products/flowers" },
+  { label: "Fruits", to: "/our-products/fruits" },
+  { label: "Vegetables", to: "/our-products/vegetables" },
+  { label: "Frozen – IQF", to: "/our-products/frozen-iqf" },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-[#16302A] text-[#F3EEE1] border-t border-[#F3EEE1]/10 pt-16 pb-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12 border-b border-[#F3EEE1]/10 pb-12">
-        {/* Brand Section */}
+    <footer
+      style={{
+        backgroundColor: "#16302A",
+        color: "#F3EEE1",
+        borderTop: "1px solid rgba(243, 238, 225, 0.1)",
+        paddingTop: "4rem",
+        paddingBottom: "3rem",
+      }}
+    >
+      <div
+        style={{
+          maxWidth: "95rem",
+          marginLeft: "auto",
+          marginRight: "auto",
+          paddingLeft: "1rem",
+          paddingRight: "1rem",
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+          gap: "3rem",
+          borderBottom: "1px solid rgba(243, 238, 225, 0.1)",
+          paddingBottom: "3rem",
+        }}
+      >
+        {/* A Bit About Us */}
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <span className="w-8 h-8 rounded bg-[#F3EEE1] text-[#16302A] flex items-center justify-center font-serif text-lg font-bold">P</span>
-            <span className="font-serif font-bold text-lg tracking-tight">PRIME AGRO EXPORTS</span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "0.5rem",
+              marginBottom: "1rem",
+            }}
+          >
+            <img
+              src="/logo.png"
+              alt="Prime Agro Exports Logo"
+              style={{
+                width: "2rem",
+                height: "2rem",
+                objectFit: "contain",
+              }}
+            />
+            <span
+              style={{
+                fontFamily: "serif",
+                fontWeight: "bold",
+                fontSize: "1.125rem",
+                letterSpacing: "-0.025em",
+              }}
+            >
+              PRIME AGRO EXPORTS
+            </span>
           </div>
-          <p className="text-xs text-[#F3EEE1]/70 font-mono mb-4 leading-relaxed">
-            {COMPANY.tagline} Connecting Kenya&apos;s volcanic highlands with global markets daily.
+          <h4
+            style={{
+              fontWeight: "bold",
+              color: "#E1672B",
+              textTransform: "uppercase",
+              marginBottom: "0.75rem",
+              letterSpacing: "0.05em",
+              fontFamily: "monospace",
+              fontSize: "0.75rem",
+            }}
+          >
+            A Bit About Us
+          </h4>
+          <p
+            style={{
+              fontSize: "0.75rem",
+              color: "rgba(243, 238, 225, 0.7)",
+              fontFamily: "monospace",
+              marginBottom: "1rem",
+              lineHeight: "1.625",
+            }}
+          >
+            {COMPANY.tagline} Connecting Kenya&apos;s volcanic highlands with
+            global markets daily.
           </p>
-          <div className="text-[11px] font-mono text-[#C99A3D] space-y-1">
+          <Link
+            to="/about-us/who-we-are"
+            style={{
+              color: "#C99A3D",
+              textDecoration: "none",
+              fontFamily: "monospace",
+              fontSize: "0.75rem",
+              fontWeight: "bold",
+              textTransform: "uppercase",
+              letterSpacing: "0.05em",
+            }}
+          >
+            Learn More →
+          </Link>
+        </div>
+
+        {/* The Company */}
+        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+          <h4
+            style={{
+              fontWeight: "bold",
+              color: "#E1672B",
+              textTransform: "uppercase",
+              marginBottom: "1rem",
+              letterSpacing: "0.05em",
+            }}
+          >
+            The Company
+          </h4>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.5rem",
+            }}
+          >
+            {COMPANY_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link
+                  to={link.to}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Our Products */}
+        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+          <h4
+            style={{
+              fontWeight: "bold",
+              color: "#E1672B",
+              textTransform: "uppercase",
+              marginBottom: "1rem",
+              letterSpacing: "0.05em",
+            }}
+          >
+            Our Products
+          </h4>
+          <ul
+            style={{
+              listStyle: "none",
+              padding: 0,
+              margin: 0,
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.5rem",
+            }}
+          >
+            {PRODUCTS_LINKS.map((link) => (
+              <li key={link.label}>
+                <Link
+                  to={link.to}
+                  style={{ color: "inherit", textDecoration: "none" }}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Head Office */}
+        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+          <h4
+            style={{
+              fontWeight: "bold",
+              color: "#E1672B",
+              textTransform: "uppercase",
+              marginBottom: "1rem",
+              letterSpacing: "0.05em",
+            }}
+          >
+            Head Office
+          </h4>
+          <div
+            style={{
+              color: "rgba(243, 238, 225, 0.7)",
+              lineHeight: "1.8",
+              marginBottom: "1rem",
+            }}
+          >
+            <div>{COMPANY.address.line1}</div>
+            <div>{COMPANY.address.line2}</div>
+            <div>{COMPANY.address.poBox}</div>
+            <div>{COMPANY.address.city}</div>
+          </div>
+          <div
+            style={{
+              color: "#C99A3D",
+              display: "flex",
+              flexDirection: "column",
+              gap: "0.35rem",
+            }}
+          >
             <div>📞 {COMPANY.phoneDisplay}</div>
             <div>✉️ {COMPANY.email}</div>
           </div>
         </div>
-
-        {/* Quick Links */}
-        <div className="text-xs font-mono">
-          <h4 className="font-bold text-[#E1672B] uppercase mb-4 tracking-wider">About & Operations</h4>
-          <ul className="space-y-2">
-            <li><Link to="/about-us/who-we-are" className="hover:text-[#E1672B] transition-colors">Who We Are</Link></li>
-            <li><Link to="/about-us/compliance-accreditation" className="hover:text-[#E1672B] transition-colors">Compliance & Accreditation</Link></li>
-            <li><Link to="/about-us/freight-logistics" className="hover:text-[#E1672B] transition-colors">Freight & Logistics</Link></li>
-            <li><Link to="/about-us/customers" className="hover:text-[#E1672B] transition-colors">Our Global Customers</Link></li>
-            <li><Link to="/about-us/our-team-careers" className="hover:text-[#E1672B] transition-colors">Our Team & Careers</Link></li>
-          </ul>
-        </div>
-
-        {/* Growing Base & Sustainability */}
-        <div className="text-xs font-mono">
-          <h4 className="font-bold text-[#E1672B] uppercase mb-4 tracking-wider">Growing & Impact</h4>
-          <ul className="space-y-2">
-            <li><Link to="/growing-base/our-farms-packhouses" className="hover:text-[#E1672B] transition-colors">Our Farms & Packhouses</Link></li>
-            <li><Link to="/growing-base/out-grower-farming" className="hover:text-[#E1672B] transition-colors">Out-Grower Partnerships</Link></li>
-            <li><Link to="/sustainability/farming-practice" className="hover:text-[#E1672B] transition-colors">Sustainable Farming & IPM</Link></li>
-            <li><Link to="/sustainability/conservation" className="hover:text-[#E1672B] transition-colors">Conservation & Biodiversity</Link></li>
-            <li><Link to="/sustainability/corporate-social-initiative-responsibilities" className="hover:text-[#E1672B] transition-colors">Community CSI & CSR</Link></li>
-          </ul>
-        </div>
-
-        {/* Newsletter Signup */}
-        <div className="text-xs font-mono">
-          <h4 className="font-bold text-[#E1672B] uppercase mb-4 tracking-wider">Weekly Crop Report</h4>
-          <p className="text-[11px] text-[#F3EEE1]/70 mb-3 leading-relaxed">
-            Subscribe to receive our latest crop calendar updates, packaging specifications, and seasonal pricing.
-          </p>
-          <form onSubmit={(e) => { e.preventDefault(); alert("Thank you for subscribing to our crop updates!"); }} className="flex gap-2">
-            <input 
-              type="email" 
-              required 
-              placeholder="export@buyer.com" 
-              className="bg-[#1F3D33] text-[#F3EEE1] px-3 py-2 rounded text-xs border border-[#F3EEE1]/20 focus:outline-none focus:border-[#E1672B] w-full"
-            />
-            <button className="bg-[#E1672B] text-white px-3 py-2 rounded font-bold hover:bg-[#C4551F]">Go</button>
-          </form>
-        </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 flex flex-col md:flex-row justify-between items-center text-[10px] font-mono text-[#F3EEE1]/50 gap-4">
+      <div
+        style={{
+          maxWidth: "80rem",
+          marginLeft: "auto",
+          marginRight: "auto",
+          paddingLeft: "1rem",
+          paddingRight: "1rem",
+          marginTop: "3rem",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-between",
+          alignItems: "center",
+          fontSize: "10px",
+          fontFamily: "monospace",
+          color: "rgba(243, 238, 225, 0.5)",
+          gap: "1rem",
+        }}
+      >
         <div>
-          © 2026 {COMPANY.name}. All Rights Reserved.
+          © 2020 {COMPANY.name}. All Rights Reserved.
         </div>
-        <div className="flex gap-4">
-          <span>{COMPANY.address.line1}, {COMPANY.address.city}</span>
+        <div style={{ display: "flex", gap: "1rem" }}>
+          <span>
+            {COMPANY.address.line1}, {COMPANY.address.city}
+          </span>
           <span>•</span>
-          <Link to="/contact-us" className="hover:text-[#E1672B]">Inquire Export Pack</Link>
+          <Link
+            to="/contact-us"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            Inquire Export Pack
+          </Link>
         </div>
       </div>
     </footer>

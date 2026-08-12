@@ -120,6 +120,10 @@ export default function ContactPage() {
                 <div>🌳 <strong style={{ color: "#16302A" }}>Naivasha Farm Office:</strong> Lake Naivasha Highland Depot (140 km from Nairobi)</div>
                 <div>🏭 <strong style={{ color: "#16302A" }}>Thika Processing Plant:</strong> Thika Industrial Highway Complex</div>
                 <div>✈️ <strong style={{ color: "#16302A" }}>{COMPANY.logisticsDivision}:</strong> JKIA Cargo Build-up Hub, Warehouse 3</div>
+                <div>🌸 <strong style={{ color: "#16302A" }}>Naivasha Flower Fields:</strong> Lake Naivasha Highland Basin, 50-acre satellite flower site</div>
+                <div>🥑 <strong style={{ color: "#16302A" }}>Muranga Avocado Estate:</strong> Murang'a County, Central Kenya (85 km from Nairobi)</div>
+                <div>🧅 <strong style={{ color: "#16302A" }}>Narok Valley Farm:</strong> Narok County, Great Rift Valley — onions & tomatoes (230 km from Nairobi)</div>
+                <div>🥦 <strong style={{ color: "#16302A" }}>Western Vegetable Gardens:</strong> Western Region, Kenya (350 km from Nairobi)</div>
               </div>
             </div>
           </div>

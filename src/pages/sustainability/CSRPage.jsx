@@ -36,7 +36,7 @@ export default function CSRPage() {
               Under our <strong>Fairtrade</strong> program and <strong>ETI (Ethical Trading Initiative)</strong> certifications, Prime Agro Exports allocates fairtrade pricing premiums directly to community-elected assemblies.
             </p>
             <p>
-              These funds have financed the construction and operational budgets of four fully staffed, fully subsidized on-site medical clinics, providing clean healthcare access to over 2,500 staff members and their families.
+              These funds have financed the construction and operational budgets of several fully staffed, fully subsidized on-site medical clinics, providing clean healthcare access to over 3,100 staff members and their families.
             </p>
             <p>
               In addition, our Naivasha estate hosts a comprehensive primary school and nursery, supporting the education of hundreds of children of our field workforce.

@@ -6,7 +6,7 @@ export default function CompliancePage() {
 
   const policies = [
     { title: "Ethical Trade Policy", code: "PAE-ET-2026", desc: "Guarantees fair wages, maximum working hours, safe working conditions, and the absolute prohibition of child labor." },
-    { title: "Human Rights & Environmental Due Diligence (HREDD)", code: "PAE-HREDD-2026", desc: "Assesses and mitigates direct social and ecological impacts across all four farming centers and supply routes." },
+    { title: "Human Rights & Environmental Due Diligence (HREDD)", code: "PAE-HREDD-2026", desc: "Assesses and mitigates direct social and ecological impacts across all seven farming centers and supply routes." },
     { title: "Modern Slavery Declaration", code: "PAE-MSD-2026", desc: "Rigorous standards ensuring zero tolerance for forced, bonded, or involuntary labor within our farms, packhouses, or logistics partners." },
     { title: "Traceability & Food Safety Policy", code: "PAE-FS-2026", desc: "Integrated HACCP and sanitation guidelines ensuring physical, biological, and chemical crop purity from seed to cold hold." }
   ];

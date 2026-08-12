@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { PRODUCTS_DATA } from "../data/productsData";
-import { COMPANY } from "../data/companyData";
 
 export default function Header() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -43,7 +42,8 @@ export default function Header() {
       zIndex: 50, 
       backgroundColor: "rgba(243, 238, 225, 0.95)", 
       borderBottom: "1px solid rgba(36, 31, 24, 0.15)", 
-      backdropFilter: "blur(8px)" 
+      backdropFilter: "blur(8px)",
+      padding:"1rem"
     }}>
       {/* Top Bar */}
       <div style={{ 
@@ -53,9 +53,9 @@ export default function Header() {
         fontFamily: "monospace", 
         padding: "0.25rem 1rem", 
         display: "flex", 
-        justifyContent: "space-between" 
+        justifyContent: "flex-end",
+        marginBottom:"1rem"
       }}>
-        <span className="hidden md:inline">📍 {COMPANY.address.line1.toUpperCase()}, JKIA CARGO VILLAGE • IN-HOUSE LOGISTICS</span>
         <span style={{ color: "#C99A3D" }}>FAIRTRADE & BRCGS AA CERTIFIED</span>
       </div>
 
@@ -71,11 +71,11 @@ export default function Header() {
       }}>
 <Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#16302A", textDecoration: "none" }}>
   <img 
-    src="/dist/assets/logo.jpeg" // Put your source here later
+    src="/logo.png"
     alt="Prime Agro Exports Logo"
     style={{ 
-      width: "3rem", 
-      height: "3rem", 
+      width: "5rem", 
+      height: "5rem", 
       borderRadius: "0.25rem", 
       objectFit: "contain",
       display: "block"

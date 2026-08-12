@@ -26,10 +26,10 @@ export default function ConservationPage() {
               Agriculture does not exist in isolation. At Prime Agro Exports, we deliberately allocate up to 15% of our private estate acreage as non-productive rewilding zones, wetlands, and buffer areas.
             </p>
             <p>
-              On our Thika Highlands farm, natural forest corridors have been preserved to protect native avian species and beneficial insects. Water harvested from seasonal rains is routed through artificial reed lagoons, filtering farm runoff before it is slowly returned to regional river networks.
+              On our Muranga avocado farm, natural forest corridors have been preserved to protect native avian species and beneficial insects. Water harvested from seasonal rains is routed through artificial reed lagoons, filtering farm runoff before it is slowly returned to regional river networks.
             </p>
             <p>
-              To reduce our carbon footprint, we have installed over 1.2 Megawatts of grid-connected solar power generation on the rooftops of our four farm packhouses, and we operate highly automated, low-volume drip irrigation systems.
+              To reduce our carbon footprint, we have installed over 1.2 Megawatts of grid-connected solar power generation on the rooftops of our farm packhouses, and we operate highly automated, low-volume drip irrigation systems.
             </p>
           </div>
           <div>
@@ -48,7 +48,7 @@ export default function ConservationPage() {
           <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>
             <span style={{ fontSize: "1.25rem", display: "block", marginBottom: "0.5rem" }}>☀️</span>
             <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>1.2 MW Solar Power</h3>
-            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", marginTop: "0.25rem" }}>Four proprietary packhouses are partially powered by clean, off-grid rooftop solar panels.</p>
+            <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", marginTop: "0.25rem" }}>Our proprietary packhouses are partially powered by clean, off-grid rooftop solar panels.</p>
           </div>
 
           <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.25rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem" }}>

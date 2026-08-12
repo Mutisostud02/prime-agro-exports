@@ -21,7 +21,7 @@ export default function OutGrowerPage() {
             Out-Grower Farming
           </h1>
           <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
-            8,000+ CONTRACTED SMALLHOLDERS SUPPORTING REGIONAL SUSTAINABILITY
+            2,000+ CONTRACTED SMALLHOLDERS SUPPORTING REGIONAL SUSTAINABILITY
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function OutGrowerPage() {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19655?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
+              src="https://images.unsplash.com/photo-1626906722163-bd4c03cb3b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhbiUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D" 
               alt="Outgrower picking fine beans" 
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />

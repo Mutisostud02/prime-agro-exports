@@ -1,8 +1,28 @@
 import React from "react";
 
 export default function WhoWeArePage() {
+  const STATS = [
+    { value: "8+", label: "Years Export Experience", color: "#C99A3D" },
+    { value: "120+", label: "Acres Proprietary Farms", color: "#E1672B" },
+    { value: "15+", label: "Global Destinations", color: "#C99A3D" },
+    { value: "150+", label: "Dedicated Employees", color: "#E1672B" },
+  ];
+
   return (
-    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen">
+      {/* Stats Section (moved here from Home) */}
+      <section className="bg-[#16302A] text-[#F3EEE1] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#F3EEE1]/10">
+        <div className="max-w-4xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 text-center font-mono">
+          {STATS.map((stat) => (
+            <div className="space-y-1" key={stat.label}>
+              <div className="text-3xl sm:text-4xl font-bold" style={{ color: stat.color }}>{stat.value}</div>
+              <div className="text-[10px] uppercase text-[#F3EEE1]/70 tracking-wider">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
           <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">About Us</span>
@@ -22,10 +42,10 @@ export default function WhoWeArePage() {
           <div className="md:col-span-2 space-y-6 text-sm leading-relaxed">
 <h2 className="font-serif text-2xl font-bold" style={{ color: 'black' }}>Kenya&apos;s Horticultural Experts</h2>
             <p>
-              Welcome to <strong>Prime Agro Exports Limited</strong>. We grow, sort, pack, and export Kenya&apos;s finest flowers, vegetables, and fresh fruits — from our own farms and a trusted out-grower network across the Rift Valley, Central Kenya, and the Coast.
+              Welcome to <strong>Prime Agro Exports Limited</strong>. We grow, sort, pack, and export Kenya&apos;s finest flowers, vegetables, and fresh fruits — from our own farms and a trusted out-grower network spanning the Rift Valley, Central Kenya, Western Kenya, and the Coast.
             </p>
             <p>
-              Based at JKIA Cargo Village in Nairobi, we run an integrated supply chain: field harvest, BRC-certified packhouses, cold storage, and in-house air and sea freight coordination. Our produce reaches buyers in Europe, the Middle East, Asia, and beyond.
+              Based at JKIA Cargo Village in Nairobi, we run an integrated supply chain: field harvest, BRC-certified packhouses, cold storage, and in-house air and sea freight coordination. Our produce reaches buyers across East Africa, East Asia, the Middle East, and Europe.
             </p>
             <p>
               Our operations span three core divisions:
@@ -57,6 +77,7 @@ export default function WhoWeArePage() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );

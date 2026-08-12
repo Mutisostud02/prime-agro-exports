@@ -17,14 +17,14 @@ export default function FarmsPackhousesPage() {
             Our Farms & Packhouses
           </h1>
           <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
-            FOUR HIGHT-ALTITUDE AGRICULTURAL GEMS STRADDLING THE EQUATOR
+            SEVEN HIGH-ALTITUDE AGRICULTURAL GEMS STRADDLING THE EQUATOR
           </p>
         </div>
 
         {/* Introduction */}
         <div style={{ fontSize: "0.875rem", lineHeight: "1.625", marginBottom: "3rem", display: "flex", flexDirection: "column", gap: "1rem" }}>
           <p>
-            Prime Agro Exports operates four proprietary farms across Kenya. Each site is deliberately located to capture unique microclimates, high-altitude cooling, and rich volcanic soil profiles. This strategic diversification ensures year-round product consistency and crop security.
+            Prime Agro Exports operates seven proprietary farms across Kenya — spanning Naivasha, Thika, Rumuruti, Ol Kalou, Muranga, Narok, and Western Kenya. Each site is deliberately located to capture unique microclimates, high-altitude cooling, and rich volcanic soil profiles. This strategic diversification ensures year-round product consistency and crop security.
           </p>
         </div>
 

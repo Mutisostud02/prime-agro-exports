@@ -27,7 +27,7 @@ export default function FarmingPracticePage() {
               At Prime Agro Exports, we practice <strong>Integrated Farming</strong>. We believe that sustained high-quality yields are only possible when we nurture the physical and biological integrity of the soil and ecosystem.
             </p>
             <p>
-              To combat crop pests while meeting the strictest chemical residue limitations of EU supermarkets, our Naivasha and Thika agricultural centers operate dedicated <strong>IPM (Integrated Pest Management)</strong> breeding facilities. Here, we rear biological beneficial bugs (such as phytoseiid predatory mites) and introduce them to crops prior to any pesticide usage.
+              To combat crop pests while meeting the strictest chemical residue limitations of EU supermarkets, our Naivasha and Narok agricultural centers operate dedicated <strong>IPM (Integrated Pest Management)</strong> breeding facilities. Here, we rear biological beneficial bugs (such as phytoseiid predatory mites) and introduce them to crops prior to any pesticide usage.
             </p>
             <p>
               In addition, we maintain one of Kenya's largest proprietary worm hatcheries. Earthworm castings (vermicompost) and tea are circulated via our automated drip-irrigation networks, dramatically increasing natural humus content, soil biology, and crop disease resistance.

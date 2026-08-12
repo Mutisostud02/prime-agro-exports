@@ -37,7 +37,7 @@ export default function FreightLogisticsPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.875rem", lineHeight: "1.625" }}>
             <h2 style={{ fontFamily: "serif", fontSize: "1.5rem", fontWeight: "bold", color: "#16302A" }}>In-House Cold Chain Mastery</h2>
             <p>
-              Unlike many exporters who transfer sensitive produce to third-party handlers, Prime Agro Exports operates <strong>{COMPANY.logisticsDivision}</strong>, our fully integrated logistics division based inside JKIA Cargo Village, {COMPANY.address.line1}, Nairobi.
+              Unlike many exporters who transfer sensitive produce to third-party handlers, Prime Agro Exports operates <strong>{COMPANY.logisticsDivision}</strong>, our fully integrated logistics division based inside JKIA Cargo Village, Nairobi.
             </p>
             <p>
               Our flagship facility features a state-of-the-art 75-tonne capacity cold room with advanced vacuum and forced-air blast chillers. This allows us to drop harvest temperatures to optimal dormancy levels within hours, preserving peak texture and vase life before air palettes are built.
@@ -54,7 +54,7 @@ export default function FreightLogisticsPage() {
             <div style={{ fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <div style={{ borderBottom: "1px solid rgba(243, 238, 225, 0.1)", paddingBottom: "0.5rem" }}>
                 <span style={{ color: "#E1672B", display: "block" }}>AIR FREIGHT BASE:</span>
-                JKIA Cargo Village, {COMPANY.address.line1}, Nairobi
+                JKIA Cargo Village, Nairobi
               </div>
               <div style={{ borderBottom: "1px solid rgba(243, 238, 225, 0.1)", paddingBottom: "0.5rem" }}>
                 <span style={{ color: "#E1672B", display: "block" }}>SEA REEFER CORRIDOR:</span>
