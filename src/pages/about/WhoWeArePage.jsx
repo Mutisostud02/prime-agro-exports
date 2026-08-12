@@ -32,7 +32,7 @@ export default function WhoWeArePage() {
 
         <div className="mb-12 rounded overflow-hidden shadow-md">
           <img 
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
+            src="/images/farm-naivasha-lakeview.jpg" 
             alt="Kenyan highland farms" 
             className="w-full h-80 object-cover"
           />

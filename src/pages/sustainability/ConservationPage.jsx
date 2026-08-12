@@ -34,7 +34,7 @@ export default function ConservationPage() {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=1200&auto=format&fit=crop" 
+              src="/images/summer-flowers-hypericum.jpg" 
               alt="Conservation and wetlands" 
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />

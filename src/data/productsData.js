@@ -8,7 +8,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Roses",
     shortDesc: "High-altitude intermediate roses cultivated at 1,650m - 1,950m with vibrant hues and 12-14 day vase life.",
     description: "Our Prime Select Line intermediate roses are cultivated under integrated crop management systems in Naivasha and Rumuruti. Grown hydroponically and in fertile volcanic soil, these roses feature strong stems, firm bud structures, and exceptional vase performance.",
-    image: "https://images.unsplash.com/photo-1556712691-5c39e0e32a8e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y3V0JTIwcm9zZXNmbG93ZXJ8ZW58MHx8MHx8fDA%3D",
+    image: "/images/cut-roses-intermediate.jpg",
     headSize: "3.5 - 4.8 cm",
     stemLength: "40 - 70 cm",
     vaseLife: "12 - 16 days",
@@ -28,7 +28,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Roses",
     shortDesc: "Large-headed premium T-Hybrid roses grown at 2,360m ASL in Ol Kalou for high-end floristry and auctions.",
     description: "Cultivated in our high-altitude Ol Kalou farm, Prime Elite Line T-Hybrid roses benefit from cool nights and intense tropical sunlight, producing massive head sizes and thick, sturdy stems preferred by luxury florists across Western Europe and Japan.",
-    image: "https://images.unsplash.com/photo-1596073419667-9d77d59f033f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UHJlbWl1bSUyMFQtSHlicmlkJTIwUm9zZXN8ZW58MHx8MHx8fDA%3D",
+    image: "/images/cut-roses-thybrid.jpg",
     headSize: "5.0 - 6.5 cm",
     stemLength: "50 - 90 cm",
     vaseLife: "14 - 18 days",
@@ -48,7 +48,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Summer Flowers",
     shortDesc: "Vibrant filler crops including Hypericum berries, Gypsophila Million Stars, Solidago, and Alstroemeria.",
     description: "Complementing our rose production, our open-field and covered summer flower operations in Naivasha and Ol Kalou yield resilient Hypericum with glossy berries, clouds of Gypsophila, and long-lasting Alstroemeria stems.",
-    image: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/summer-flowers-hypericum.jpg",
     headSize: "Dense berry clusters / flower heads",
     stemLength: "50 - 80 cm",
     vaseLife: "14 - 21 days",
@@ -69,7 +69,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Avocados",
     shortDesc: "Creamy, high-oil content Hass avocados grown on 500+ proprietary acres and Fairtrade certified out-grower farms.",
     description: "Kenyan Hass avocados are world-renowned for their rich, nutty flavor and buttery texture. Grown at optimal equatorial altitudes with abundant rainfall, our avocados are machine-graded for weight, size, and dry matter content (min 23%), then blast-cooled to preserve fresh quality.",
-    image: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/avocado-hass.jpg",
     headSize: "Counts 12 to 26 per 4kg box",
     stemLength: "Button stem intact",
     vaseLife: "21 - 30 days cold storage shelf life",
@@ -89,7 +89,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Avocados",
     shortDesc: "Smooth, green-skinned Fuerte and Pinkerton avocados with high yield oil and mild creamy taste.",
     description: "Preferred in Middle Eastern and European markets for early season supply, Fuerte avocados feature smooth green skin that remains green when ripe. Ideal for slicing and catering usage.",
-    image: "https://images.unsplash.com/photo-1601039641847-7857b994d704?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/avocado-fuerte.jpg",
     headSize: "Counts 10 to 22 per 4kg box",
     stemLength: "Button stem intact",
     vaseLife: "18 - 24 days under cold chain",
@@ -109,7 +109,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Mangoes",
     shortDesc: "Juicy, fiberless Apple and Kent mangoes with vibrant blush red/orange cheeks and high Brix sweetness.",
     description: "Sourced from warm tropical lowland farms in Machakos and the Coast region, our export mangoes undergo rigorous hot-water treatment and optical sorting for zero pest compliance and uniform blush coloring.",
-    image: "https://images.unsplash.com/photo-1553279768-865429fa0078?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/mango-apple-kent.jpg",
     headSize: "Weight: 300g - 650g per fruit",
     stemLength: "Clean flush cut",
     vaseLife: "14 - 18 days under 10-12°C cool chain",
@@ -129,7 +129,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Exotics",
     shortDesc: "Intensely aromatic purple passion fruit with wrinkled dark skin and high-juice tropical pulp.",
     description: "Kenya's equatorial sunshine produces passion fruit with unmatched aroma and juice content. Hand-harvested when fruit naturally develops a deep purple shade, perfect for air-freight retail placement.",
-    image: "https://images.unsplash.com/photo-1604495772376-9657f0035eb5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVycGxlJTIwcGFzc2lvbiUyMGZydWl0fGVufDB8fDB8fHww",
+    image: "/images/passion-fruit-purple.jpg",
     headSize: "40g - 65g per fruit",
     stemLength: "Short stem intact",
     vaseLife: "14 days refrigerated",
@@ -150,7 +150,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Legumes",
     shortDesc: "Hand-picked, stringless extra fine green beans, packed under BRC High Care standards in Lake Naivasha packhouse.",
     description: "Our flagship vegetable product. Grown on contracted GLOBALG.A.P farms across Machakos, Mt. Kenya, and Rift Valley. Beans are top-and-tailed or left whole, washed, and packed in micro-perforated MAP bags to lock in field freshness.",
-    image: "https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/fine-beans-extra-fine.jpg",
     headSize: "Diameter: 6-8mm (Extra Fine) / 8-9mm (Fine)",
     stemLength: "Length: 10cm - 14cm",
     vaseLife: "12 - 14 days under 4-6°C cold chain",
@@ -170,7 +170,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Peas",
     shortDesc: "Crisp, sweet snow peas and sugar snap peas grown in the cool foothills of Aberdares and Mt. Kenya.",
     description: "Cultivated at high elevations where cool mountain temperatures produce tender pods with intense natural sweetness. Calibrated for color, size, and absence of string, packed immediately after harvest.",
-    image: "https://images.unsplash.com/photo-1592394533824-9440e5d68530?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVhc3xlbnwwfHwwfHx8MA%3D%3D",
+    image: "/images/snow-peas-sugar-snaps.jpg",
     headSize: "Pod length 60-90mm",
     stemLength: "Clean calyx",
     vaseLife: "10 - 14 days",
@@ -190,7 +190,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Specialty",
     shortDesc: "Miniature baby corn, tenderstem broccoli, baby courgettes, and baby leeks for premium food service.",
     description: "Specially bred dwarf varieties harvested by hand at early maturity. Ideal for high-end dining, retail ready-meals, and stir-fry packs across East Africa and Europe.",
-    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/baby-vegetables-tenderstem.jpg",
     headSize: "Calibrated micro size",
     stemLength: "10 - 15cm stems",
     vaseLife: "10 - 12 days",
@@ -211,7 +211,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Frozen Fruit",
     shortDesc: "Individually Quick Frozen (IQF) Hass avocado dices and halves processed with cryogenic nitrogen blast cooling.",
     description: "Processed in our state-of-the-art Thika plant, selected Hass avocados sourced from our Muranga and Naivasha orchards are pitted, peeled, diced (10x10mm) or halved, treated with natural ascorbic acid to lock in emerald green color, and flash frozen at -40°C. 100% natural with zero additives.",
-    image: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/iqf-avocado-dices-halves.jpg",
     headSize: "Dices: 10x10mm / Halves: 70g-110g",
     stemLength: "Pitted & Peeled",
     vaseLife: "24 months shelf life stored at -18°C",
@@ -231,7 +231,7 @@ export const PRODUCTS_DATA = [
     subcategory: "Frozen Fruit",
     shortDesc: "Golden Apple & Kent mango chunks individually quick frozen at peak ripeness for smoothies and processing.",
     description: "Naturally ripened Kenyan mangoes peeled, pitted, and diced into uniform 15x15mm chunks. Ideal for industrial dairy, smoothie manufacturing, bakery, and retail frozen fruit mixes.",
-    image: "https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?fm=jpg&q=80&w=1200&auto=format&fit=crop",
+    image: "/images/iqf-mango-chunks.jpg",
     headSize: "10x10mm, 15x15mm dices & irregular chunks",
     stemLength: "Peeled & Pitted",
     vaseLife: "24 months stored at -18°C",
@@ -284,7 +284,7 @@ export const FARMS_LIST = [
     altitude: "1,950 Metres ASL",
     area: "450 Acres (82 acres undercover Roses, 12 acres Summer Flowers, 200 acres Hass Avocados)",
     highlights: ["Lake Naivasha & borehole water security", "Solar power microgrid & Reverse Osmosis purification", "Recycled water lagoons & propagation nursery", "On-site dispensary, primary school & housing for 1,100 workers (46% women)"],
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+    image: "/images/farm-naivasha-lakeview.jpg"
   },
   {
     id: "thika",
@@ -293,7 +293,7 @@ export const FARMS_LIST = [
     altitude: "1,500 Metres ASL",
     area: "155 Acres (40 acres undercover Roses/Chrysanthemums, 15 acres Summer Flowers, State-of-the-art Avocado & IQF Plant)",
     highlights: ["Powered by solar array and regional river water", "Houses automated avocado processing & IQF freezing unit", "Wetlands buffer zone and organic compost plant", "Employs ~500 staff (45% women)"],
-    image: "https://images.unsplash.com/photo-1667137751727-55ed2c3eec0c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aGlnaGxhbmQlMjBmYXJtfGVufDB8fDB8fHww"
+    image: "/images/farm-thika-highlands.jpg"
   },
   {
     id: "rumuruti",
@@ -302,7 +302,7 @@ export const FARMS_LIST = [
     altitude: "1,800 Metres ASL",
     area: "450 Acres (50 acres undercover Roses, 300 acres Hass Avocados)",
     highlights: ["Drip irrigation fed by Ngare Narok River & rainwater catchment dams", "Solar powered pumping station", "Employs ~550 staff (53% women)"],
-    image: "https://images.unsplash.com/photo-1560493676-04071c5f467b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZmFybXxlbnwwfHwwfHx8MA%3D%3D"
+    image: "/images/farm-laikipia-rumuruti.jpg"
   },
   {
     id: "ol-kalou",
@@ -311,7 +311,7 @@ export const FARMS_LIST = [
     altitude: "2,360 Metres ASL (Ultra-High Altitude)",
     area: "120 Acres (50 acres undercover T-Hybrid Roses & Gypsophila)",
     highlights: ["Cold mountain microclimate yields premium 6cm+ rose head sizes", "Rooftop solar generation & Malewa River water harvesting", "Employs ~400 staff (51.5% women)"],
-    image: "https://images.unsplash.com/photo-1619282812296-95ddc25e8a70?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGlnaGxhbmQlMjBmYXJtfGVufDB8fDB8fHww"
+    image: "/images/farm-ol-kalou-highlands.jpg"
   },
   {
     id: "naivasha-flower-fields",
@@ -320,7 +320,7 @@ export const FARMS_LIST = [
     altitude: "1,890 Metres ASL",
     area: "50 Acres (open-field Summer Flowers & Gypsophila multiplication blocks)",
     highlights: ["Satellite flower site supporting our main Naivasha packhouse", "Lake-fed drip irrigation with recycled water lagoons", "Employs ~150 staff (48% women)"],
-    image: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2VyJTIwZmllbGR8ZW58MHx8MHx8fDA%3D"
+    image: "/images/farm-naivasha-flower-fields.jpg"
   },
   {
     id: "muranga",
@@ -329,7 +329,7 @@ export const FARMS_LIST = [
     altitude: "1,450 - 1,700 Metres ASL",
     area: "55 Acres (proprietary Hass Avocado orchards)",
     highlights: ["Deep red volcanic loam ideal for high dry-matter Hass fruit", "Feeds fresh and IQF avocado lines via our Thika processing plant", "Employs ~165 staff (49% women)"],
-    image: "https://images.unsplash.com/photo-1601039641847-7857b994d704?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+    image: "/images/avocado-fuerte.jpg"
   },
   {
     id: "narok",
@@ -338,7 +338,7 @@ export const FARMS_LIST = [
     altitude: "1,830 Metres ASL",
     area: "45 Acres (bulb Onions & Vine Tomatoes)",
     highlights: ["Rich Rift Valley soils suited to bulb onions and vine tomatoes", "Furrow & drip irrigation fed by seasonal river catchments", "Employs ~155 staff (44% women)"],
-    image: "https://images.unsplash.com/photo-1741517481122-51d958803203?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YnVsYiUyME9uaW9ucyUyMCUyNiUyMFZpbmUlMjBUb21hdG9lc3xlbnwwfHwwfHx8MA%3D%3D"
+    image: "/images/farm-narok-valley.jpg"
   },
   {
     id: "western",
@@ -347,6 +347,6 @@ export const FARMS_LIST = [
     altitude: "1,500 Metres ASL",
     area: "40 Acres (Fine Beans, Snow Peas & Mixed Vegetables)",
     highlights: ["High-rainfall region supporting year-round vegetable cropping", "Feeds our fresh vegetable and IQF fine bean lines", "Employs ~150 staff (50% women)"],
-    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmVnZXRhYmxlJTIwZmFybXxlbnwwfHwwfHx8MA%3D%3D"
+    image: "/images/farm-western-vegetable-gardens.jpg"
   }
 ];

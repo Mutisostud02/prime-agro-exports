@@ -1,3 +1,15 @@
+## Local images setup
+
+All image references in the code now point to local files under `public/images/` instead of Unsplash URLs. To fetch the actual images, run once:
+
+```bash
+npm run images:download
+```
+
+This downloads all 28 images (see `scripts/image-map.json` for the URL → filename mapping) into `public/images/`. Re-run it any time to re-fetch or retry failed downloads.
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

@@ -41,7 +41,7 @@ export default function OutGrowerPage() {
           </div>
           <div>
             <img 
-              src="https://images.unsplash.com/photo-1626906722163-bd4c03cb3b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhbiUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D" 
+              src="/images/quicklink-our-farms.jpg" 
               alt="Outgrower picking fine beans" 
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />

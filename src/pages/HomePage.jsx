@@ -10,7 +10,7 @@ const HERO_SLIDES = [
     highlight: "An exporter by trade.",
     text: "Every stem, pod, and fruit that leaves our packhouse has been raised, graded, and cooled by people who know exactly where it came from — our own equatorial highland farms and out-grower network.",
     image:
-      "https://images.unsplash.com/photo-1734036871909-906fb9b3d474?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+      "/images/hero-slide-agriculture.jpg",
     ctaLabel: "See What We Ship",
     ctaTo: "/our-products",
   },
@@ -20,7 +20,7 @@ const HERO_SLIDES = [
     highlight: "of our flowers.",
     text: "Grown at altitude in Naivasha, Ol Kalou, and Rumuruti, our roses and summer flowers are harvested and cold-chained for exceptional vase life around the world.",
     image:
-      "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+      "/images/summer-flowers-hypericum-hero.jpg",
     ctaLabel: "View Our Flowers",
     ctaTo: "/our-products/flowers",
   },
@@ -30,7 +30,7 @@ const HERO_SLIDES = [
     highlight: "bringing you abundant living.",
     text: "From Hass avocados in Muranga to onions and tomatoes in Narok, our fruit and vegetable lines are hand-graded and quick-frozen to lock in quality.",
     image:
-      "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+      "/images/avocado-hass-hero.jpg",
     ctaLabel: "View Our Fruits",
     ctaTo: "/our-products/fruits",
   },
@@ -40,17 +40,17 @@ const HERO_SLIDES = [
     highlight: "logistical solutions.",
     text: "Our in-house freight division moves produce from farm cold rooms to airline cargo holds at JKIA — shipping to destinations across East Africa, East Asia, the Middle East, and Europe.",
     image:
-      "https://images.unsplash.com/photo-1540420773420-3366772f4999?fm=jpg&q=80&w=2400&auto=format&fit=crop",
+      "/images/baby-vegetables-tenderstem-hero.jpg",
     ctaLabel: "Find Out More",
     ctaTo: "/about-us/freight-logistics",
   },
 ];
 
 const QUICK_LINKS = [
-  { label: "Our Farms", to: "/growing-base/our-farms-packhouses", icon: "🌱", src: "https://images.unsplash.com/photo-1626906722163-bd4c03cb3b9b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YmVhbiUyMGZhcm1pbmd8ZW58MHx8MHx8fDA%3D" },
-  { label: "Our Products", to: "/our-products", icon: "📦", src: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Zmxvd2Vyc3xlbnwwfHwwfHx8MA%3D%3D" },
-  { label: "Social Responsibility", to: "/sustainability/corporate-social-initiative-responsibilities", icon: "🤝", src: "https://images.unsplash.com/photo-1509099342178-e323b1717dba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGFmcmljYW4lMjBjb21tdW5pdHl8ZW58MHx8MHx8fDA%3D" },
-  { label: "Freight & Logistics", to: "/about-us/freight-logistics", icon: "✈️", src: "https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGxvZ2lzdGljc3xlbnwwfHwwfHx8MA%3D%3D" },
+  { label: "Our Farms", to: "/growing-base/our-farms-packhouses", icon: "🌱", src: "/images/quicklink-our-farms.jpg" },
+  { label: "Our Products", to: "/our-products", icon: "📦", src: "/images/quicklink-our-products.jpg" },
+  { label: "Social Responsibility", to: "/sustainability/corporate-social-initiative-responsibilities", icon: "🤝", src: "/images/quicklink-social-responsibility.jpg" },
+  { label: "Freight & Logistics", to: "/about-us/freight-logistics", icon: "✈️", src: "/images/quicklink-freight-logistics.jpg" },
 ];
 
 export default function HomePage() {
@@ -292,7 +292,7 @@ export default function HomePage() {
         >
           <div>
             <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+              src="/images/farm-naivasha-lakeview.jpg"
               alt="Prime Agro Exports highland farms"
               style={{
                 width: "100%",

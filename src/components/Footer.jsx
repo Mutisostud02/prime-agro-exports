@@ -218,7 +218,6 @@ export default function Footer() {
           <div
             style={{
               color: "#C99A3D",
-              fontWeight: 600,
               display: "flex",
               flexDirection: "column",
               gap: "0.35rem",

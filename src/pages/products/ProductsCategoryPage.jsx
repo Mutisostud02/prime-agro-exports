@@ -8,10 +8,10 @@ export default function ProductsCategoryPage() {
   const [selectedProduct, setSelectedProduct] = useState(null);
 
   const categories = [
-    { id: "flowers", label: "Flowers", icon: "🌹", banner: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?fm=jpg&q=80&w=1200&auto=format&fit=crop" },
-    { id: "fruits", label: "Fruits", icon: "🥑", banner: "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?fm=jpg&q=80&w=1200&auto=format&fit=crop" },
-    { id: "vegetables", label: "Vegetables", icon: "🫛", banner: "https://images.unsplash.com/photo-1567375698348-5d9d5ae99de0?fm=jpg&q=80&w=1200&auto=format&fit=crop" },
-    { id: "frozen-iqf", label: "Frozen – IQF", icon: "❄️", banner: "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?fm=jpg&q=80&w=1200&auto=format&fit=crop" }
+    { id: "flowers", label: "Flowers", icon: "🌹", banner: "/images/category-banner-flowers.jpg" },
+    { id: "fruits", label: "Fruits", icon: "🥑", banner: "/images/avocado-hass.jpg" },
+    { id: "vegetables", label: "Vegetables", icon: "🫛", banner: "/images/fine-beans-extra-fine.jpg" },
+    { id: "frozen-iqf", label: "Frozen – IQF", icon: "❄️", banner: "/images/iqf-avocado-dices-halves.jpg" }
   ];
 
   useEffect(() => {
