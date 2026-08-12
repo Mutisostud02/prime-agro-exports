@@ -50,14 +50,14 @@ export default function Header() {
           transition: color 0.15s ease;
         }
         .pae-nav-trigger:hover {
-          color: #E1672B !important;
+          color: #2563EB !important;
         }
         .pae-dropdown-item {
           transition: background-color 0.15s ease, color 0.15s ease;
         }
         .pae-dropdown-item:hover {
           background-color: rgba(225, 103, 43, 0.1);
-          color: #E1672B !important;
+          color: #2563EB !important;
         }
         .pae-contact-btn {
           transition: background-color 0.15s ease, color 0.15s ease;
@@ -73,7 +73,7 @@ export default function Header() {
           transition: color 0.15s ease;
         }
         .pae-mobile-link:hover {
-          color: #E1672B !important;
+          color: #2563EB !important;
         }
       `}</style>
 
@@ -82,7 +82,7 @@ export default function Header() {
         backgroundColor: "#16302A", 
         color: "#F3EEE1", 
         fontSize: "10px", 
-        fontFamily: "serif", 
+        fontFamily: "'Jost', sans-serif", 
         padding: "0.25rem 1rem", 
         display: "flex", 
         justifyContent: "flex-end",
@@ -114,15 +114,15 @@ export default function Header() {
     }} 
   />
   <div>
-    <div style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", lineHeight: "1", color: "#16302A" }}>PRIME AGRO EXPORTS</div>
-    <span style={{ fontSize: "8px", fontFamily: "monospace", letterSpacing: "0.1em", color: "#E1672B", display: "block" }}>KENYAN EXPORTERS</span>
+    <div style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", lineHeight: "1", color: "#16302A" }}>PRIME AGRO EXPORTS</div>
+    <span style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", letterSpacing: "0.1em", color: "#2563EB", display: "block" }}>KENYAN EXPORTERS</span>
   </div>
 </Link>
 
-        <nav className="hidden lg:flex" style={{ alignItems: "center", gap: "1rem", fontSize: "10px", fontFamily: "monospace", textTransform: "uppercase", fontWeight: "bold", letterSpacing: "0.05em" }}>
+        <nav className="hidden lg:flex" style={{ alignItems: "center", gap: "1rem", fontSize: "12px", fontFamily: "'Jost', sans-serif", textTransform: "uppercase", fontWeight: "bold", letterSpacing: "0.05em" }}>
           {/* About Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("about")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>About Us ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "'Jost', sans-serif", fontSize: "12px", textTransform: "uppercase" }}>About Us ▾</button>
             {activeDropdown === "about" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "11rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
                 <Link to="/about-us/who-we-are" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Who We Are</Link>
@@ -136,7 +136,7 @@ export default function Header() {
 
           {/* Growing Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("growing")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Growing ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "'Jost', sans-serif", fontSize: "12px", textTransform: "uppercase" }}>Growing ▾</button>
             {activeDropdown === "growing" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "12rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
                 <Link to="/growing-base/our-farms-packhouses" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farms & Packhouses</Link>
@@ -160,7 +160,7 @@ export default function Header() {
 
           {/* Sustainability Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("sustainability")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Sustainability ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "'Jost', sans-serif", fontSize: "12px", textTransform: "uppercase" }}>Sustainability ▾</button>
             {activeDropdown === "sustainability" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "12rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
                 <Link to="/sustainability/farming-practice" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farming Practice</Link>
@@ -192,7 +192,7 @@ export default function Header() {
                 backgroundColor: "rgba(234, 226, 206, 0.8)", 
                 color: "#241F18", 
                 fontSize: "10px", 
-                fontFamily: "monospace", 
+                fontFamily: "'Jost', sans-serif", 
                 padding: "0.25rem 1.25rem 0.25rem 1.75rem", 
                 borderRadius: "0.25rem", 
                 outline: "none", 
@@ -218,7 +218,7 @@ export default function Header() {
               }}>
                 {filteredProducts.length > 0 ? (
                   <>
-                    <div style={{ padding: "0.375rem 0.5rem", fontSize: "9px", fontFamily: "monospace", color: "rgba(36, 31, 24, 0.5)", borderBottom: "1px solid rgba(36, 31, 24, 0.1)" }}>
+                    <div style={{ padding: "0.375rem 0.5rem", fontSize: "9px", fontFamily: "'Jost', sans-serif", color: "rgba(36, 31, 24, 0.5)", borderBottom: "1px solid rgba(36, 31, 24, 0.1)" }}>
                       {filteredProducts.length} product{filteredProducts.length !== 1 ? "s" : ""} found
                     </div>
                     {filteredProducts.map((p) => (
@@ -226,13 +226,13 @@ export default function Header() {
                         <img src={p.image} alt={p.name} style={{ width: "2rem", height: "2rem", objectFit: "cover", borderRadius: "0.125rem" }} />
                         <div style={{ minWidth: 0, flex: 1 }}>
                           <div style={{ fontWeight: "bold", color: "#16302A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</div>
-                          <div style={{ fontSize: "8px", fontFamily: "monospace", color: "#E1672B" }}>{p.categoryLabel}</div>
+                          <div style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", color: "#2563EB" }}>{p.categoryLabel}</div>
                         </div>
                       </div>
                     ))}
                   </>
                 ) : (
-                  <div style={{ padding: "0.75rem", textAlign: "center", fontSize: "10px", fontFamily: "monospace", color: "rgba(36, 31, 24, 0.7)" }}>No products match &quot;{searchQuery}&quot;</div>
+                  <div style={{ padding: "0.75rem", textAlign: "center", fontSize: "10px", fontFamily: "'Jost', sans-serif", color: "rgba(36, 31, 24, 0.7)" }}>No products match &quot;{searchQuery}&quot;</div>
                 )}
               </div>
             )}
@@ -247,14 +247,14 @@ export default function Header() {
           borderBottom: "1px solid rgba(36, 31, 24, 0.15)", 
           padding: "1rem", 
           fontSize: "10px", 
-          fontFamily: "monospace", 
+          fontFamily: "'Jost', sans-serif", 
           textTransform: "uppercase", 
           display: "flex", 
           flexDirection: "column", 
           gap: "0.75rem" 
         }} className="lg:hidden">
           <div>
-            <div style={{ fontWeight: "bold", color: "#E1672B", marginBottom: "0.25rem" }}>About Us:</div>
+            <div style={{ fontWeight: "bold", color: "#2563EB", marginBottom: "0.25rem" }}>About Us:</div>
             <div style={{ paddingLeft: "0.5rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
               <Link to="/about-us/who-we-are" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Who We Are</Link>
               <Link to="/about-us/compliance-accreditation" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Accreditation</Link>
@@ -264,7 +264,7 @@ export default function Header() {
             </div>
           </div>
           <div>
-            <div style={{ fontWeight: "bold", color: "#E1672B", marginBottom: "0.25rem" }}>Products:</div>
+            <div style={{ fontWeight: "bold", color: "#2563EB", marginBottom: "0.25rem" }}>Products:</div>
             <div style={{ paddingLeft: "0.5rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
               <Link to="/our-products/flowers" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>🌹 Flowers</Link>
               <Link to="/our-products/fruits" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>🥑 Fruits</Link>

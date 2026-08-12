@@ -33,7 +33,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen bg-[#F3EEE1] text-[#241F18] font-sans antialiased selection:bg-[#E1672B] selection:text-white">
+      <div className="flex flex-col min-h-screen bg-[#F3EEE1] text-[#241F18] font-sans antialiased selection:bg-[#2563EB] selection:text-white">
         <Header />
         
         {/* Main Content Area */}

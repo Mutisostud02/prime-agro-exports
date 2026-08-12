@@ -40,9 +40,9 @@ export default function ProductsCategoryPage() {
       <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
         <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
           <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
-            <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>Consignments & Portfolios</span>
-            <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem" }}>Our Products</h1>
-            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>FOUR CERTIFIED EXPORT PRODUCT LINES GRADED TO CONSERVED COLD-CHAIN STANDARD</p>
+            <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", textTransform: "uppercase", color: "#2563EB", letterSpacing: "0.1em", fontWeight: "bold" }}>Consignments & Portfolios</span>
+            <h1 style={{ fontFamily: "'Jost', sans-serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem" }}>Our Products</h1>
+            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "'Jost', sans-serif", marginTop: "1rem" }}>FOUR CERTIFIED EXPORT PRODUCT LINES GRADED TO CONSERVED COLD-CHAIN STANDARD</p>
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
@@ -54,9 +54,9 @@ export default function ProductsCategoryPage() {
               >
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(22, 48, 42, 0.95), rgba(22, 48, 42, 0.6), transparent)", zIndex: 10 }} />
                 <img src={cat.banner} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem", zIndex: 20, color: "white", fontFamily: "monospace" }}>
+                <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem", zIndex: 20, color: "white", fontFamily: "'Jost', sans-serif" }}>
                   <div style={{ fontSize: "1.875rem", marginBottom: "0.25rem" }}>{cat.icon}</div>
-                  <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1.25rem", color: "#F3EEE1", margin: 0 }}>{cat.label}</h3>
+                  <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1.25rem", color: "#F3EEE1", margin: 0 }}>{cat.label}</h3>
                   <p style={{ fontSize: "10px", color: "#C99A3D", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", marginTop: "0.25rem" }}>Explore Full Catalog & Specs →</p>
                 </div>
               </Link>
@@ -74,15 +74,15 @@ export default function ProductsCategoryPage() {
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
         
-        <Link to="/our-products" style={{ fontFamily: "monospace", fontSize: "0.75rem", fontWeight: "bold", color: "#E1672B", textDecoration: "none", marginBottom: "1.5rem", display: "inline-block" }}>
+        <Link to="/our-products" style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", fontWeight: "bold", color: "#2563EB", textDecoration: "none", marginBottom: "1.5rem", display: "inline-block" }}>
           ← Back to All Product Portfolios
         </Link>
 
         {activeCategory ? (
           <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
-            <span style={{ fontFamily: "monospace", fontSize: "1.875rem", marginBottom: "0.5rem", display: "block" }}>{activeCategory.icon}</span>
-            <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", lineHeight: "1" }}>{activeCategory.label} Portfolio</h1>
-            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>PRIME EXPORT GRADE 1 SPECS · BRCGS CERTIFIED</p>
+            <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "1.875rem", marginBottom: "0.5rem", display: "block" }}>{activeCategory.icon}</span>
+            <h1 style={{ fontFamily: "'Jost', sans-serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", lineHeight: "1" }}>{activeCategory.label} Portfolio</h1>
+            <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "'Jost', sans-serif", marginTop: "1rem" }}>PRIME EXPORT GRADE 1 SPECS · BRCGS CERTIFIED</p>
           </div>
         ) : (
           <div style={{ textAlign: "center", padding: "3rem 0" }}>Category not found.</div>
@@ -99,20 +99,20 @@ export default function ProductsCategoryPage() {
               <div style={{ height: "12rem", overflow: "hidden", position: "relative" }}>
                 <img src={prod.image} alt={prod.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 {prod.isPopular && (
-                  <span style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: "#E1672B", color: "white", fontFamily: "monospace", fontSize: "9px", fontWeight: "bold", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
+                  <span style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: "#2563EB", color: "white", fontFamily: "'Jost', sans-serif", fontSize: "9px", fontWeight: "bold", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     High Volume Demand
                   </span>
                 )}
               </div>
-              <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", fontFamily: "monospace" }}>
+              <div style={{ padding: "1rem", flex: 1, display: "flex", flexDirection: "column", justifyContent: "space-between", fontFamily: "'Jost', sans-serif" }}>
                 <div>
                   <span style={{ fontSize: "10px", color: "#C99A3D", fontWeight: "bold", display: "block", marginBottom: "0.25rem", textTransform: "uppercase" }}>{prod.subcategory}</span>
-                  <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", lineHeight: "1.2" }}>{prod.name}</h3>
+                  <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", lineHeight: "1.2" }}>{prod.name}</h3>
                   <p style={{ fontSize: "11px", color: "rgba(36, 31, 24, 0.8)", marginTop: "0.5rem", lineHeight: "1.625", height: "3rem", overflow: "hidden" }}>{prod.shortDesc}</p>
                 </div>
                 <div style={{ fontSize: "10px", fontWeight: "bold", color: "#16302A", borderTop: "1px solid rgba(36, 31, 24, 0.1)", paddingTop: "0.75rem", marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                   <span>SPECIFICATION SHEETS</span>
-                  <span style={{ color: "#E1672B" }}>Inspect →</span>
+                  <span style={{ color: "#2563EB" }}>Inspect →</span>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function ProductsCategoryPage() {
         {/* --- PRODUCT DETAIL MODAL --- */}
         {selectedProduct && (
           <div style={{ position: "fixed", inset: 0, backgroundColor: "rgba(0,0,0,0.75)", backdropFilter: "blur(4px)", display: "flex", alignItems: "center", justifyContent: "center", padding: "1rem", zIndex: 50 }}>
-            <div style={{ backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.25)", borderRadius: "0.25rem", maxWidth: "42rem", width: "100%", padding: "1.5rem", position: "relative", fontFamily: "monospace", fontSize: "0.75rem", maxHeight: "90vh", overflowY: "auto" }}>
+            <div style={{ backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.25)", borderRadius: "0.25rem", maxWidth: "42rem", width: "100%", padding: "1.5rem", position: "relative", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", maxHeight: "90vh", overflowY: "auto" }}>
               <button 
                 onClick={handleCloseProduct}
                 style={{ position: "absolute", right: "1rem", top: "1rem", fontSize: "1rem", color: "rgba(36, 31, 24, 0.6)", border: "none", background: "none", cursor: "pointer" }}
@@ -130,10 +130,10 @@ export default function ProductsCategoryPage() {
                 ✕
               </button>
 
-              <span style={{ fontSize: "10px", color: "#E1672B", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", display: "block", marginBottom: "0.25rem" }}>
+              <span style={{ fontSize: "10px", color: "#2563EB", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "bold", display: "block", marginBottom: "0.25rem" }}>
                 Prime Export Technical Specification Sheet
               </span>
-              <h2 style={{ fontFamily: "serif", fontSize: "1.75rem", fontWeight: "bold", color: "#16302A", marginBottom: "0.75rem", lineHeight: "1.2", borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "0.5rem" }}>
+              <h2 style={{ fontFamily: "'Jost', sans-serif", fontSize: "1.75rem", fontWeight: "bold", color: "#16302A", marginBottom: "0.75rem", lineHeight: "1.2", borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "0.5rem" }}>
                 {selectedProduct.name}
               </h2>
 
@@ -157,13 +157,13 @@ export default function ProductsCategoryPage() {
 
               <div style={{ display: "flex", flexDirection: "column", gap: "1rem", fontSize: "0.75rem", lineHeight: "1.625", borderTop: "1px solid rgba(36, 31, 24, 0.1)", paddingTop: "1rem" }}>
                 <div>
-                  <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Botanical / Crop Summary:</h4>
+                  <h4 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Botanical / Crop Summary:</h4>
                   <p style={{ color: "rgba(36, 31, 24, 0.85)", margin: 0 }}>{selectedProduct.description}</p>
                 </div>
 
                 {selectedProduct.varieties && selectedProduct.varieties.length > 0 && (
                   <div>
-                    <h4 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Certified Cultivars / Export Varieties:</h4>
+                    <h4 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", color: "#16302A", marginBottom: "0.25rem" }}>Certified Cultivars / Export Varieties:</h4>
                     <div style={{ display: "flex", flexWrap: "wrap", gap: "0.375rem", marginTop: "0.25rem" }}>
                       {selectedProduct.varieties.map((v, i) => (
                         <span key={i} style={{ backgroundColor: "rgba(31, 61, 51, 0.1)", color: "#16302A", fontSize: "9.5px", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", border: "1px solid rgba(22, 48, 42, 0.1)" }}>
@@ -176,12 +176,12 @@ export default function ProductsCategoryPage() {
 
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
                   <div style={{ backgroundColor: "white", padding: "0.75rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)" }}>
-                    <h5 style={{ fontFamily: "serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>📦 Carton Packaging specs:</h5>
+                    <h5 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>📦 Carton Packaging specs:</h5>
                     <p style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.4", margin: 0 }}>{selectedProduct.packaging}</p>
                   </div>
                   <div style={{ backgroundColor: "white", padding: "0.75rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)" }}>
-                    <h5 style={{ fontFamily: "serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>🛡️ Compliance Credentials:</h5>
-                    <p style={{ fontSize: "10px", color: "#E1672B", fontWeight: "bold", lineHeight: "1.4", margin: 0 }}>{selectedProduct.certifications ? selectedProduct.certifications.join(" • ") : "GLOBALG.A.P"}</p>
+                    <h5 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", color: "#16302A", marginBottom: "0.25rem", margin: 0 }}>🛡️ Compliance Credentials:</h5>
+                    <p style={{ fontSize: "10px", color: "#2563EB", fontWeight: "bold", lineHeight: "1.4", margin: 0 }}>{selectedProduct.certifications ? selectedProduct.certifications.join(" • ") : "GLOBALG.A.P"}</p>
                   </div>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function ProductsCategoryPage() {
                 <span style={{ fontSize: "10px", color: "rgba(36, 31, 24, 0.6)" }}>Document ID: Sec-PAE-{selectedProduct.id}-2026</span>
                 <Link 
                   to="/contact-us"
-                  style={{ backgroundColor: "#E1672B", color: "white", fontWeight: "bold", fontSize: "10px", padding: "0.5rem 1rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: "none" }}
+                  style={{ backgroundColor: "#2563EB", color: "white", fontWeight: "bold", fontSize: "10px", padding: "0.5rem 1rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em", textDecoration: "none" }}
                 >
                   Request Secure Contract Quote for {selectedProduct.name}
                 </Link>

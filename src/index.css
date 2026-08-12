@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Jost', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Jost', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Jost', ui-monospace, Consolas, monospace;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -13,9 +19,9 @@
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --sans: 'Jost', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --heading: 'Jost', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --mono: 'Jost', ui-monospace, Consolas, monospace;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,6 +48,16 @@
 body {
   margin: 0;
   background-color: #F3EEE1;
+  font-family: 'Jost', system-ui, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Browsers don't inherit font-family on form controls by default,
+   so force every component (buttons, inputs, selects, textareas) to Jost too */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 
 #root {

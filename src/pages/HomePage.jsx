@@ -72,7 +72,7 @@ export default function HomePage() {
       style={{
         backgroundColor: "#F3EEE1",
         color: "#241F18",
-        fontFamily: "sans-serif",
+        fontFamily: "'Jost', sans-serif",
       }}
     >
       {/* Hero Section — rotating slider */}
@@ -126,7 +126,7 @@ export default function HomePage() {
         >
           <span
             style={{
-              fontFamily: "monospace",
+              fontFamily: "'Jost', sans-serif",
               fontSize: "0.75rem",
               lineHeight: "1rem",
               textTransform: "uppercase",
@@ -140,7 +140,7 @@ export default function HomePage() {
           </span>
           <h1
             style={{
-              fontFamily: "serif",
+              fontFamily: "'Jost', sans-serif",
               fontSize: "clamp(2.25rem, 5vw, 3.75rem)",
               fontWeight: "bold",
               lineHeight: 1,
@@ -149,12 +149,12 @@ export default function HomePage() {
           >
             {slide.heading}
             <br />
-            <span style={{ color: "#E1672B" }}>{slide.highlight}</span>
+            <span style={{ color: "white" }}>{slide.highlight}</span>
           </h1>
           <p
             style={{
               fontSize: "clamp(0.875rem, 1.5vw, 1rem)",
-              fontFamily: "monospace",
+              fontFamily: "'Jost', sans-serif",
               color: "rgba(243, 238, 225, 0.8)",
               maxWidth: "42rem",
               marginLeft: "auto",
@@ -181,9 +181,9 @@ export default function HomePage() {
               onBlur={() => setHoveredCta(null)}
               style={{
                 backgroundColor:
-                  hoveredCta === "primary" ? "#c2551f" : "#E1672B",
+                  hoveredCta === "primary" ? "#c2551f" : "#2563EB",
                 color: "#F3EEE1",
-                fontFamily: "monospace",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "0.75rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
@@ -218,7 +218,7 @@ export default function HomePage() {
                 backgroundColor:
                   hoveredCta === "secondary" ? "#F3EEE1" : "transparent",
                 color: hoveredCta === "secondary" ? "#241F18" : "#F3EEE1",
-                fontFamily: "monospace",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "0.75rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
@@ -261,7 +261,7 @@ export default function HomePage() {
                   border: "none",
                   cursor: "pointer",
                   backgroundColor:
-                    i === activeSlide ? "#E1672B" : "rgba(243, 238, 225, 0.4)",
+                    i === activeSlide ? "#2563EB" : "rgba(243, 238, 225, 0.4)",
                   transition: "all 0.3s ease",
                 }}
               />
@@ -308,10 +308,10 @@ export default function HomePage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             <span
               style={{
-                fontFamily: "monospace",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "0.75rem",
                 textTransform: "uppercase",
-                color: "#E1672B",
+                color: "blue",
                 letterSpacing: "0.05em",
                 fontWeight: "bold",
               }}
@@ -320,7 +320,7 @@ export default function HomePage() {
             </span>
             <h2
               style={{
-                fontFamily: "serif",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "clamp(1.875rem, 4vw, 2.25rem)",
                 fontWeight: "bold",
                 color: "black",
@@ -352,8 +352,8 @@ export default function HomePage() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.375rem",
-                color: "#E1672B",
-                fontFamily: "monospace",
+                color: "blue",
+                fontFamily: "'Jost', sans-serif",
                 fontSize: "0.75rem",
                 textTransform: "uppercase",
                 letterSpacing: "0.05em",
@@ -409,7 +409,7 @@ export default function HomePage() {
                   padding: "1.25rem 1rem",
                   textDecoration: "none",
                   color: isHovered ? "#F3EEE1" : "#16302A",
-                  fontFamily: "monospace",
+                  fontFamily: "'Jost', sans-serif",
                   fontSize: "0.75rem",
                   fontWeight: "bold",
                   textTransform: "uppercase",

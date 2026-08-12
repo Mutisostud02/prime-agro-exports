@@ -15,7 +15,7 @@ export default function CompliancePage() {
     <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">Traceability & Social Standards</span>
+          <span className="font-mono text-xs uppercase text-[#2563EB] tracking-widest font-bold">Traceability & Social Standards</span>
 <h1 className="font-serif text-4xl sm:text-5xl font-bold mt-2 leading-none" style={{ color: 'black' }}>Compliance & Accreditation</h1>
           <p className="text-[#241F18]/70 text-sm font-mono mt-4">UNCOMPROMISING QUALITY BENCHMARKS ACROSS GLOBAL FOOD CHAINS</p>
         </div>
@@ -35,8 +35,8 @@ export default function CompliancePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
           {policies.map((policy) => (
-            <div key={policy.code} className="bg-[#EAE2CE]/60 border border-[#241F18]/15 p-5 rounded hover:border-[#E1672B] transition-colors">
-              <span className="font-mono text-[10px] text-[#E1672B] font-bold block">{policy.code}</span>
+            <div key={policy.code} className="bg-[#EAE2CE]/60 border border-[#241F18]/15 p-5 rounded hover:border-[#2563EB] transition-colors">
+              <span className="font-mono text-[10px] text-[#2563EB] font-bold block">{policy.code}</span>
               <h3 className="font-serif font-bold text-base mt-1" style={{ color: 'black' }}>{policy.title}</h3>
               <p className="text-xs text-[#241F18]/80 font-mono mt-2 leading-relaxed">{policy.desc}</p>
             </div>
@@ -58,10 +58,10 @@ export default function CompliancePage() {
                 className="w-full flex justify-between items-center p-4 bg-[#EAE2CE]/40 hover:bg-[#EAE2CE] transition-colors text-left"
               >
                 <div>
-                  <h3 className="font-serif font-bold text-sm" style={{ color: '#E1672B' }}>{cert.name}</h3>
+                  <h3 className="font-serif font-bold text-sm" style={{ color: '#2563EB' }}>{cert.name}</h3>
                   <span className="text-[10px] font-mono text-[#241F18]/60 mt-0.5 block">{cert.short}</span>
                 </div>
-                <span className="text-[#E1672B] font-mono text-xs">{activeCert === cert.id ? "Close ▲" : "Inspect ▼"}</span>
+                <span className="text-[#2563EB] font-mono text-xs">{activeCert === cert.id ? "Close ▲" : "Inspect ▼"}</span>
               </button>
               
               {activeCert === cert.id && (

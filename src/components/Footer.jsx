@@ -26,7 +26,7 @@ export default function Footer() {
   return (
     <footer
       style={{
-        backgroundColor: "#16302A",
+        backgroundColor: "#12305C",
         color: "#F3EEE1",
         borderTop: "1px solid rgba(243, 238, 225, 0.1)",
         paddingTop: "4rem",
@@ -68,7 +68,7 @@ export default function Footer() {
             />
             <span
               style={{
-                fontFamily: "serif",
+                fontFamily: "'Jost', sans-serif",
                 fontWeight: "bold",
                 fontSize: "1.125rem",
                 letterSpacing: "-0.025em",
@@ -84,7 +84,7 @@ export default function Footer() {
               textTransform: "uppercase",
               marginBottom: "0.75rem",
               letterSpacing: "0.05em",
-              fontFamily: "monospace",
+              fontFamily: "'Jost', sans-serif",
               fontSize: "0.75rem",
             }}
           >
@@ -94,7 +94,7 @@ export default function Footer() {
             style={{
               fontSize: "0.75rem",
               color: "rgba(243, 238, 225, 0.7)",
-              fontFamily: "monospace",
+              fontFamily: "'Jost', sans-serif",
               marginBottom: "1rem",
               lineHeight: "1.625",
             }}
@@ -107,7 +107,7 @@ export default function Footer() {
             style={{
               color: "#C99A3D",
               textDecoration: "none",
-              fontFamily: "monospace",
+              fontFamily: "'Jost', sans-serif",
               fontSize: "0.75rem",
               fontWeight: "bold",
               textTransform: "uppercase",
@@ -119,7 +119,7 @@ export default function Footer() {
         </div>
 
         {/* The Company */}
-        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+        <div style={{ fontSize: "0.75rem", fontFamily: "'Jost', sans-serif" }}>
           <h4
             style={{
               fontWeight: "bold",
@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
 
         {/* Our Products */}
-        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+        <div style={{ fontSize: "0.75rem", fontFamily: "'Jost', sans-serif" }}>
           <h4
             style={{
               fontWeight: "bold",
@@ -191,7 +191,7 @@ export default function Footer() {
         </div>
 
         {/* Head Office */}
-        <div style={{ fontSize: "0.75rem", fontFamily: "monospace" }}>
+        <div style={{ fontSize: "0.75rem", fontFamily: "'Jost', sans-serif" }}>
           <h4
             style={{
               fontWeight: "bold",
@@ -242,7 +242,7 @@ export default function Footer() {
           justifyContent: "space-between",
           alignItems: "center",
           fontSize: "10px",
-          fontFamily: "monospace",
+          fontFamily: "'Jost', sans-serif",
           color: "rgba(243, 238, 225, 0.5)",
           gap: "1rem",
         }}

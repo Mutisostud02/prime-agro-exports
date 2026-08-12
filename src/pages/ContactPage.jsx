@@ -16,13 +16,13 @@ export default function ContactPage() {
         
         {/* Header Section */}
         <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
-          <span style={{ fontFamily: "monospace", fontSize: "0.75rem", textTransform: "uppercase", color: "#E1672B", letterSpacing: "0.1em", fontWeight: "bold" }}>
+          <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", textTransform: "uppercase", color: "#2563EB", letterSpacing: "0.1em", fontWeight: "bold" }}>
             Secure Global Comms Portal
           </span>
-          <h1 style={{ fontFamily: "serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
+          <h1 style={{ fontFamily: "'Jost', sans-serif", fontSize: "2.5rem", fontWeight: "bold", color: "#16302A", marginTop: "0.5rem", lineHeight: "1" }}>
             Contact Us
           </h1>
-          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "monospace", marginTop: "1rem" }}>
+          <p style={{ color: "rgba(36, 31, 24, 0.7)", fontSize: "0.875rem", fontFamily: "'Jost', sans-serif", marginTop: "1rem" }}>
             DIRECT CHANNELS TO OUR NAIROBI EXPORT DESK & REGIONAL FARMS
           </p>
         </div>
@@ -30,15 +30,15 @@ export default function ContactPage() {
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem", alignItems: "start", marginBottom: "3rem" }}>
           
           {/* Form Panel */}
-          <div style={{ backgroundColor: "white", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)", fontFamily: "monospace", fontSize: "0.75rem" }}>
-            <h2 style={{ fontFamily: "serif", fontSize: "1.25rem", fontWeight: "bold", color: "#16302A", marginBottom: "1rem" }}>
+          <div style={{ backgroundColor: "white", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem" }}>
+            <h2 style={{ fontFamily: "'Jost', sans-serif", fontSize: "1.25rem", fontWeight: "bold", color: "#16302A", marginBottom: "1rem" }}>
               Submit securing wholesale inquiry
             </h2>
             
             {submitted ? (
               <div style={{ textAlign: "center", padding: "3rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <span style={{ fontSize: "2.25rem", display: "block" }}>📬</span>
-                <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Inquiry Transmitted</h3>
+                <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Inquiry Transmitted</h3>
                 <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
                   Thank you! Your cold-chain procurement request has been safely logged in our central database. Our Nairobi export desk agent will follow up via email within 12 hours.
                 </p>
@@ -52,7 +52,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
                   <input 
                     required 
                     type="text" 
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Business Email</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Business Email</label>
                   <input 
                     required 
                     type="email" 
@@ -72,7 +72,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
                   <select 
                     value={formData.category} 
                     onChange={(e) => setFormData({...formData, category: e.target.value})}
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#E1672B", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
+                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
                   <textarea 
                     required 
                     placeholder="Specify stem counts, varieties, required shipment arrival airports, or seasonal volume expectations..."
@@ -94,7 +94,7 @@ export default function ContactPage() {
                     style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", height: "7rem", outline: "none", resize: "vertical" }} 
                   />
                 </div>
-                <button type="submit" style={{ width: "100%", backgroundColor: "#E1672B", color: "white", padding: "0.75rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: "pointer" }}>
+                <button type="submit" style={{ width: "100%", backgroundColor: "#2563EB", color: "white", padding: "0.75rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: "pointer" }}>
                   Submit Direct Inquiry
                 </button>
               </form>
@@ -103,19 +103,19 @@ export default function ContactPage() {
 
           {/* Location Panel */}
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "0.875rem" }}>
-            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Headquarters Office</h3>
+            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Headquarters Office</h3>
               <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
                 📍 {COMPANY.address.full}
               </p>
-              <div style={{ fontSize: "10px", color: "#E1672B", fontWeight: "bold", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+              <div style={{ fontSize: "10px", color: "#2563EB", fontWeight: "bold", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 <div>📞 {COMPANY.phoneDisplay}</div>
                 <div>✉️ Email: {COMPANY.email}</div>
               </div>
             </div>
 
-            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "monospace", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              <h3 style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Regional Operations Centers</h3>
+            <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+              <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Regional Operations Centers</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "11px", color: "rgba(36, 31, 24, 0.8)" }}>
                 <div>🌳 <strong style={{ color: "#16302A" }}>Naivasha Farm Office:</strong> Lake Naivasha Highland Depot (140 km from Nairobi)</div>
                 <div>🏭 <strong style={{ color: "#16302A" }}>Thika Processing Plant:</strong> Thika Industrial Highway Complex</div>

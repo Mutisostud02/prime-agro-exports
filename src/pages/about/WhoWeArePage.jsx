@@ -3,9 +3,9 @@ import React from "react";
 export default function WhoWeArePage() {
   const STATS = [
     { value: "8+", label: "Years Export Experience", color: "#C99A3D" },
-    { value: "120+", label: "Acres Proprietary Farms", color: "#E1672B" },
+    { value: "120+", label: "Acres Proprietary Farms", color: "#2563EB" },
     { value: "15+", label: "Global Destinations", color: "#C99A3D" },
-    { value: "150+", label: "Dedicated Employees", color: "#E1672B" },
+    { value: "150+", label: "Dedicated Employees", color: "#2563EB" },
   ];
 
   return (
@@ -25,7 +25,7 @@ export default function WhoWeArePage() {
       <div className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
-          <span className="font-mono text-xs uppercase text-[#E1672B] tracking-widest font-bold">About Us</span>
+          <span className="font-mono text-xs uppercase text-[#2563EB] tracking-widest font-bold">About Us</span>
           <h1 className="font-serif text-4xl sm:text-5xl font-bold mt-2 leading-none" style={{ color: 'black' }}>Who We Are</h1>
           <p className="text-[#241F18]/70 text-sm font-mono mt-4">PRIME AGRO EXPORTS LIMITED · NAIROBI, KENYA</p>
         </div>
@@ -55,6 +55,25 @@ export default function WhoWeArePage() {
               <li><strong className="text-[#16302A]">Prime Fresh Produce:</strong> Hand-graded vegetables and fruits harvested daily and packed under BRCGS Grade AA standards.</li>
               <li><strong className="text-[#16302A]">Prime Agro Logistics:</strong> In-house cold-chain and cargo handling at JKIA, plus sea reefer coordination via Mombasa.</li>
             </ul>
+
+            <h2 className="font-serif text-2xl font-bold pt-4" style={{ color: 'black' }}>Our Story</h2>
+            <p>
+              It began in 2020 with four people who believed Kenya&apos;s highlands deserved a seat at the world&apos;s table. <strong>Robert Mayeku Namonyo, Edith Wanjiru Njenga, Patrick Kimani Kuria,</strong> and <strong>Jacquelyne Ayesa Kidula</strong> pooled their expertise in agronomy, logistics, and trade to found Prime Agro Exports Limited — starting with a handful of contracted acres and a single freight route out of JKIA. What they built together has since grown into an integrated export house serving buyers across three continents, without ever losing sight of the founders&apos; original promise: quality grown honestly, and delivered on time.
+            </p>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
+              {[
+                { name: "Robert Mayeku Namonyo", role: "Director / Shareholder" },
+                { name: "Edith Wanjiru Njenga", role: "Director / Shareholder" },
+                { name: "Patrick Kimani Kuria", role: "Director / Shareholder" },
+                { name: "Jacquelyne Ayesa Kidula", role: "Director / Shareholder" },
+              ].map((founder) => (
+                <div key={founder.name} className="bg-[#EAE2CE] border border-[#241F18]/10 rounded p-3 text-center">
+                  <div className="font-serif font-bold text-xs leading-tight" style={{ color: '#16302A' }}>{founder.name}</div>
+                  <div className="font-mono text-[10px] uppercase tracking-wider text-[#2563EB] mt-1">{founder.role}</div>
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="bg-[#EAE2CE] p-6 rounded border border-[#241F18]/10 h-fit space-y-6">
@@ -70,9 +89,9 @@ export default function WhoWeArePage() {
 <h3 className="font-serif font-bold text-lg mb-2" style={{ color: 'black' }}>Core Values</h3>
 
               <ul className="text-xs font-mono space-y-3">
-                <li><strong className="text-[#E1672B]">TRANSPARENCY:</strong> Farm-to-flight traceability on every carton.</li>
-                <li><strong className="text-[#E1672B]">INTEGRITY:</strong> Fair trade, social welfare, and environmental stewardship.</li>
-                <li><strong className="text-[#E1672B]">EXCELLENCE:</strong> Meeting global standards (BRC, GLOBALG.A.P, MPS).</li>
+                <li><strong className="text-[#2563EB]">TRANSPARENCY:</strong> Farm-to-flight traceability on every carton.</li>
+                <li><strong className="text-[#2563EB]">INTEGRITY:</strong> Fair trade, social welfare, and environmental stewardship.</li>
+                <li><strong className="text-[#2563EB]">EXCELLENCE:</strong> Meeting global standards (BRC, GLOBALG.A.P, MPS).</li>
               </ul>
             </div>
           </div>
