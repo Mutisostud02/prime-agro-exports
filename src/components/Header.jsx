@@ -115,7 +115,7 @@ export default function Header() {
   />
   <div>
     <div style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", lineHeight: "1", color: "#16302A" }}>PRIME AGRO EXPORTS</div>
-    <span style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", letterSpacing: "0.1em", color: "#2563EB", display: "block" }}>KENYAN EXPORTERS</span>
+    <span style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", fontWeight: "600", letterSpacing: "0.1em", color: "#2563EB", display: "block" }}>KENYAN EXPORTERS</span>
   </div>
 </Link>
 

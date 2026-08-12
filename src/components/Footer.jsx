@@ -218,12 +218,14 @@ export default function Footer() {
           <div
             style={{
               color: "#C99A3D",
+              fontWeight: 600,
               display: "flex",
               flexDirection: "column",
               gap: "0.35rem",
             }}
           >
             <div>📞 {COMPANY.phoneDisplay}</div>
+            <div>📱 {COMPANY.mobileDisplay}</div>
             <div>✉️ {COMPANY.email}</div>
           </div>
         </div>
@@ -250,19 +252,7 @@ export default function Footer() {
         <div>
           © 2020 {COMPANY.name}. All Rights Reserved.
         </div>
-        <div style={{ display: "flex", gap: "1rem" }}>
-          <span>
-            {COMPANY.address.line1}, {COMPANY.address.city}
-          </span>
-          <span>•</span>
-          <Link
-            to="/contact-us"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            Inquire Export Pack
-          </Link>
         </div>
-      </div>
     </footer>
   );
 }

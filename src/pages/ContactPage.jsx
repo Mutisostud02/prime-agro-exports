@@ -52,7 +52,7 @@ export default function ContactPage() {
             ) : (
               <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
                   <input 
                     required 
                     type="text" 
@@ -62,7 +62,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Business Email</label>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Business Email</label>
                   <input 
                     required 
                     type="email" 
@@ -72,7 +72,7 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
                   <select 
                     value={formData.category} 
                     onChange={(e) => setFormData({...formData, category: e.target.value})}
@@ -85,7 +85,7 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div>
-                  <label style={{ display: "block", fontSize: "10px", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
+                  <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
                   <textarea 
                     required 
                     placeholder="Specify stem counts, varieties, required shipment arrival airports, or seasonal volume expectations..."
@@ -105,18 +105,19 @@ export default function ContactPage() {
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", fontSize: "0.875rem" }}>
             <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
               <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Headquarters Office</h3>
-              <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
+              <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625", fontSize: "0.9rem"}}>
                 📍 {COMPANY.address.full}
               </p>
-              <div style={{ fontSize: "10px", color: "#2563EB", fontWeight: "bold", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
+              <div style={{ fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                 <div>📞 {COMPANY.phoneDisplay}</div>
+                <div>📱 {COMPANY.mobileDisplay}</div>
                 <div>✉️ Email: {COMPANY.email}</div>
               </div>
             </div>
 
             <div style={{ backgroundColor: "rgba(234, 226, 206, 0.6)", padding: "1.5rem", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.15)", fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
-              <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Regional Operations Centers</h3>
-              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "11px", color: "rgba(36, 31, 24, 0.8)" }}>
+              <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1.2rem", color: "#16302A" }}>Regional Operations Centers</h3>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem", fontSize: "1rem", color: "rgba(36, 31, 24, 0.8)" }}>
                 <div>🌳 <strong style={{ color: "#16302A" }}>Naivasha Farm Office:</strong> Lake Naivasha Highland Depot (140 km from Nairobi)</div>
                 <div>🏭 <strong style={{ color: "#16302A" }}>Thika Processing Plant:</strong> Thika Industrial Highway Complex</div>
                 <div>✈️ <strong style={{ color: "#16302A" }}>{COMPANY.logisticsDivision}:</strong> JKIA Cargo Build-up Hub, Warehouse 3</div>
