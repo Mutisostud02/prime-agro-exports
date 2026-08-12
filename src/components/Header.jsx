@@ -45,16 +45,48 @@ export default function Header() {
       backdropFilter: "blur(8px)",
       padding:"1rem"
     }}>
+      <style>{`
+        .pae-nav-trigger {
+          transition: color 0.15s ease;
+        }
+        .pae-nav-trigger:hover {
+          color: #E1672B !important;
+        }
+        .pae-dropdown-item {
+          transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .pae-dropdown-item:hover {
+          background-color: rgba(225, 103, 43, 0.1);
+          color: #E1672B !important;
+        }
+        .pae-contact-btn {
+          transition: background-color 0.15s ease, color 0.15s ease;
+        }
+        .pae-contact-btn:hover {
+          background-color: #16302A;
+          color: #F3EEE1 !important;
+        }
+        .pae-search-result:hover {
+          background-color: rgba(225, 103, 43, 0.08);
+        }
+        .pae-mobile-link {
+          transition: color 0.15s ease;
+        }
+        .pae-mobile-link:hover {
+          color: #E1672B !important;
+        }
+      `}</style>
+
       {/* Top Bar */}
       <div style={{ 
         backgroundColor: "#16302A", 
         color: "#F3EEE1", 
         fontSize: "10px", 
-        fontFamily: "monospace", 
+        fontFamily: "serif", 
         padding: "0.25rem 1rem", 
         display: "flex", 
         justifyContent: "flex-end",
-        marginBottom:"1rem"
+        marginBottom:"1rem",
       }}>
         <span style={{ color: "#C99A3D" }}>FAIRTRADE & BRCGS AA CERTIFIED</span>
       </div>
@@ -90,55 +122,55 @@ export default function Header() {
         <nav className="hidden lg:flex" style={{ alignItems: "center", gap: "1rem", fontSize: "10px", fontFamily: "monospace", textTransform: "uppercase", fontWeight: "bold", letterSpacing: "0.05em" }}>
           {/* About Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("about")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>About Us ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>About Us ▾</button>
             {activeDropdown === "about" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "11rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
-                <Link to="/about-us/who-we-are" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Who We Are</Link>
-                <Link to="/about-us/compliance-accreditation" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Accreditation</Link>
-                <Link to="/about-us/freight-logistics" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Logistics</Link>
-                <Link to="/about-us/customers" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Our Customers</Link>
-                <Link to="/about-us/our-team-careers" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Careers</Link>
+                <Link to="/about-us/who-we-are" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Who We Are</Link>
+                <Link to="/about-us/compliance-accreditation" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Accreditation</Link>
+                <Link to="/about-us/freight-logistics" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Logistics</Link>
+                <Link to="/about-us/customers" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Our Customers</Link>
+                <Link to="/about-us/our-team-careers" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Careers</Link>
               </div>
             )}
           </div>
 
           {/* Growing Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("growing")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Growing ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Growing ▾</button>
             {activeDropdown === "growing" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "12rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
-                <Link to="/growing-base/our-farms-packhouses" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farms & Packhouses</Link>
-                <Link to="/growing-base/out-grower-farming" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Out-Growers</Link>
+                <Link to="/growing-base/our-farms-packhouses" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farms & Packhouses</Link>
+                <Link to="/growing-base/out-grower-farming" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Out-Growers</Link>
               </div>
             )}
           </div>
 
           {/* Products Link */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("products")} onMouseLeave={() => setActiveDropdown(null)}>
-            <Link to="/our-products" style={{ textDecoration: "none", color: "#16302A", padding: "0.5rem 0" }}>Products ▾</Link>
+            <Link to="/our-products" className="pae-nav-trigger" style={{ textDecoration: "none", color: "#16302A", padding: "0.5rem 0" }}>Products ▾</Link>
             {activeDropdown === "products" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "10rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
-                <Link to="/our-products/flowers" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🌹 Flowers</Link>
-                <Link to="/our-products/fruits" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🥑 Fruits</Link>
-                <Link to="/our-products/vegetables" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🫛 Vegetables</Link>
-                <Link to="/our-products/frozen-iqf" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>❄️ Frozen IQF</Link>
+                <Link to="/our-products/flowers" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🌹 Flowers</Link>
+                <Link to="/our-products/fruits" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🥑 Fruits</Link>
+                <Link to="/our-products/vegetables" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>🫛 Vegetables</Link>
+                <Link to="/our-products/frozen-iqf" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>❄️ Frozen IQF</Link>
               </div>
             )}
           </div>
 
           {/* Sustainability Dropdown */}
           <div style={{ position: "relative" }} onMouseEnter={() => setActiveDropdown("sustainability")} onMouseLeave={() => setActiveDropdown(null)}>
-            <button style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Sustainability ▾</button>
+            <button className="pae-nav-trigger" style={{ color: "#16302A", border: "none", background: "none", cursor: "pointer", padding: "0.5rem 0", fontWeight: "bold", fontFamily: "monospace", fontSize: "10px", textTransform: "uppercase" }}>Sustainability ▾</button>
             {activeDropdown === "sustainability" && (
               <div style={{ position: "absolute", top: "100%", left: 0, width: "12rem", backgroundColor: "#F3EEE1", border: "1px solid rgba(36, 31, 24, 0.15)", borderRadius: "0.25rem", boxShadow: "0 10px 15px -3px rgba(0, 0, 0, 0.1)", padding: "0.25rem 0" }}>
-                <Link to="/sustainability/farming-practice" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farming Practice</Link>
-                <Link to="/sustainability/conservation" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Conservation</Link>
-                <Link to="/sustainability/corporate-social-initiative-responsibilities" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>CSR / CSI</Link>
+                <Link to="/sustainability/farming-practice" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Farming Practice</Link>
+                <Link to="/sustainability/conservation" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>Conservation</Link>
+                <Link to="/sustainability/corporate-social-initiative-responsibilities" className="pae-dropdown-item" style={{ display: "block", padding: "0.375rem 0.75rem", textDecoration: "none", color: "inherit" }}>CSR / CSI</Link>
               </div>
             )}
           </div>
 
-          <Link to="/contact-us" style={{ 
+          <Link to="/contact-us" className="pae-contact-btn" style={{ 
             border: "1px solid #16302A", 
             color: "#16302A", 
             padding: "0.25rem 0.75rem", 
@@ -190,7 +222,7 @@ export default function Header() {
                       {filteredProducts.length} product{filteredProducts.length !== 1 ? "s" : ""} found
                     </div>
                     {filteredProducts.map((p) => (
-                      <div key={p.id} onClick={() => handleProductClick(p)} style={{ padding: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center", cursor: "pointer", fontSize: "10px", textAlign: "left", borderBottom: "1px solid rgba(36, 31, 24, 0.05)" }}>
+                      <div key={p.id} onClick={() => handleProductClick(p)} className="pae-search-result" style={{ padding: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center", cursor: "pointer", fontSize: "10px", textAlign: "left", borderBottom: "1px solid rgba(36, 31, 24, 0.05)" }}>
                         <img src={p.image} alt={p.name} style={{ width: "2rem", height: "2rem", objectFit: "cover", borderRadius: "0.125rem" }} />
                         <div style={{ minWidth: 0, flex: 1 }}>
                           <div style={{ fontWeight: "bold", color: "#16302A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</div>
@@ -224,23 +256,23 @@ export default function Header() {
           <div>
             <div style={{ fontWeight: "bold", color: "#E1672B", marginBottom: "0.25rem" }}>About Us:</div>
             <div style={{ paddingLeft: "0.5rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-              <Link to="/about-us/who-we-are" style={{ textDecoration: "none", color: "#16302A" }}>Who We Are</Link>
-              <Link to="/about-us/compliance-accreditation" style={{ textDecoration: "none", color: "#16302A" }}>Accreditation</Link>
-              <Link to="/about-us/freight-logistics" style={{ textDecoration: "none", color: "#16302A" }}>Logistics</Link>
-              <Link to="/about-us/customers" style={{ textDecoration: "none", color: "#16302A" }}>Customers</Link>
-              <Link to="/about-us/our-team-careers" style={{ textDecoration: "none", color: "#16302A" }}>Careers</Link>
+              <Link to="/about-us/who-we-are" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Who We Are</Link>
+              <Link to="/about-us/compliance-accreditation" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Accreditation</Link>
+              <Link to="/about-us/freight-logistics" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Logistics</Link>
+              <Link to="/about-us/customers" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Customers</Link>
+              <Link to="/about-us/our-team-careers" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>Careers</Link>
             </div>
           </div>
           <div>
             <div style={{ fontWeight: "bold", color: "#E1672B", marginBottom: "0.25rem" }}>Products:</div>
             <div style={{ paddingLeft: "0.5rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
-              <Link to="/our-products/flowers" style={{ textDecoration: "none", color: "#16302A" }}>🌹 Flowers</Link>
-              <Link to="/our-products/fruits" style={{ textDecoration: "none", color: "#16302A" }}>🥑 Fruits</Link>
-              <Link to="/our-products/vegetables" style={{ textDecoration: "none", color: "#16302A" }}>🫛 Vegetables</Link>
-              <Link to="/our-products/frozen-iqf" style={{ textDecoration: "none", color: "#16302A" }}>❄️ Frozen IQF</Link>
+              <Link to="/our-products/flowers" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>🌹 Flowers</Link>
+              <Link to="/our-products/fruits" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>🥑 Fruits</Link>
+              <Link to="/our-products/vegetables" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>🫛 Vegetables</Link>
+              <Link to="/our-products/frozen-iqf" className="pae-mobile-link" style={{ textDecoration: "none", color: "#16302A" }}>❄️ Frozen IQF</Link>
             </div>
           </div>
-          <Link to="/contact-us" style={{ 
+          <Link to="/contact-us" className="pae-contact-btn" style={{ 
             display: "block", 
             textAlign: "center", 
             backgroundColor: "#16302A", 

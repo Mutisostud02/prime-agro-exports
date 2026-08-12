@@ -55,6 +55,8 @@ const QUICK_LINKS = [
 
 export default function HomePage() {
   const [activeSlide, setActiveSlide] = useState(0);
+  const [hoveredLink, setHoveredLink] = useState(null);
+  const [hoveredCta, setHoveredCta] = useState(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -173,8 +175,13 @@ export default function HomePage() {
           >
             <Link
               to={slide.ctaTo}
+              onMouseEnter={() => setHoveredCta("primary")}
+              onMouseLeave={() => setHoveredCta(null)}
+              onFocus={() => setHoveredCta("primary")}
+              onBlur={() => setHoveredCta(null)}
               style={{
-                backgroundColor: "#E1672B",
+                backgroundColor:
+                  hoveredCta === "primary" ? "#c2551f" : "#E1672B",
                 color: "#F3EEE1",
                 fontFamily: "monospace",
                 fontSize: "0.75rem",
@@ -188,15 +195,29 @@ export default function HomePage() {
                 borderRadius: "0.25rem",
                 textDecoration: "none",
                 display: "inline-block",
+                boxShadow:
+                  hoveredCta === "primary"
+                    ? "0 6px 12px -2px rgba(0, 0, 0, 0.3)"
+                    : "none",
+                transform:
+                  hoveredCta === "primary" ? "translateY(-2px)" : "translateY(0)",
+                transition:
+                  "background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease",
               }}
             >
               {slide.ctaLabel}
             </Link>
             <Link
               to="/about-us/who-we-are"
+              onMouseEnter={() => setHoveredCta("secondary")}
+              onMouseLeave={() => setHoveredCta(null)}
+              onFocus={() => setHoveredCta("secondary")}
+              onBlur={() => setHoveredCta(null)}
               style={{
                 border: "1px solid #F3EEE1",
-                color: "#F3EEE1",
+                backgroundColor:
+                  hoveredCta === "secondary" ? "#F3EEE1" : "transparent",
+                color: hoveredCta === "secondary" ? "#241F18" : "#F3EEE1",
                 fontFamily: "monospace",
                 fontSize: "0.75rem",
                 textTransform: "uppercase",
@@ -209,6 +230,10 @@ export default function HomePage() {
                 borderRadius: "0.25rem",
                 textDecoration: "none",
                 display: "inline-block",
+                transform:
+                  hoveredCta === "secondary" ? "translateY(-2px)" : "translateY(0)",
+                transition:
+                  "background-color 0.2s ease, color 0.2s ease, transform 0.2s ease",
               }}
             >
               Who We Are
@@ -318,8 +343,8 @@ export default function HomePage() {
               out-grower network. Everything is hand-graded in our
               BRCGS-certified packhouses and, for select lines, individually
               quick-frozen to lock in quality. We also run our own in-house
-              logistics division, moving produce from farm to airline cargo
-              hold.
+              logistics division, moving produce from farm cold rooms to
+              airline cargo hold.
             </p>
             <Link
               to="/about-us/who-we-are"
@@ -365,34 +390,69 @@ export default function HomePage() {
             gap: "1rem",
           }}
         >
-          {QUICK_LINKS.map((link) => (
-            <Link
-              key={link.label}
-              to={link.to}
-              style={{
-                backgroundColor: "#ffffff",
-                border: "1px solid rgba(36, 31, 24, 0.1)",
-                borderRadius: "0.25rem",
-                padding: "1.25rem 1rem",
-                textDecoration: "none",
-                color: "#16302A",
-                fontFamily: "monospace",
-                fontSize: "0.75rem",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-                letterSpacing: "0.03em",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                textAlign: "center",
-                gap: "0.5rem",
-                boxShadow: "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
-              }}
-            ><img src={link.src}/>
-              <span style={{ fontSize: "1.5rem" }}>{link.icon}</span>
-              {link.label}
-            </Link>
-          ))}
+          {QUICK_LINKS.map((link, index) => {
+            const isHovered = hoveredLink === index;
+            return (
+              <Link
+                key={link.label}
+                to={link.to}
+                onMouseEnter={() => setHoveredLink(index)}
+                onMouseLeave={() => setHoveredLink(null)}
+                onFocus={() => setHoveredLink(index)}
+                onBlur={() => setHoveredLink(null)}
+                style={{
+                  backgroundColor: isHovered ? "#16302A" : "#ffffff",
+                  border: isHovered
+                    ? "1px solid #16302A"
+                    : "1px solid rgba(36, 31, 24, 0.1)",
+                  borderRadius: "0.25rem",
+                  padding: "1.25rem 1rem",
+                  textDecoration: "none",
+                  color: isHovered ? "#F3EEE1" : "#16302A",
+                  fontFamily: "monospace",
+                  fontSize: "0.75rem",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.03em",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  gap: "0.5rem",
+                  boxShadow: isHovered
+                    ? "0 10px 15px -3px rgba(0, 0, 0, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.08)"
+                    : "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                  transform: isHovered ? "translateY(-4px)" : "translateY(0)",
+                  transition:
+                    "background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease",
+                  cursor: "pointer",
+                }}
+              >
+                <img
+                  src={link.src}
+                  alt=""
+                  style={{
+                    width: "100%",
+                    height: "6rem",
+                    objectFit: "cover",
+                    borderRadius: "0.25rem",
+                    opacity: isHovered ? 0.85 : 1,
+                    transition: "opacity 0.2s ease",
+                  }}
+                />
+                <span
+                  style={{
+                    fontSize: "1.5rem",
+                    transform: isHovered ? "scale(1.1)" : "scale(1)",
+                    transition: "transform 0.2s ease",
+                  }}
+                >
+                  {link.icon}
+                </span>
+                {link.label}
+              </Link>
+            );
+          })}
         </div>
       </section>
     </div>
