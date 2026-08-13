@@ -2,13 +2,89 @@ import React, { useState } from "react";
 import { COMPANY } from "../data/companyData";
 import SEO, { SITE_URL } from "../components/SEO";
 
-export default function ContactPage() {
-  const [formData, setFormData] = useState({ name: "", email: "", category: "Export Wholesale Quote", message: "" });
-  const [submitted, setSubmitted] = useState(false);
+// Web3Forms delivers submissions to whatever email address was used to
+// generate the access key at https://web3forms.com — it is NOT set here.
+// Create a free account with info@primeagroexportsltd.com, grab the access
+// key from the dashboard, and set it as VITE_WEB3FORMS_ACCESS_KEY in your
+// .env file (see .env.example). Without a real key, submissions will fail.
+const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || "";
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 
-  const handleSubmit = (e) => {
+const initialFormData = { name: "", email: "", category: "Export Wholesale Quote", message: "" };
+
+export default function ContactPage() {
+  const [formData, setFormData] = useState(initialFormData);
+  // status: "idle" | "submitting" | "success" | "error"
+  const [status, setStatus] = useState("idle");
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const validate = () => {
+    if (!formData.name.trim()) return "Please enter your company or buyer name.";
+    if (!formData.email.trim()) return "Please enter your business email.";
+    // Simple, permissive email shape check — the browser's type="email" already
+    // catches most issues, this is a second guard since we submit via fetch.
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(formData.email.trim())) return "Please enter a valid email address.";
+    if (!formData.message.trim()) return "Please add a message describing your inquiry.";
+    if (formData.message.trim().length < 10) return "Please provide a bit more detail in your message.";
+    return null;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    const validationError = validate();
+    if (validationError) {
+      setStatus("error");
+      setErrorMessage(validationError);
+      return;
+    }
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      setStatus("error");
+      setErrorMessage(
+        "This form isn't fully configured yet (missing Web3Forms access key). Please email us directly instead."
+      );
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage("");
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New ${formData.category} inquiry — ${formData.name}`,
+          from_name: formData.name,
+          name: formData.name,
+          email: formData.email,
+          category: formData.category,
+          message: formData.message,
+          // Honeypot field — Web3Forms silently discards submissions where
+          // this is filled in, since real users never see or fill it.
+          botcheck: formData.botcheck || "",
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setStatus("success");
+        setFormData(initialFormData);
+      } else {
+        setStatus("error");
+        setErrorMessage(result.message || "Something went wrong sending your message. Please try again.");
+      }
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage("Network error — please check your connection and try again.");
+    }
   };
 
   const contactJsonLd = {
@@ -62,27 +138,48 @@ export default function ContactPage() {
               Submit securing wholesale inquiry
             </h2>
             
-            {submitted ? (
+            {status === "success" ? (
               <div style={{ textAlign: "center", padding: "3rem 0", display: "flex", flexDirection: "column", gap: "1rem" }}>
                 <span style={{ fontSize: "2.25rem", display: "block" }}>📬</span>
-                <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Inquiry Transmitted</h3>
+                <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1rem", color: "#16302A" }}>Inquiry Sent</h3>
                 <p style={{ color: "rgba(36, 31, 24, 0.8)", lineHeight: "1.625" }}>
-                  Thank you! Your cold-chain procurement request has been safely logged in our central database. Our Nairobi export desk agent will follow up via email within 12 hours.
+                  Thank you! Your inquiry has been sent to our Nairobi export desk. An agent will follow up via email within 12 hours.
                 </p>
                 <button 
-                  onClick={() => { setSubmitted(false); setFormData({ name: "", email: "", category: "Export Wholesale Quote", message: "" }); }}
+                  onClick={() => { setStatus("idle"); setFormData(initialFormData); }}
                   style={{ backgroundColor: "#16302A", color: "white", padding: "0.5rem 1rem", borderRadius: "0.25rem", fontWeight: "bold", border: "none", cursor: "pointer" }}
                 >
                   New Message
                 </button>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              <form onSubmit={handleSubmit} noValidate style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+                {/* Honeypot field — hidden from real users via CSS, bots that auto-fill every
+                    field will trip it, causing Web3Forms to silently drop the submission. */}
+                <input
+                  type="text"
+                  name="botcheck"
+                  value={formData.botcheck || ""}
+                  onChange={(e) => setFormData({ ...formData, botcheck: e.target.value })}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  aria-hidden="true"
+                  style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", opacity: 0 }}
+                />
+
+                {status === "error" && errorMessage && (
+                  <div role="alert" style={{ backgroundColor: "rgba(220, 38, 38, 0.08)", border: "1px solid rgba(220, 38, 38, 0.3)", color: "#B91C1C", padding: "0.625rem 0.75rem", borderRadius: "0.25rem", fontSize: "0.75rem", lineHeight: "1.4" }}>
+                    {errorMessage}
+                  </div>
+                )}
+
                 <div>
                   <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Company / Buyer Name</label>
                   <input 
                     required 
                     type="text" 
+                    name="name"
+                    autoComplete="name"
                     value={formData.name} 
                     onChange={(e) => setFormData({...formData, name: e.target.value})}
                     style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} 
@@ -93,6 +190,8 @@ export default function ContactPage() {
                   <input 
                     required 
                     type="email" 
+                    name="email"
+                    autoComplete="email"
                     value={formData.email} 
                     onChange={(e) => setFormData({...formData, email: e.target.value})}
                     style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }} 
@@ -101,6 +200,7 @@ export default function ContactPage() {
                 <div>
                   <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Inquiry Category</label>
                   <select 
+                    name="category"
                     value={formData.category} 
                     onChange={(e) => setFormData({...formData, category: e.target.value})}
                     style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", outline: "none" }}
@@ -115,14 +215,19 @@ export default function ContactPage() {
                   <label style={{ display: "block", fontSize: "0.8rem", color: "#2563EB", fontWeight: "bold", textTransform: "uppercase", marginBottom: "0.25rem" }}>Message Detail</label>
                   <textarea 
                     required 
+                    name="message"
                     placeholder="Specify stem counts, varieties, required shipment arrival airports, or seasonal volume expectations..."
                     value={formData.message} 
                     onChange={(e) => setFormData({...formData, message: e.target.value})}
                     style={{ width: "100%", backgroundColor: "rgba(234, 226, 206, 0.4)", border: "1px solid rgba(36, 31, 24, 0.15)", padding: "0.625rem", borderRadius: "0.25rem", fontSize: "0.75rem", height: "7rem", outline: "none", resize: "vertical" }} 
                   />
                 </div>
-                <button type="submit" style={{ width: "100%", backgroundColor: "#2563EB", color: "white", padding: "0.75rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: "pointer" }}>
-                  Submit Direct Inquiry
+                <button 
+                  type="submit" 
+                  disabled={status === "submitting"}
+                  style={{ width: "100%", backgroundColor: status === "submitting" ? "rgba(37, 99, 235, 0.6)" : "#2563EB", color: "white", padding: "0.75rem", borderRadius: "0.25rem", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.05em", fontSize: "0.75rem", border: "none", cursor: status === "submitting" ? "not-allowed" : "pointer" }}
+                >
+                  {status === "submitting" ? "Sending…" : "Submit Direct Inquiry"}
                 </button>
               </form>
             )}

@@ -41,6 +41,26 @@ node scripts/generate-sitemap.js
 
 ---
 
+## Contact form (Web3Forms)
+
+The Contact page form (`src/pages/ContactPage.jsx`) submits to [Web3Forms](https://web3forms.com), a free form-backend service — no server code needed. Submissions are delivered by email to whatever address you register with them.
+
+**Setup:**
+
+1. Go to [web3forms.com](https://web3forms.com) and create an access key using `info@primeagroexportsltd.com` (or whichever inbox should receive inquiries).
+2. Copy the access key from the dashboard.
+3. For local dev: `cp .env.example .env` and paste the key into `VITE_WEB3FORMS_ACCESS_KEY`.
+4. For production on Vercel: Project Settings → Environment Variables → add `VITE_WEB3FORMS_ACCESS_KEY` with the same value, then redeploy.
+
+Without a valid key, the form will show a clear error to visitors instead of silently failing — but it won't actually deliver messages, so this step isn't optional before launch.
+
+The form includes:
+- Client-side + native HTML5 validation on all required fields (name, email format, message length)
+- A hidden honeypot field (`botcheck`) that silently discards bot submissions
+- Loading and error states so a failed submission never falsely tells the visitor it succeeded
+
+---
+
 ## Local images setup
 
 All image references in the code now point to local files under `public/images/` instead of Unsplash URLs. To fetch the actual images, run once:
