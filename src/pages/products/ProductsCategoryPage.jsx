@@ -1,6 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link, useSearchParams } from "react-router-dom";
 import { PRODUCTS_DATA } from "../../data/productsData";
+import SEO, { SITE_URL } from "../../components/SEO";
+
+const CATEGORY_SEO = {
+  flowers: {
+    title: "Kenyan Cut Flowers & Roses | Prime Agro Exports Limited",
+    description: "Export-grade Kenyan cut roses, summer flowers and fillers, MPS-ABC and Kenya Flower Council certified, air-freighted fresh from Naivasha to global auctions and wholesalers.",
+  },
+  fruits: {
+    title: "Kenyan Avocados, Mangoes & Passion Fruit | Prime Agro Exports Limited",
+    description: "Fresh Hass and Fuerte avocados, Apple and Kent mangoes, and purple passion fruit — Fairtrade and GLOBALG.A.P certified, grown and exported from Kenya.",
+  },
+  vegetables: {
+    title: "Kenyan Fine Beans, Snow Peas & Baby Vegetables | Prime Agro Exports Limited",
+    description: "Fine and extra fine green beans, snow peas, sugar snaps, baby vegetables and tenderstem broccoli — export-grade, BRCGS certified, from Kenyan farms.",
+  },
+  "frozen-iqf": {
+    title: "IQF Frozen Avocado, Mango & Vegetables | Prime Agro Exports Limited",
+    description: "Individually Quick Frozen avocado dices, mango chunks and mixed cut vegetables — bulk export-grade IQF produce from Prime Agro Exports Limited, Kenya.",
+  },
+};
 
 export default function ProductsCategoryPage() {
   const { categoryId } = useParams();
@@ -38,6 +58,11 @@ export default function ProductsCategoryPage() {
   if (!categoryId) {
     return (
       <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+        <SEO
+          title="Our Products | Prime Agro Exports Limited"
+          description="Browse Prime Agro Exports' full range of export-grade Kenyan flowers, avocados, mangoes, passion fruit, fine beans and IQF frozen produce."
+          path="/our-products"
+        />
         <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
           <div style={{ borderBottom: "1px solid rgba(36, 31, 24, 0.15)", paddingBottom: "2rem", marginBottom: "3rem" }}>
             <span style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", textTransform: "uppercase", color: "#2563EB", letterSpacing: "0.1em", fontWeight: "bold" }}>Consignments & Portfolios</span>
@@ -53,7 +78,7 @@ export default function ProductsCategoryPage() {
                 style={{ position: "relative", height: "16rem", borderRadius: "0.25rem", overflow: "hidden", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.15)", display: "block", textDecoration: "none" }}
               >
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(22, 48, 42, 0.95), rgba(22, 48, 42, 0.6), transparent)", zIndex: 10 }} />
-                <img src={cat.banner} alt={cat.label} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={cat.banner} alt={`Kenyan ${cat.label.toLowerCase()} export category`} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div style={{ position: "absolute", bottom: "1.5rem", left: "1.5rem", right: "1.5rem", zIndex: 20, color: "white", fontFamily: "'Jost', sans-serif" }}>
                   <div style={{ fontSize: "1.875rem", marginBottom: "0.25rem" }}>{cat.icon}</div>
                   <h3 style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "1.25rem", color: "#F3EEE1", margin: 0 }}>{cat.label}</h3>
@@ -69,9 +94,31 @@ export default function ProductsCategoryPage() {
 
   const activeCategory = categories.find((c) => c.id === categoryId);
   const products = PRODUCTS_DATA.filter((p) => p.category === categoryId);
+  const seoInfo = CATEGORY_SEO[categoryId] || {
+    title: "Our Products | Prime Agro Exports Limited",
+    description: "Browse Prime Agro Exports' full range of export-grade Kenyan flowers, avocados, mangoes, passion fruit, fine beans and IQF frozen produce.",
+  };
+  const itemListJsonLd = products.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        itemListElement: products.map((p, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: p.name,
+          url: `${SITE_URL}/our-products/${categoryId}?product=${p.id}`,
+        })),
+      }
+    : null;
 
   return (
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
+      <SEO
+        title={seoInfo.title}
+        description={seoInfo.description}
+        path={`/our-products/${categoryId}`}
+        jsonLd={itemListJsonLd}
+      />
       <div style={{ maxWidth: "64rem", marginLeft: "auto", marginRight: "auto" }}>
         
         <Link to="/our-products" style={{ fontFamily: "'Jost', sans-serif", fontSize: "0.75rem", fontWeight: "bold", color: "#2563EB", textDecoration: "none", marginBottom: "1.5rem", display: "inline-block" }}>
@@ -97,7 +144,7 @@ export default function ProductsCategoryPage() {
               style={{ backgroundColor: "white", borderRadius: "0.25rem", border: "1px solid rgba(36, 31, 24, 0.1)", overflow: "hidden", boxShadow: "0 1px 3px rgba(0,0,0,0.1)", cursor: "pointer", display: "flex", flexDirection: "column", height: "100%" }}
             >
               <div style={{ height: "12rem", overflow: "hidden", position: "relative" }}>
-                <img src={prod.image} alt={prod.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src={prod.image} alt={`${prod.name} — Kenyan export produce`} loading="lazy" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 {prod.isPopular && (
                   <span style={{ position: "absolute", top: "0.75rem", left: "0.75rem", backgroundColor: "#2563EB", color: "white", fontFamily: "'Jost', sans-serif", fontSize: "9px", fontWeight: "bold", padding: "0.125rem 0.5rem", borderRadius: "0.25rem", textTransform: "uppercase", letterSpacing: "0.05em" }}>
                     High Volume Demand

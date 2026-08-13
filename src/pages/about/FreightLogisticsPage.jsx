@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { COMPANY } from "../../data/companyData";
+import SEO from "../../components/SEO";
 
 export default function FreightLogisticsPage() {
   const [formData, setFormData] = useState({ origin: "Nairobi (JKIA)", destination: "", weight: "", cropType: "Flowers" });
@@ -16,6 +17,12 @@ export default function FreightLogisticsPage() {
   };
 
   return (
+    <>
+      <SEO
+        title="Freight & Logistics | Prime Agro Exports Limited"
+        description="IATA-accredited, RA3-cleared air cargo and reefer sea-freight logistics from our JKIA cargo village facility to markets across Europe and the Middle East."
+        path="/about-us/freight-logistics"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -143,5 +150,6 @@ export default function FreightLogisticsPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

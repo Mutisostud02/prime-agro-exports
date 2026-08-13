@@ -99,23 +99,24 @@ export default function Header() {
         height: "4rem", 
         display: "flex", 
         alignItems: "center", 
-        justifyContent: "space-between" 
+        justifyContent: "space-between",
+        gap: "0.5rem"
       }}>
-<Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#16302A", textDecoration: "none" }}>
+<Link to="/" style={{ display: "flex", alignItems: "center", gap: "0.5rem", color: "#16302A", textDecoration: "none", minWidth: 0, flexShrink: 1 }}>
   <img 
     src="/logo.png"
     alt="Prime Agro Exports Logo"
+    className="w-10 h-10 sm:w-14 sm:h-14 lg:w-20 lg:h-20"
     style={{ 
-      width: "5rem", 
-      height: "5rem", 
       borderRadius: "0.25rem", 
       objectFit: "contain",
-      display: "block"
+      display: "block",
+      flexShrink: 0
     }} 
   />
-  <div>
-    <div style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", fontSize: "0.875rem", lineHeight: "1", color: "#16302A" }}>PRIME AGRO EXPORTS</div>
-    <span style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", fontWeight: "600", letterSpacing: "0.1em", color: "#2563EB", display: "block" }}>KENYAN EXPORTERS</span>
+  <div style={{ minWidth: 0 }}>
+    <div className="text-[10px] sm:text-xs lg:text-sm" style={{ fontFamily: "'Jost', sans-serif", fontWeight: "bold", lineHeight: "1.2", color: "#16302A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>PRIME AGRO EXPORTS</div>
+    <span className="hidden sm:block" style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", fontWeight: "600", letterSpacing: "0.1em", color: "#2563EB" }}>KENYAN EXPORTERS</span>
   </div>
 </Link>
 
@@ -179,7 +180,7 @@ export default function Header() {
           }}>Contact</Link>
         </nav>
 
-        <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+        <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", flexShrink: 0 }}>
           <div style={{ position: "relative" }}>
             <input
               type="text"
@@ -188,16 +189,16 @@ export default function Header() {
               placeholder="Search products..."
               aria-label="Search products"
               onFocus={() => setIsSearchOpen(true)}
+              className="w-24 sm:w-40 lg:w-48"
               style={{ 
                 backgroundColor: "rgba(234, 226, 206, 0.8)", 
                 color: "#241F18", 
                 fontSize: "10px", 
                 fontFamily: "'Jost', sans-serif", 
-                padding: "0.25rem 1.25rem 0.25rem 1.75rem", 
+                padding: "0.25rem 0.5rem 0.25rem 1.75rem", 
                 borderRadius: "0.25rem", 
                 outline: "none", 
-                border: "1px solid rgba(36, 31, 24, 0.1)",
-                width: "12rem"
+                border: "1px solid rgba(36, 31, 24, 0.1)"
               }}
             />
             <span style={{ position: "absolute", left: "0.625rem", top: "0.375rem", fontSize: "9px" }}>🔍</span>
@@ -208,6 +209,7 @@ export default function Header() {
                 top: "100%", 
                 marginTop: "0.25rem", 
                 width: "18rem", 
+                maxWidth: "calc(100vw - 2rem)",
                 backgroundColor: "#F3EEE1", 
                 border: "1px solid rgba(36, 31, 24, 0.15)", 
                 borderRadius: "0.25rem", 
@@ -223,7 +225,7 @@ export default function Header() {
                     </div>
                     {filteredProducts.map((p) => (
                       <div key={p.id} onClick={() => handleProductClick(p)} className="pae-search-result" style={{ padding: "0.5rem", display: "flex", gap: "0.5rem", alignItems: "center", cursor: "pointer", fontSize: "10px", textAlign: "left", borderBottom: "1px solid rgba(36, 31, 24, 0.05)" }}>
-                        <img src={p.image} alt={p.name} style={{ width: "2rem", height: "2rem", objectFit: "cover", borderRadius: "0.125rem" }} />
+                        <img src={p.image} alt={p.name} loading="lazy" style={{ width: "2rem", height: "2rem", objectFit: "cover", borderRadius: "0.125rem" }} />
                         <div style={{ minWidth: 0, flex: 1 }}>
                           <div style={{ fontWeight: "bold", color: "#16302A", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{p.name}</div>
                           <div style={{ fontSize: "8px", fontFamily: "'Jost', sans-serif", color: "#2563EB" }}>{p.categoryLabel}</div>

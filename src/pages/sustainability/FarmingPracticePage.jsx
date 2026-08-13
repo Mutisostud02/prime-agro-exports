@@ -1,7 +1,14 @@
 import React from "react";
+import SEO from "../../components/SEO";
 
 export default function FarmingPracticePage() {
   return (
+    <>
+      <SEO
+        title="Sustainable Farming Practices | Prime Agro Exports Limited"
+        description="Discover the sustainable, low-impact farming practices behind our GLOBALG.A.P and organic-certified Kenyan flower, fruit and vegetable production."
+        path="/sustainability/farming-practice"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -61,5 +68,6 @@ export default function FarmingPracticePage() {
 
       </div>
     </div>
+    </>
   );
 }

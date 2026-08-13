@@ -1,0 +1,9 @@
+# https://www.primeagroexportsltd.com/robots.txt
+User-agent: *
+Allow: /
+
+# Keep search-param product deep links out of the crawl budget;
+# canonical tags on those pages already point crawlers to the clean category URL.
+Disallow: /*?product=
+
+Sitemap: https://www.primeagroexportsltd.com/sitemap.xml

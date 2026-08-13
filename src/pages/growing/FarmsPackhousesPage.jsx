@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import { FARMS_LIST } from "../../data/productsData";
+import SEO from "../../components/SEO";
 
 export default function FarmsPackhousesPage() {
   const [selectedFarm, setSelectedFarm] = useState(FARMS_LIST[0]);
 
   return (
+    <>
+      <SEO
+        title="Our Farms & Packhouses | Prime Agro Exports Limited"
+        description="Explore Prime Agro Exports' farms and packhouses across Naivasha, Thika, Laikipia, Ol Kalou, Narok and Muranga, Kenya's leading growing regions."
+        path="/growing-base/our-farms-packhouses"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -95,6 +102,7 @@ export default function FarmsPackhousesPage() {
               <img 
                 src={selectedFarm.image} 
                 alt={selectedFarm.name} 
+                loading="lazy"
                 style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)" }}
               />
               <div style={{ backgroundColor: "#16302A", color: "#F3EEE1", textAlign: "center", fontFamily: "'Jost', sans-serif", fontSize: "10px", padding: "0.5rem 0", marginTop: "0.5rem", borderRadius: "0.25rem" }}>
@@ -105,5 +113,6 @@ export default function FarmsPackhousesPage() {
         )}
       </div>
     </div>
+    </>
   );
 }

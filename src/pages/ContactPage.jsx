@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { COMPANY } from "../data/companyData";
+import SEO, { SITE_URL } from "../components/SEO";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({ name: "", email: "", category: "Export Wholesale Quote", message: "" });
@@ -10,7 +11,33 @@ export default function ContactPage() {
     setSubmitted(true);
   };
 
+  const contactJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name: "Contact Prime Agro Exports Limited",
+    url: `${SITE_URL}/contact-us`,
+    about: {
+      "@type": "Organization",
+      name: COMPANY.name,
+      telephone: COMPANY.phone,
+      email: COMPANY.email,
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: `${COMPANY.address.line1}, ${COMPANY.address.line2}`,
+        addressLocality: "Nairobi",
+        addressCountry: "KE",
+      },
+    },
+  };
+
   return (
+    <>
+      <SEO
+        title="Contact Us | Prime Agro Exports Limited"
+        description="Get in touch with Prime Agro Exports Limited at JKIA Cargo Village, Nairobi. Call, email or send an enquiry about Kenyan flower, fruit and vegetable exports."
+        path="/contact-us"
+        jsonLd={contactJsonLd}
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -132,5 +159,6 @@ export default function ContactPage() {
 
       </div>
     </div>
+    </>
   );
 }

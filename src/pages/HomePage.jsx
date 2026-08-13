@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CERTIFICATIONS_LIST } from "../data/productsData";
 import { COMPANY } from "../data/companyData";
+import SEO from "../components/SEO";
 
 const HERO_SLIDES = [
   {
@@ -68,6 +69,12 @@ export default function HomePage() {
   const slide = HERO_SLIDES[activeSlide];
 
   return (
+    <>
+      <SEO
+        title="Prime Agro Exports Limited | Kenyan Flowers, Avocados, Fruits & Vegetables Exporter"
+        description="Prime Agro Exports Limited grows and exports premium Kenyan roses, Hass avocados, mangoes, fine beans and IQF frozen produce to Europe, the Middle East and beyond."
+        path="/"
+      />
     <div
       style={{
         backgroundColor: "#F3EEE1",
@@ -101,6 +108,7 @@ export default function HomePage() {
         <img
           src={slide.image}
           alt={slide.heading}
+          fetchpriority="high"
           style={{
             position: "absolute",
             inset: 0,
@@ -294,6 +302,7 @@ export default function HomePage() {
             <img
               src="/images/farm-naivasha-lakeview.jpg"
               alt="Prime Agro Exports highland farms"
+              loading="lazy"
               style={{
                 width: "100%",
                 height: "22rem",
@@ -430,7 +439,8 @@ export default function HomePage() {
               >
                 <img
                   src={link.src}
-                  alt=""
+                  alt={link.label}
+                  loading="lazy"
                   style={{
                     width: "100%",
                     height: "6rem",
@@ -456,5 +466,6 @@ export default function HomePage() {
         </div>
       </section>
     </div>
+    </>
   );
 }

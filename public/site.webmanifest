@@ -1,0 +1,13 @@
+{
+  "name": "Prime Agro Exports Limited",
+  "short_name": "Prime Agro Exports",
+  "description": "Kenyan grower and exporter of fine flowers, fresh fruits, vegetables, and IQF products.",
+  "icons": [
+    { "src": "/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#16302A",
+  "background_color": "#F3EEE1",
+  "display": "standalone",
+  "start_url": "/"
+}

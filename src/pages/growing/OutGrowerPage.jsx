@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../../components/SEO";
 
 export default function OutGrowerPage() {
   const [inquired, setInquired] = useState(false);
@@ -9,6 +10,12 @@ export default function OutGrowerPage() {
   };
 
   return (
+    <>
+      <SEO
+        title="Out-Grower Farming Programme | Prime Agro Exports Limited"
+        description="Our out-grower network partners with smallholder farmers across Kenya, providing training, inputs and guaranteed markets for export-grade produce."
+        path="/growing-base/out-grower-farming"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -43,6 +50,7 @@ export default function OutGrowerPage() {
             <img 
               src="/images/quicklink-our-farms.jpg" 
               alt="Outgrower picking fine beans" 
+              loading="lazy"
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0,0,0,0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />
           </div>
@@ -117,5 +125,6 @@ export default function OutGrowerPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

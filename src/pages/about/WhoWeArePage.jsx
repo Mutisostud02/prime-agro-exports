@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../../components/SEO";
 
 export default function WhoWeArePage() {
   const STATS = [
@@ -9,6 +10,12 @@ export default function WhoWeArePage() {
   ];
 
   return (
+    <>
+      <SEO
+        title="Who We Are | Prime Agro Exports Limited"
+        description="Learn about Prime Agro Exports Limited, a Kenyan grower-exporter of flowers, fruits and vegetables operating farms, packhouses and cold-chain logistics from Nairobi."
+        path="/about-us/who-we-are"
+      />
     <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen">
       {/* Stats Section (moved here from Home) */}
       <section className="bg-[#16302A] text-[#F3EEE1] py-12 px-4 sm:px-6 lg:px-8 border-b border-[#F3EEE1]/10">
@@ -34,6 +41,7 @@ export default function WhoWeArePage() {
           <img 
             src="/images/farm-naivasha-lakeview.jpg" 
             alt="Kenyan highland farms" 
+            loading="lazy"
             className="w-full h-80 object-cover"
           />
         </div>
@@ -99,5 +107,6 @@ export default function WhoWeArePage() {
       </div>
       </div>
     </div>
+    </>
   );
 }

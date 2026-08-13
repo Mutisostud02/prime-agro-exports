@@ -1,7 +1,14 @@
 import React from "react";
+import SEO from "../../components/SEO";
 
 export default function CSRPage() {
   return (
+    <>
+      <SEO
+        title="Corporate Social Responsibility (CSR) | Prime Agro Exports Limited"
+        description="Learn about Prime Agro Exports' community investment, worker welfare and Fairtrade-funded social programs across Kenya."
+        path="/sustainability/corporate-social-initiative-responsibilities"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -24,6 +31,7 @@ export default function CSRPage() {
             <img 
               src="/images/baby-vegetables-tenderstem.jpg" 
               alt="Community Clinic and School" 
+              loading="lazy"
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />
           </div>
@@ -77,5 +85,6 @@ export default function CSRPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

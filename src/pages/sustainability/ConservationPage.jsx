@@ -1,7 +1,14 @@
 import React from "react";
+import SEO from "../../components/SEO";
 
 export default function ConservationPage() {
   return (
+    <>
+      <SEO
+        title="Environmental Conservation | Prime Agro Exports Limited"
+        description="See how Prime Agro Exports protects water resources, biodiversity and soil health across its Kenyan farming operations."
+        path="/sustainability/conservation"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -36,6 +43,7 @@ export default function ConservationPage() {
             <img 
               src="/images/summer-flowers-hypericum.jpg" 
               alt="Conservation and wetlands" 
+              loading="lazy"
               style={{ width: "100%", height: "20rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)", border: "1px solid rgba(36, 31, 24, 0.1)" }}
             />
           </div>
@@ -66,5 +74,6 @@ export default function ConservationPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

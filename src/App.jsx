@@ -4,9 +4,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 // Layout components
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import OrganizationSchema from "./components/OrganizationSchema";
 
 // Page components
 import HomePage from "./pages/HomePage";
+import NotFoundPage from "./pages/NotFoundPage";
 import WhoWeArePage from "./pages/about/WhoWeArePage";
 import CompliancePage from "./pages/about/CompliancePage";
 import FreightLogisticsPage from "./pages/about/FreightLogisticsPage";
@@ -33,6 +35,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <OrganizationSchema />
       <div className="flex flex-col min-h-screen bg-[#F3EEE1] text-[#241F18] font-sans antialiased selection:bg-[#2563EB] selection:text-white">
         <Header />
         
@@ -64,8 +67,8 @@ export default function App() {
             {/* Contact Route */}
             <Route path="/contact-us" element={<ContactPage />} />
 
-            {/* Catch-all fallback redirecting to Home */}
-            <Route path="*" element={<HomePage />} />
+            {/* Catch-all 404 (noindexed, so it never competes with real pages in search) */}
+            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 

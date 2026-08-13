@@ -2,12 +2,54 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicons / touch icons -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
+    <meta name="theme-color" content="#16302A" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
-    <title>Prime Agro Exports Limited — Kenyan Flower, Fruit & Vegetable Exporter</title>
+
+    <!--
+      Default / fallback SEO tags for the homepage and for crawlers that don't execute
+      JavaScript (link-preview bots, some social scrapers). Every route in the app
+      overrides these client-side via the <SEO> component (see src/components/SEO.jsx),
+      which Google's renderer picks up since Googlebot executes JS.
+    -->
+    <title>Prime Agro Exports Limited | Kenyan Flowers, Avocados, Fruits & Vegetables Exporter</title>
+    <meta name="description" content="Prime Agro Exports Limited grows and exports premium Kenyan roses, Hass avocados, mangoes, fine beans and IQF frozen produce to Europe, the Middle East and beyond." />
+    <link rel="canonical" href="https://www.primeagroexportsltd.com/" />
+    <meta name="robots" content="index, follow" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Prime Agro Exports Limited | Kenyan Flowers, Avocados, Fruits & Vegetables Exporter" />
+    <meta property="og:description" content="Prime Agro Exports Limited grows and exports premium Kenyan roses, Hass avocados, mangoes, fine beans and IQF frozen produce to Europe, the Middle East and beyond." />
+    <meta property="og:url" content="https://www.primeagroexportsltd.com/" />
+    <meta property="og:image" content="https://www.primeagroexportsltd.com/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Prime Agro Exports" />
+    <meta property="og:locale" content="en_KE" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Prime Agro Exports Limited | Kenyan Flowers, Avocados, Fruits & Vegetables Exporter" />
+    <meta name="twitter:description" content="Prime Agro Exports Limited grows and exports premium Kenyan roses, Hass avocados, mangoes, fine beans and IQF frozen produce to Europe, the Middle East and beyond." />
+    <meta name="twitter:image" content="https://www.primeagroexportsltd.com/og-image.jpg" />
+
+    <!--
+      Google Search Console verification: paste the "content" meta tag Search Console
+      gives you here (Settings > Ownership verification > HTML tag), or use the file-based
+      method instead — see README.md for both options.
+    -->
+    <!-- <meta name="google-site-verification" content="PASTE_YOUR_VERIFICATION_CODE_HERE" /> -->
   </head>
   <body>
     <div id="root"></div>

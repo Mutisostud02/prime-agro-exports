@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CERTIFICATIONS_LIST } from "../../data/productsData";
+import SEO from "../../components/SEO";
 
 export default function CompliancePage() {
   const [activeCert, setActiveCert] = useState(null);
@@ -12,6 +13,12 @@ export default function CompliancePage() {
   ];
 
   return (
+    <>
+      <SEO
+        title="Certifications & Compliance | Prime Agro Exports Limited"
+        description="GLOBALG.A.P, BRCGS Grade AA, Fairtrade, SMETA, MPS-ABC and Kenya Flower Council Gold Standard — see the certifications behind our export-quality produce."
+        path="/about-us/compliance-accreditation"
+      />
     <div className="bg-[#F3EEE1] text-[#241F18] min-h-screen py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="border-b border-[#241F18]/15 pb-8 mb-12">
@@ -77,5 +84,6 @@ export default function CompliancePage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEO from "../../components/SEO";
 
 export default function TeamCareersPage() {
   const [activeJob, setActiveJob] = useState(null);
@@ -16,6 +17,12 @@ export default function TeamCareersPage() {
   };
 
   return (
+    <>
+      <SEO
+        title="Team & Careers | Prime Agro Exports Limited"
+        description="Meet the team behind Prime Agro Exports and explore current openings in agronomy, cold-chain logistics and international export sales in Kenya."
+        path="/about-us/our-team-careers"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -47,6 +54,7 @@ export default function TeamCareersPage() {
             <img 
               src="/images/baby-vegetables-tenderstem.jpg" 
               alt="Team at Naivasha Packhouse" 
+              loading="lazy"
               style={{ width: "100%", height: "16rem", objectFit: "cover", borderRadius: "0.25rem", boxShadow: "0 4px 6px -1px rgba(0, 0, 0, 0.1)" }}
             />
           </div>
@@ -155,5 +163,6 @@ export default function TeamCareersPage() {
         )}
       </div>
     </div>
+    </>
   );
 }

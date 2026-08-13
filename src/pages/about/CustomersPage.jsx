@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../../components/SEO";
 
 export default function CustomersPage() {
   const segments = [
@@ -8,6 +9,12 @@ export default function CustomersPage() {
   ];
 
   return (
+    <>
+      <SEO
+        title="Our Customers | Prime Agro Exports Limited"
+        description="Trusted by supermarket chains, wholesalers and importers across Europe and the Middle East for consistent, export-quality Kenyan produce."
+        path="/about-us/customers"
+      />
     <div style={{ backgroundColor: "#F3EEE1", color: "#241F18", minHeight: "100vh", padding: "4rem 1rem" }}>
       <div style={{ maxWidth: "56rem", marginLeft: "auto", marginRight: "auto" }}>
         
@@ -96,5 +103,6 @@ export default function CustomersPage() {
 
       </div>
     </div>
+    </>
   );
 }
