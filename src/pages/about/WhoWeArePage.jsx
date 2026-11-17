@@ -66,7 +66,7 @@ export default function WhoWeArePage() {
 
             <h2 className="font-serif text-2xl font-bold pt-4" style={{ color: 'black' }}>Our Story</h2>
             <p>
-              It began in 2020 with four people who believed Kenya&apos;s highlands deserved a seat at the world&apos;s table. <strong>Robert Mayeku Namonyo, Edith Wanjiru Njenga, Patrick Kimani Kuria,</strong> and <strong>Jacquelyne Ayesa Kidula</strong> pooled their expertise in agronomy, logistics, and trade to found Prime Agro Exports Limited — starting with a handful of contracted acres and a single freight route out of JKIA. What they built together has since grown into an integrated export house serving buyers across three continents, without ever losing sight of the founders&apos; original promise: quality grown honestly, and delivered on time.
+              It began in the year 2020 with four people who believed Kenya&apos;s highlands deserved a seat at the world&apos;s table. <strong>Robert Mayeku Namonyo, Edith Wanjiru Njenga, Patrick Kimani Kuria,</strong> and <strong>Jacquelyne Ayesa Kidula</strong> pooled their expertise in agronomy, logistics, and trade to found Prime Agro Exports Limited — starting with a handful of contracted acres and a single freight route out of JKIA. What they built together has since grown into an integrated export house serving buyers across three continents, without ever losing sight of the founders&apos; original promise: quality grown honestly, and delivered on time.
             </p>
 
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
