@@ -72,9 +72,9 @@ export default function WhoWeArePage() {
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-2">
               {[
                 { name: "Robert Mayeku Namonyo", role: "Director / Shareholder" },
-                { name: "Edith Wanjiru Njenga", role: "Director / Shareholder" },
+                { name: "Rachel Talu Phaurine Mshingo", role: "Director / Shareholder" },
                 { name: "Patrick Kimani Kuria", role: "Director / Shareholder" },
-                { name: "Jacquelyne Ayesa Kidula", role: "Director / Shareholder" },
+                { name: "Jane Muthoni Mugwe", role: "Director / Shareholder" },
               ].map((founder) => (
                 <div key={founder.name} className="bg-[#EAE2CE] border border-[#241F18]/10 rounded p-3 text-center">
                   <div className="font-serif font-bold text-xs leading-tight" style={{ color: '#16302A' }}>{founder.name}</div>
