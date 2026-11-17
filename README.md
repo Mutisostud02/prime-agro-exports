@@ -4,7 +4,7 @@ This project is configured for search-engine indexing and a production launch on
 
 ### What's already configured
 
-- **Per-page metadata** — every route sets its own `<title>`, meta description, canonical URL, and Open Graph/Twitter tags via `src/components/SEO.jsx` (uses React 19's native title/meta/link hoisting, no extra library).
+- **Per-page metadata** — every of the route sets its own `<title>`, meta description, canonical URL, and Open Graph/Twitter tags via `src/components/SEO.jsx` (uses React 19's native title/meta/link hoisting, no extra library).
 - **Structured data (JSON-LD)** — sitewide `Organization` schema (`src/components/OrganizationSchema.jsx`), plus page-specific schema on the Contact page and an `ItemList` on each product category page.
 - **`public/robots.txt`** — allows crawling, points to the sitemap.
 - **`public/sitemap.xml`** — auto-regenerated from `src/data/seoRoutes.js` by `scripts/generate-sitemap.js`, which runs automatically before every `npm run build` (see `prebuild` in `package.json`). Add a new page? Add its route to `seoRoutes.js` and the sitemap updates itself on the next build.
